@@ -39,10 +39,10 @@ Betaling skjer i klinikken som i dag (kontant/kort på stedet); nettsiden endrer
 De fleste norske hudpleie- og skjønnhetsklinikker løser booking med et abonnement på en ferdig SaaS-plattform (f.eks. Timma, Fresha, Eazybook) fremfor en egen nettside. [ASSUMPTION — basert på research, ikke bekreftet med klinikkeier] Fordelen med en skreddersydd løsning her er:
 
 - **Egen merkevare, ikke en generisk bookingportal.** Nettsiden kan se ut og føles som AURA SKIN Klinikk, ikke som en av mange klinikker inne i en tredjeparts app.
-- **Ingen løpende abonnementskostnad** for en klinikk som drives av én person med antagelig begrenset budsjett — engangsutvikling fremfor 200–1000+ kr/mnd i SaaS-avgift.
+- **Ingen løpende abonnementskostnad** for en klinikk som drives av én person med begrenset budsjett — engangsutvikling fremfor 200–1000+ kr/mnd i SaaS-avgift.
 - **Enkelhet tilpasset faktisk behov.** Klinikken har én behandler; mange SaaS-verktøy er bygget for flere ansatte/ressurser og bærer kompleksitet klinikken ikke trenger.
 
-Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunne løst det samme funksjonelt, kanskje raskere. Fordelen ligger i skreddersøm, merkevarekontroll og at løsningen samtidig er et portefølje-bevis for utvikleren, ikke i unik teknologi.
+Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunne løst det samme funksjonelt, kanskje raskere. Fordelen ligger i skreddersøm, merkevarekontroll og porteføljeverdien for utvikleren, ikke i unik teknologi.
 
 ## Hvem dette er for
 
@@ -50,13 +50,13 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 **Primær: klinikkens kunder.** Vil raskt finne ut hva klinikken tilbyr, hva det koster, og booke en ledig time uten å vente på svar. Suksess for dem = booking tar under et par minutter, uten meldingsutveksling.
 
-**Sekundær: utvikleren selv.** [ASSUMPTION] Dette er et frilansprosjekt hvor et vellykket, ryddig sluttresultat skal fungere som referanse overfor fremtidige oppdragsgivere. Dette påvirker kvalitetsbaren på briefen — løsningen skal ikke bare "fungere", den skal se gjennomført og profesjonell ut.
+**Sekundær: utvikleren selv.** Som premisset i sammendraget sier, er dette et referanseprosjekt — det påvirker kvalitetsbaren: løsningen skal ikke bare "fungere", den skal se gjennomført og profesjonell ut.
 
 ## Suksesskriterier
 
 - Klinikkeieren kan motta og administrere en booking uten å involvere utvikleren i det daglige.
-- En ny kunde kan gå fra "vet ikke hva klinikken tilbyr" til "har booket en time" på egen hånd, uten å sende en melding først.
-- Antall booking-relaterte meldinger klinikken mottar på Facebook/telefon går ned sammenlignet med i dag. [ASSUMPTION — ingen baseline målt ennå; bør bekreftes med klinikkeier etter lansering]
+- En ny kunde kan gå fra "vet ikke hva klinikken tilbyr" til "har booket en time" selv, uten å sende en melding først.
+- Antall bookingrelaterte meldinger klinikken mottar på Facebook/telefon går ned sammenlignet med i dag. [ASSUMPTION — ingen baseline målt ennå; bør bekreftes med klinikkeier etter lansering]
 - Nettsiden er ferdig nok og presentabel nok til at utvikleren selv vil vise den frem som referanseprosjekt overfor potensielle oppdragsgivere.
 
 ## Omfang
@@ -76,4 +76,4 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 ## Visjon
 
-Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows, som er en vanlig bruksmåte blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, er det også en åpning for utvikleren: en dokumentert, gjenbrukbar mal for booking-nettsider til andre små enkeltmanns-klinikker — fra ett vellykket kundeprosjekt til et gjentagbart tilbud.
+Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, er det også en åpning for utvikleren: en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker — fra ett vellykket kundeprosjekt til et gjentagbart tilbud.
