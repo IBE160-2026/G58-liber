@@ -13,7 +13,7 @@ AURA SKIN Klinikk er en hudpleieklinikk i Salhus som i dag driftes nesten uteluk
 
 Dette prosjektet er en egen nettside der kunder kan lese om klinikken og behandlingene den tilbyr, se priser, og booke en ledig time selv i en kalender — uten å måtte sende en eneste melding. Klinikkeieren får et adminpanel hvor hun styrer kalender, behandlinger og priser selv. I første versjon betaler kunden i klinikken som normalt; nettbetaling via Vipps er en bevisst utsatt utvidelse.
 
-Prosjektet er et skoleprosjekt: [ASSUMPTION] det gjøres for en reell, liten enkeltmannsklinikk drevet av en bekjent, og skal samtidig fungere som et presentabelt prosjekt studenten kan vise frem faglig. Den doble målsettingen — en løsning som fungerer godt for en reell, liten enkeltmannsklinikk, og et resultat av høy nok kvalitet til å vises frem — er premisset for hele briefen.
+Prosjektet gjøres for en reell, liten enkeltmannsklinikk drevet av en bekjent, og skal samtidig fungere som et presentabelt prosjekt studenten kan vise frem faglig. Den doble målsettingen — en løsning som fungerer godt for en reell, liten enkeltmannsklinikk, og et resultat av høy nok kvalitet til å vises frem — er premisset for hele briefen.
 
 ## Problemet
 
