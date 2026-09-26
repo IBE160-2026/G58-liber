@@ -2,7 +2,7 @@
 title: "Product Brief: AURA SKIN Klinikk – bookingnettside"
 status: draft
 created: 2026-09-13
-updated: 2026-09-13
+updated: 2026-09-26
 ---
 
 # Product Brief: AURA SKIN Klinikk – bookingnettside
@@ -13,7 +13,7 @@ AURA SKIN Klinikk er en hudpleieklinikk i Salhus som i dag driftes nesten uteluk
 
 Dette prosjektet er en egen nettside der kunder kan lese om klinikken og behandlingene den tilbyr, se priser, og booke en ledig time selv i en kalender — uten å måtte sende en eneste melding. Klinikkeieren får et adminpanel hvor hun styrer kalender, behandlinger og priser selv. I første versjon betaler kunden i klinikken som normalt; nettbetaling via Vipps er en bevisst utsatt utvidelse.
 
-Prosjektet er en frilansoppgave: [ASSUMPTION] det gjøres som en tjeneste for en bekjent, med et mulig honorar ved ferdigstillelse, og skal samtidig fungere som et referanseprosjekt som gjør utviklerens arbeid attraktivt for fremtidige oppdragsgivere. Den doble målsettingen — en løsning som fungerer godt for en reell, liten enkeltmannsklinikk, og et resultat av høy nok kvalitet til å vises frem — er premisset for hele briefen.
+Prosjektet er et skoleprosjekt: [ASSUMPTION] det gjøres for en reell, liten enkeltmannsklinikk drevet av en bekjent, og skal samtidig fungere som et presentabelt prosjekt studenten kan vise frem faglig. Den doble målsettingen — en løsning som fungerer godt for en reell, liten enkeltmannsklinikk, og et resultat av høy nok kvalitet til å vises frem — er premisset for hele briefen.
 
 ## Problemet
 
@@ -50,14 +50,14 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 **Primær: klinikkens kunder.** Vil raskt finne ut hva klinikken tilbyr, hva det koster, og booke en ledig time uten å vente på svar. Suksess for dem = booking tar under et par minutter, uten meldingsutveksling.
 
-**Sekundær: utvikleren selv.** Som premisset i sammendraget sier, er dette et referanseprosjekt — det påvirker kvalitetsbaren: løsningen skal ikke bare "fungere", den skal se gjennomført og profesjonell ut.
+**Sekundær: studenten selv.** Som premisset i sammendraget sier, er dette et skoleprosjekt som også skal vises frem faglig — det påvirker kvalitetsbaren: løsningen skal ikke bare "fungere", den skal se gjennomført og profesjonell ut.
 
 ## Suksesskriterier
 
 - Klinikkeieren kan motta og administrere en booking uten å involvere utvikleren i det daglige.
 - En ny kunde kan gå fra "vet ikke hva klinikken tilbyr" til "har booket en time" selv, uten å sende en melding først.
 - Antall bookingrelaterte meldinger klinikken mottar på Facebook/telefon går ned sammenlignet med i dag. [ASSUMPTION — ingen baseline målt ennå; bør bekreftes med klinikkeier etter lansering]
-- Nettsiden er ferdig nok og presentabel nok til at utvikleren selv vil vise den frem som referanseprosjekt overfor potensielle oppdragsgivere.
+- Nettsiden er ferdig nok og presentabel nok til at studenten kan vise den frem som et godt gjennomført skoleprosjekt.
 
 ## Omfang
 
@@ -76,4 +76,4 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 ## Visjon
 
-Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, er det også en åpning for utvikleren: en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker — fra ett vellykket kundeprosjekt til et gjentagbart tilbud.
+Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, er det også en åpning for studenten: en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker — fra ett vellykket skoleprosjekt til en gjenbrukbar mal.
