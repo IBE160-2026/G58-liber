@@ -2,7 +2,7 @@
 title: "Product Brief: AURA SKIN Klinikk – bookingnettside"
 status: draft
 created: 2026-09-13
-updated: 2026-09-26
+updated: 2026-09-27
 ---
 
 # Product Brief: AURA SKIN Klinikk – bookingnettside
@@ -13,7 +13,7 @@ AURA SKIN Klinikk er en hudpleieklinikk i Salhus som i dag driftes nesten uteluk
 
 Dette prosjektet er en egen nettside der kunder kan lese om klinikken og behandlingene den tilbyr, se priser, og booke en ledig time selv i en kalender — uten å måtte sende en eneste melding. Klinikkeieren får et adminpanel hvor hun styrer kalender, behandlinger og priser selv. I første versjon betaler kunden i klinikken som normalt; nettbetaling via Vipps er en bevisst utsatt utvidelse.
 
-Prosjektet gjøres for en reell, liten enkeltmannsklinikk drevet av en bekjent, og skal samtidig fungere som et presentabelt prosjekt studenten kan vise frem faglig. Den doble målsettingen — en løsning som fungerer godt for en reell, liten enkeltmannsklinikk, og et resultat av høy nok kvalitet til å vises frem — er premisset for hele briefen.
+Løsningen er skreddersydd for en liten enkeltmannsklinikk: enkel å bruke, uten løpende abonnementskostnad, og med klinikkens egen merkevare i sentrum.
 
 ## Problemet
 
@@ -30,19 +30,19 @@ En dedikert nettside for AURA SKIN Klinikk med tre kjernedeler:
 
 1. **Informasjonsside** — presenterer klinikken og de fem behandlingskategoriene (ansiktsbehandling, laser, botox/filler, vipper/bryn, kroppsbehandling) med beskrivelser og priser, hentet fra eksisterende materiale på klinikkens Facebook-side.
 2. **Selvbetjent booking** — kunden velger behandling, ser en kalender med faktisk ledige tider (én behandler, ingen ressursvalg nødvendig) og booker selv. Bookingskjemaet samler kun det som trengs for å gjennomføre timen: navn, telefon, e-post og valgt behandling — ingen helseopplysninger (hudtilstand, allergier) samles i denne versjonen.
-3. **Adminpanel** — klinikkeieren administrerer kalender, behandlinger og priser selv. Utvikleren beholder egen tilgang ved siden av, for å kunne bistå med endringer ved behov i en tidlig fase.
+3. **Adminpanel** — klinikkeieren administrerer kalender, behandlinger og priser selv. Utvikleren beholder egen tilgang ved siden av, for å kunne bistå med endringer ved behov.
 
 Betaling skjer i klinikken som i dag (kontant/kort på stedet); nettsiden endrer ikke betalingsopplevelsen i denne versjonen.
 
 ## Hva gjør dette annerledes
 
-De fleste norske hudpleie- og skjønnhetsklinikker løser booking med et abonnement på en ferdig SaaS-plattform (f.eks. Timma, Fresha, Eazybook) fremfor en egen nettside. [ASSUMPTION — basert på research, ikke bekreftet med klinikkeier] Fordelen med en skreddersydd løsning her er:
+De fleste norske hudpleie- og skjønnhetsklinikker løser booking med et abonnement på en ferdig SaaS-plattform (f.eks. Timma, Fresha, Eazybook) fremfor en egen nettside (basert på egen research, ikke bekreftet med klinikkeier). Fordelen med en skreddersydd løsning her er:
 
 - **Egen merkevare, ikke en generisk bookingportal.** Nettsiden kan se ut og føles som AURA SKIN Klinikk, ikke som en av mange klinikker inne i en tredjeparts app.
 - **Ingen løpende abonnementskostnad** for en klinikk som drives av én person med begrenset budsjett — engangsutvikling fremfor 200–1000+ kr/mnd i SaaS-avgift.
 - **Enkelhet tilpasset faktisk behov.** Klinikken har én behandler; mange SaaS-verktøy er bygget for flere ansatte/ressurser og bærer kompleksitet klinikken ikke trenger.
 
-Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunne løst det samme funksjonelt, kanskje raskere. Fordelen ligger i skreddersøm, merkevarekontroll og porteføljeverdien for utvikleren, ikke i unik teknologi.
+En ferdig SaaS-løsning kunne dekket mye av det samme funksjonelt. Fordelen her ligger ikke i unik teknologi, men i skreddersøm, merkevarekontroll og en løsning som er dimensjonert for klinikkens faktiske behov.
 
 ## Hvem dette er for
 
@@ -50,14 +50,12 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 **Primær: klinikkens kunder.** Vil raskt finne ut hva klinikken tilbyr, hva det koster, og booke en ledig time uten å vente på svar. Suksess for dem = booking tar under et par minutter, uten meldingsutveksling.
 
-**Sekundær: studenten selv.** Som premisset i sammendraget sier, er dette et skoleprosjekt som også skal vises frem faglig — det påvirker kvalitetsbaren: løsningen skal ikke bare "fungere", den skal se gjennomført og profesjonell ut.
-
 ## Suksesskriterier
 
-- Klinikkeieren kan motta og administrere en booking uten å involvere utvikleren i det daglige.
+- Klinikkeieren kan motta og administrere en booking uten teknisk hjelp i det daglige.
 - En ny kunde kan gå fra "vet ikke hva klinikken tilbyr" til "har booket en time" selv, uten å sende en melding først.
-- Antall bookingrelaterte meldinger klinikken mottar på Facebook/telefon går ned sammenlignet med i dag. [ASSUMPTION — ingen baseline målt ennå; bør bekreftes med klinikkeier etter lansering]
-- Nettsiden er ferdig nok og presentabel nok til at studenten kan vise den frem som et godt gjennomført skoleprosjekt.
+- Antall bookingrelaterte meldinger klinikken mottar på Facebook/telefon går ned sammenlignet med i dag. (Ingen baseline er målt ennå; dette bør bekreftes med klinikkeier etter lansering.)
+- Nettsiden fremstår gjennomført og profesjonell, på nivå med det kunder forventer av en etablert klinikk.
 
 ## Omfang
 
@@ -66,7 +64,7 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 - Kalendervisning med faktisk ledige tider for én behandler.
 - Selvbetjent booking med enkelt kontaktskjema (navn, telefon, e-post, valgt behandling) — ingen helse-/hudopplysninger.
 - Betaling i klinikken (ingen nettbetaling).
-- Adminpanel for klinikkeieren til å styre kalender, behandlinger og priser, med parallell tilgang for utvikleren.
+- Adminpanel for klinikkeieren til å styre kalender, behandlinger og priser, med egen tilgang for utvikleren.
 
 **Eksplisitt utenfor v1 (bevisst utsatt, ikke avvist):**
 - Nettbetaling / depositum via Vipps — planlagt som neste steg (v2), se Visjon.
@@ -76,4 +74,4 @@ Dette er ærlig talt ingen teknologisk vollgrav — en ferdig SaaS-løsning kunn
 
 ## Visjon
 
-Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, er det også en åpning for studenten: en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker — fra ett vellykket skoleprosjekt til en gjenbrukbar mal.
+Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, kan den også bli en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker.
