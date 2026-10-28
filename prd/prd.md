@@ -245,6 +245,18 @@ Klinikken kan se alle innsendte meldinger, markere dem som besvart, og velge hvi
 
 Repoet er offentlig. Hemmeligheter ligger i `.env` utenfor Git, med `.env.example` i repoet. Ekte kundedata committes aldri. Bilder av klinikken og de ansatte legges bare i repoet etter samtykke fra klinikken; ellers brukes plassholdere.
 
+### 7.5 Domene, hosting og overlevering `[FORSLAG]`
+
+Nettsiden skal kunne legges på klinikkens eget domene (for eksempel `auraskin.no`) uten endringer i koden.
+
+- **NFR-12 Domeneuavhengig:** Adresse til nettsiden, avsender-e-post og andre miljøavhengige verdier ligger i miljøvariabler (`.env.example`). Ingen adresser er hardkodet.
+- **NFR-13 Overleveringsguide:** README beskriver stegene for å gå live: velge hosting, legge inn domenet hos hostingtjenesten, sette DNS-oppføringene hos registraren, sette miljøvariabler og verifisere avsenderdomenet for e-post og SMS.
+- **Eierskap:** Domenet registreres av klinikken i eget navn, hos en registrar klinikken velger. Produksjonshosting og tilhørende kontoer eies av klinikken, eller overføres til klinikken ved overlevering.
+- **E-post:** Hvis klinikken har e-post på domenet fra før, endres ikke MX-oppføringene. Utsending fra nettsiden krever at SPF og DKIM legges til for e-posttjenesten.
+- **Hosting:** Nettsiden har admin, database og utsending, og krever hosting som kan kjøre en applikasjon, ikke ren statisk hosting. Hosting og database velges i EU/EØS (se §7.2).
+- **HTTPS:** Sertifikat utstedes automatisk av hostingtjenesten når DNS peker riktig (NFR-4).
+- **Demo før domene:** Før klinikken har domene og hosting på plass, kjøres en demoversjon på gratisadressen hostingtjenesten gir, slik at hele flyten (bygg, publisering, miljøvariabler) er prøvd før overlevering.
+
 ## 8. Utenfor omfang
 
 - Kalender og selvbetjent booking: passer ikke klinikkens arbeidsflyt med konsultasjon og legegodkjenning.
@@ -253,7 +265,7 @@ Repoet er offentlig. Hemmeligheter ligger i `.env` utenfor Git, med `.env.exampl
 - Opplasting av bilder og innsamling av helseopplysninger.
 - Digital flyt for legegodkjenning.
 - Andre språk enn norsk.
-- Domene og produksjonshosting (klinikkens ansvar).
+- Kjøp og drift av domene og produksjonshosting (klinikkens ansvar). Å gjøre nettsiden klar for klinikkens domene og levere en overleveringsguide er med (§7.5).
 
 ## 9. Omfang og fasering `[FORSLAG]`
 
@@ -317,7 +329,7 @@ Forslag til rekkefølge, som avtales når omfanget for nyhetsbrev og push er avk
 | # | Spørsmål | Hvem |
 |---|---|---|
 | 6 | Hvem betaler for SMS-utsending, og hva er forventet volum? | Klinikken |
-| 7 | Domene og hosting: hva finnes i dag, og hvem skal eie det? | Klinikken og utvikleren |
+| 7 | Domene og hosting: har klinikken domene i dag, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. | Klinikken og utvikleren |
 | 8 | Når skal nettsiden være ferdig? | Klinikken |
 | 9 | Eksakt adresse. Eldre notater nevner Salhus, intervjuet sier Haugesund. | Klinikken |
 | 10 | Logo, farger, stil og bilder. Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
