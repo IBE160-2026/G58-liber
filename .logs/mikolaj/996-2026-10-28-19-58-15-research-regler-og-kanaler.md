@@ -32,6 +32,6 @@ Hovedfunn:
 - Finne ut hva lovendringen LOV-2026-06-19-42 (i kraft 2026-07-01) endrer i helsepersonelloven.
 - Spørre DMP om merkenavn i prislister (kilder er uenige), og la klinikkens lege godkjenne endelige behandlingstekster.
 - Teste med klinikkens egen Facebook-side at bilder fra `m.me`/`ig.me` kommer fram i Business Suite.
-- Utføre manuelt Google-søk fra Molde («hudpleie Molde») og lese anmeldelser av konkurrentene.
+- Utføre manuelt Google-søk for «hudpleie Haugesund» og lese anmeldelser av konkurrentene der.
 - Gjøre konkurrentdelen (C) om for Haugesund.
 - Gå gjennom PRD v3, committe den, og kjøre `bmad-prd` i validate-modus.
