@@ -12,3 +12,5 @@
 - [ ] 2026-10-28 [prd-grunnlag](998-2026-10-28-19-18-58-prd-grunnlag.md) — Rydde utdaterte bookingspørsmål i `kundeintervju/sporsmal.md`
 - [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Spørre klinikken om eksisterende domene, eier og e-postløsning (PRD §12 nr. 7)
 - [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Velge stack og hostingtjeneste i arkitekturfasen, og gjøre overleveringsguiden (NFR-13) konkret for valgt leverandør
+- [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Sende spørsmålslisten og domeneguiden til klinikken, og føre svarene inn i PRD §12
+- [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Sjekke pris og organisasjonsnummer-krav for `.no` i domeneguiden mot registraren, og åpne begge PDF-ene visuelt før de sendes
