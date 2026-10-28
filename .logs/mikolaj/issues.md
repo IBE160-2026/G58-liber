@@ -19,4 +19,6 @@
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Spørre DMP om merkenavn i prislister, og la klinikkens lege godkjenne endelige behandlingstekster
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Teste at bilder sendt via `m.me`/`ig.me` kommer fram i Business Suite hos klinikken
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Manuelt Google-søk fra Molde og lese anmeldelser av konkurrentene
-- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Oppdatere PRD v2 med funnene (ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending i FR-8, FAQ, nyhetsbrev, push)
+- [x] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Oppdatere PRD v2 med funnene (ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending i FR-8, FAQ, nyhetsbrev, push) (løst 2026-10-28: PRD v3 skrevet, ikke committet)
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gjøre konkurrentdelen om for Haugesund (den ble kjørt for Molde)
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gå gjennom PRD v3, committe den og kjøre `bmad-prd` i validate-modus

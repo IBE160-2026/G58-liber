@@ -21,10 +21,11 @@ Hovedfunn:
 - Helsepersonelloven §§ 4 a/4 b verifisert (i kraft 2022-07-01).
 - Meta: et nettskjema kan ikke legge en samtale i klinikkens innboks (Instagram-API tillater bare svar etter at brukeren har skrevet først). `m.me`/`ig.me`-lenker er veien inn. Chat-pluginen er rapportert fjernet 2024-05-09, men bare vendor-kilder sier det. Det er uverifisert om bilder sendt via lenkene kommer fram i Business Suite.
 - Google avviklet FAQ-rikt resultat i 2026 (verifisert). Push på iPhone krever Hjem-skjerm-app. Ingen kilde viste at en FAQ-side reduserer henvendelser.
-- Konkurrenter (fire lest førstehånds): bare Skin Clinic Molde viser priser åpent; Velbehag har FAQ og resultatside med bilder; ingen viste nyhetsbrev, Messenger eller kontaktskjema.
+- Konkurrenter (fire lest førstehånds, **men i Molde-området, ikke Haugesund** – se feil under): bare Skin Clinic Molde viser priser åpent; Velbehag har FAQ og resultatside med bilder; ingen viste nyhetsbrev, Messenger eller kontaktskjema.
 - Anbefalinger i `research.md`: regel mot legemiddelnavn, nøytrale behandlingsnavn, ingen før/etter-bilder, `m.me`/`ig.me`-knapper i stedet for videresending, FAQ som liten infoside, nyhetsbrev utsatt, push utelatt fra v1.
 - Ikke kjørt: red-team, andre runde (depth 2) og `bmad-review` på rapporten. Hullene står som åpne spørsmål i rapporten.
-- Ingen endringer i `prd/` eller `product-brief/`.
+- **Feil i oppsettet:** Konkurrentdelen (C) ble kjørt for Molde/Romsdal, mens PRD-en sier at klinikken ligger i Haugesund (eldre notat: Salhus). Delene A, B og D gjelder hele Norge og er ikke berørt. C må gjøres om for Haugesund før den brukes til posisjonering. Notert i `research.md` og i PRD §2.4.
+- PRD oppdatert til versjon 3 (se `prd/prd.md`, `prd/addendum.md`, `prd/.memlog.md`), ikke committet: ny §2.4 med rammer fra research; FR-3 (medisinsk ansvarlig), FR-6 (ordliste), FR-8 endret til SMS og e-post, FR-9 med `m.me`/`ig.me`, FR-21 omformulert, §5.4 med begrensninger for nyhetsbrev og push, NFR-9 utvidet, NFR-10 med `LocalBusiness`, ny fasering (push ut av første versjon), nye risikoer og åpne spørsmål 15–20. Ingenting pushet. `product-brief/` er ikke endret.
 
 ### Åpne punkter
 - Lese kilden for forskrift § 7 (markedsføringshenvendelser om kosmetiske inngrep til forbrukere) og markedsføringsloven § 15 på Lovdata, og avgjøre om § 7 også gjelder SMS-påminnelser.
@@ -32,4 +33,5 @@ Hovedfunn:
 - Spørre DMP om merkenavn i prislister (kilder er uenige), og la klinikkens lege godkjenne endelige behandlingstekster.
 - Teste med klinikkens egen Facebook-side at bilder fra `m.me`/`ig.me` kommer fram i Business Suite.
 - Utføre manuelt Google-søk fra Molde («hudpleie Molde») og lese anmeldelser av konkurrentene.
-- Oppdatere PRD (v2) med funnene: ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending (FR-8), FAQ-omfang, nyhetsbrev og push.
+- Gjøre konkurrentdelen (C) om for Haugesund.
+- Gå gjennom PRD v3, committe den, og kjøre `bmad-prd` i validate-modus.
