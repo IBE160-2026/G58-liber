@@ -1,132 +1,119 @@
 ---
-title: "Product Brief: AURA SKIN Klinikk – bookingnettside"
+title: "Product Brief: AURA SKIN Klinikk – nettside"
 status: draft
 created: 2026-09-13
-updated: 2026-10-09
+updated: 2026-10-28
 ---
 
-# Product Brief: AURA SKIN Klinikk – bookingnettside
+# Product Brief: AURA SKIN Klinikk – nettside
 
 ## Sammendrag
 
-AURA SKIN Klinikk er en hudpleieklinikk i Salhus som i dag driftes nesten utelukkende gjennom Facebook — kunder må sende meldinger frem og tilbake for å finne ut hva klinikken tilbyr og for å avtale time. Det er tungvint for kundene og tidkrevende for klinikkeieren, som driver alene.
+AURA SKIN Klinikk er en hudpleieklinikk i Haugesund med to ansatte, blant dem en kosmetisk sykepleier. I dag går all kundekontakt gjennom Facebook, Instagram og telefon. Kunder sender meldinger og bilder for å finne ut hva klinikken tilbyr, hva det koster og når den er åpen. Det er tungvint for kundene og tidkrevende for klinikken, som tar imot rundt tre kunder om dagen.
 
-Dette prosjektet er en egen nettside der kunder kan lese om klinikken og behandlingene den tilbyr, se priser, og booke en ledig time selv i en kalender — uten å måtte sende en eneste melding. Klinikkeieren får et adminpanel hvor hun styrer kalender, behandlinger og priser selv. I første versjon betaler kunden i klinikken som normalt; nettbetaling via Vipps er en bevisst utsatt utvidelse.
+Behandlingene starter alltid med en konsultasjon, og mange behandlinger må godkjennes av lege. Kunden tar derfor kontakt med klinikken for å avtale konsultasjon før en time settes opp. Selvbetjent booking passer ikke til denne arbeidsflyten og er ikke en del av løsningen.
 
-Løsningen er skreddersydd for en liten enkeltmannsklinikk: enkel å bruke, uten løpende abonnementskostnad, og med klinikkens egen merkevare i sentrum.
+Dette prosjektet er en egen nettside som presenterer klinikken og behandlerne med bilder, forklarer behandlingene og prisene, og gjør det enkelt å kontakte en behandler via SMS, Facebook, Instagram eller e-post. Klinikken får et adminpanel der de oppdaterer innholdet selv, registrerer avtalte timer slik at kunden automatisk får SMS om timen, og når kundene sine med nyhetsbrev og push-varsler.
 
 ## Problemet
 
-Klinikkeieren driver AURA SKIN Klinikk alene og bruker Facebook som eneste kanal for markedsføring og booking. Det gir flere konkrete problemer:
-
-- **Ingen selvbetjening.** Kunder må sende en melding for å spørre om behandlinger, priser og ledig tid, og vente på svar — i stedet for å se dette selv og booke direkte.
-- **Uprofesjonelt førsteinntrykk.** En Facebook-side signaliserer et hobbyprosjekt, ikke en etablert klinikk, noe som kan gjøre det vanskeligere å tiltrekke nye kunder som forventer en ordentlig nettside.
-- **Tidsbruk for eieren.** Hver booking krever manuell frem-og-tilbake-kommunikasjon — tid som går fra behandlingstid.
-- **Ingen samlet oversikt.** Behandlinger og priser ligger spredt i innlegg og kommentarer på Facebook fremfor på ett sted kunden kan finne selv.
+- **Mange gjentatte spørsmål.** Kunder spør om det samme igjen og igjen: hva behandlingene innebærer, pris, åpningstider og om man kan komme uten avtale.
+- **Mange meldinger og bilder på telefonen.** Klinikken får store mengder private meldinger og bilder som må besvares manuelt ved siden av behandlingene.
+- **Manuell oppfølging av timer.** Bekreftelser og påminnelser om avtalte timer må sendes for hånd.
+- **Ingen egen kanal til kundene.** Klinikken når kundene bare gjennom sosiale medier, uten nyhetsbrev eller varsler den selv styrer.
+- **Uprofesjonelt førsteinntrykk.** En side på sosiale medier signaliserer mindre etablering enn en egen nettside.
 
 ## Løsningen
 
-En dedikert nettside for AURA SKIN Klinikk med tre kjernedeler:
+### Nettsiden
 
-1. **Informasjonsside** — presenterer klinikken og de fem behandlingskategoriene (ansiktsbehandling, laser, botox/filler, vipper/bryn, kroppsbehandling) med beskrivelser, varighet og priser, hentet fra eksisterende materiale på klinikkens Facebook-side.
-2. **Selvbetjent booking** — kunden velger behandling, ser en kalender med faktisk ledige tider (én behandler, ingen ressursvalg nødvendig) og booker selv. Bookingskjemaet samler kun det som trengs for å gjennomføre timen: navn, telefon, e-post og valgt behandling — ingen helseopplysninger (hudtilstand, allergier) samles i denne versjonen. Kunden får en bekreftelse på skjermen med tid, behandling og pris.
-3. **Adminpanel** — klinikkeieren logger inn og gjør det daglige arbeidet selv:
-   - ser dagens og ukens timer i en oversikt, med kundens navn og kontaktinfo;
-   - avlyser eller flytter en booking (f.eks. etter en telefon fra kunden);
-   - blokkerer tid — en ettermiddag, en dag eller en ferieperiode — slik at den ikke kan bookes;
-   - endrer faste åpningstider per ukedag;
-   - legger til, endrer og skjuler behandlinger, med pris og varighet.
+- **Om oss:** presentasjon av klinikken og behandlerne, med bilder av klinikken og de ansatte.
+- **Behandlinger:** egen side med alle behandlinger, for eksempel HIFU. For hver behandling står det hva den innebærer (hvordan den foregår, varighet, forventet resultat og eventuell nedetid), hva den koster, og om den krever legegodkjenning.
+- **Slik foregår det:** kunden tar kontakt og avtaler konsultasjon, deretter eventuell legegodkjenning og behandling.
+- **Praktisk info:** åpningstider 10–20, kun etter avtale (ingen drop-in), adresse i Haugesund.
+- **Send melding (kontakt og timeavtale):** en egen side der kunden skriver navn, telefonnummer, hvilken behandling det gjelder og en melding, og trykker «Send melding». Meldingen videresendes til behandleren på SMS, Facebook Messenger og/eller Instagram, slik at behandleren får den der de allerede svarer kunder. Behandleren tar så kontakt og avtaler konsultasjon eller time. Siden har i tillegg direkte lenker til SMS, Facebook, Instagram og e-post for kunder som heller vil skrive selv.
+- **Påmelding:** kunden kan melde seg på nyhetsbrev og slå på push-varsler.
 
-   Utvikleren beholder egen admin-tilgang ved siden av, for å kunne bistå med endringer ved behov.
+### Adminpanelet
 
-Betaling skjer i klinikken som i dag (kontant/kort på stedet); nettsiden endrer ikke betalingsopplevelsen i denne versjonen.
+Klinikken logger inn og gjør følgende selv:
 
-Kjerneflyten som må være ferdig og stabil før noe annet bygges: **velg behandling → se ledige tider → book → bookingen vises i adminpanelet og tiden er ikke lenger ledig.**
+- legger til, endrer og skjuler behandlinger, med beskrivelse, pris, varighet og krav om legegodkjenning;
+- endrer åpningstider, kontaktinformasjon, «Om oss»-tekst og bilder;
+- velger hvilke kanaler meldinger fra «Send melding» skal videresendes til (SMS, Facebook, Instagram), og ser alle mottatte meldinger i en oversikt;
+- registrerer en avtalt time (kunde, telefonnummer, behandling, tidspunkt), og kunden får automatisk en SMS med bekreftelse og påminnelse før timen;
+- skriver og sender nyhetsbrev til påmeldte kunder;
+- sender push-varsler, for eksempel om tilbud eller ledige timer.
 
-## Bookingregler
-
-Reglene under avgjør hva en «ledig tid» er, og er grunnlaget for testene. Verdiene er et forslag som bekreftes eller justeres i kundeintervjuet med klinikkeieren (se `kundeintervju/sporsmal.md`); alle tallverdier er innstillinger i adminpanelet eller konfigurasjonen, ikke hardkodet.
-
-| Regel | Forslag v1 |
-|---|---|
-| Åpningstider | Faste tider per ukedag (f.eks. tirsdag–fredag 10–17, lørdag 10–14). Stengte dager har ingen ledige tider. |
-| Varighet | Hver behandling har en fast varighet (f.eks. 30, 60 eller 90 min) satt av eieren. |
-| Buffer | 15 min mellom timer til rydding og klargjøring. |
-| Tidsluker | Starttider tilbys hvert 15. minutt. |
-| Ledig tid | En starttid er ledig når hele behandlingen *pluss buffer* får plass innenfor åpningstiden, uten overlapp med en annen booking eller blokkert tid. Eksempel: en 60-minutters behandling kan ikke bookes kl. 16.30 når klinikken stenger kl. 17. |
-| Korteste varsel | Tidligst 2 timer frem i tid; tider tidligere samme dag vises ikke. |
-| Lengste horisont | Inntil 8 uker frem i tid. |
-| Dobbeltbooking | To bookinger kan aldri overlappe. Sjekken skjer i databasen ved lagring, slik at to kunder som booker samme tid samtidig ikke begge får bekreftelse — den siste får beskjed om at tiden er tatt. |
-| Avbestilling | I v1 avbestiller kunden ved å kontakte klinikken; eieren avlyser i adminpanelet og tiden blir ledig igjen umiddelbart. Avbestillingsfrist (f.eks. 24 timer) vises som tekst på nettsiden. |
-| Sletting av data | Kundeopplysninger på gjennomførte eller avlyste bookinger slettes/anonymiseres automatisk etter en fast periode (forslag: 12 måneder). |
+Utvikleren beholder egen admin-tilgang for å kunne bistå ved behov. Betaling skjer i klinikken.
 
 ## Hva gjør dette annerledes
 
-De fleste norske hudpleie- og skjønnhetsklinikker løser booking med et abonnement på en ferdig SaaS-plattform (f.eks. Timma, Fresha, Eazybook) fremfor en egen nettside (basert på egen research, ikke bekreftet med klinikkeier). Fordelen med en skreddersydd løsning her er:
+Mange klinikker bruker en ferdig bookingplattform (f.eks. Timma, Fresha, Eazybook). For AURA SKIN Klinikk passer ikke det: behandlingene krever konsultasjon og legegodkjenning før time kan settes, så automatisk booking ville skapt flere avklaringer, ikke færre. Fordelen med en skreddersydd nettside er:
 
-- **Egen merkevare, ikke en generisk bookingportal.** Nettsiden kan se ut og føles som AURA SKIN Klinikk, ikke som en av mange klinikker inne i en tredjeparts app.
-- **Ingen løpende abonnementskostnad** for en klinikk som drives av én person med begrenset budsjett — engangsutvikling fremfor 200–1000+ kr/mnd i SaaS-avgift.
-- **Enkelhet tilpasset faktisk behov.** Klinikken har én behandler; mange SaaS-verktøy er bygget for flere ansatte/ressurser og bærer kompleksitet klinikken ikke trenger.
-
-En ferdig SaaS-løsning kunne dekket mye av det samme funksjonelt. Fordelen her ligger ikke i unik teknologi, men i skreddersøm, merkevarekontroll og en løsning som er dimensjonert for klinikkens faktiske behov.
+- **Tilpasset klinikkens arbeidsflyt:** kunden blir informert før kontakt, og timen settes av klinikken, som så får automatisk SMS-oppfølging.
+- **Egen kanal til kundene:** nyhetsbrev og push-varsler som klinikken styrer selv.
+- **Egen merkevare:** nettsiden ser ut og føles som AURA SKIN Klinikk.
 
 ## Hvem dette er for
 
-**Primær: klinikkeieren.** Driver AURA SKIN Klinikk alene i Salhus. Trenger å bruke mindre tid på booking-kommunikasjon og fremstå mer profesjonelt overfor nye kunder. Suksess for henne = færre meldinger å svare på manuelt, en kalender hun stoler på, og et adminpanel hun faktisk mestrer selv uten teknisk hjelp.
+**Primær: klinikken.** To ansatte, blant dem en kosmetisk sykepleier. Suksess = færre gjentatte spørsmål, mindre manuell oppfølging av timer, og innhold de oppdaterer selv uten teknisk hjelp.
 
-**Primær: klinikkens kunder.** Vil raskt finne ut hva klinikken tilbyr, hva det koster, og booke en ledig time uten å vente på svar — som oftest fra mobilen. Suksess for dem = booking tar under et par minutter, uten meldingsutveksling.
+**Primær: klinikkens kunder.** Vil raskt finne ut hva klinikken tilbyr, hvem behandlerne er, hva det koster og hvordan de tar kontakt, som oftest fra mobilen.
 
 ## Suksesskriterier
 
-### Funksjonelle kriterier (testbare i v1)
+### Funksjonelle kriterier
 
-1. En kunde kan velge en behandling, se ledige tider og booke en time; etter bookingen er tiden ikke lenger ledig i kalenderen.
-2. Ledige tider følger bookingreglene: ingen tider utenfor åpningstid, ingen tider der behandling + buffer går over stengetid, ingen tider i blokkert periode, og ingen tider utenfor korteste varsel / lengste horisont.
-3. To kunder kan ikke booke overlappende tider — heller ikke når de sender bookingen samtidig.
-4. En ny booking vises i adminpanelets oversikt med tid, behandling og kundens kontaktinfo.
-5. Når eieren avlyser en booking eller fjerner en blokkering, blir tiden ledig igjen for kundene.
-6. Når eieren endrer pris, varighet eller åpningstider, gjenspeiles endringen på informasjonssiden og i ledige tider uten at utvikleren må gjøre noe.
-7. Adminpanelet er kun tilgjengelig etter innlogging; kunder ser aldri andres bookinger.
-8. Bookingflyten kan fullføres på en mobilskjerm.
-9. Appen kan startes lokalt etter README med eksempelbehandlinger, en testkalender og en test-admin — uten tilgang til klinikkens hosting eller andre private nøkler.
+1. Behandlingssiden viser hver synlige behandling med hva den innebærer og hva den koster.
+2. «Om oss» viser presentasjon og bilder av klinikken og behandlerne.
+3. Åpningstider (10–20) og «kun etter avtale» vises tydelig.
+4. En melding sendt via «Send melding» kommer frem til behandleren på de valgte kanalene og vises i adminpanelet; kunden får bekreftelse på skjermen om at meldingen er sendt.
+   Direkte lenker åpner riktig kanal (SMS, Facebook, Instagram, e-post) på mobil.
+5. Når klinikken endrer innhold i adminpanelet, vises endringen på nettsiden uten at utvikleren må gjøre noe.
+6. Når klinikken registrerer en time, sendes en SMS-bekreftelse til kunden, og en påminnelse før timen.
+7. Kunder kan melde seg på og av nyhetsbrev og push-varsler; klinikken kan sende til de påmeldte.
+8. Adminpanelet er kun tilgjengelig etter innlogging.
+9. Nettsiden fungerer godt på mobilskjerm.
+10. Appen kan startes lokalt etter README med seed-data og en test-admin; SMS, e-post og push kan testes uten ekte utsending.
 
-### Forretningsmål (følges opp med klinikkeieren etter lansering)
+### Forretningsmål (følges opp med klinikken etter lansering)
 
-- Klinikkeieren håndterer bookinger i det daglige uten teknisk hjelp.
-- Antall bookingrelaterte meldinger på Facebook/telefon går ned sammenlignet med i dag (ingen baseline er målt ennå).
-- Nettsiden oppleves gjennomført og profesjonell, på nivå med det kunder forventer av en etablert klinikk.
+- Klinikken oppdaterer innholdet og registrerer timer selv uten teknisk hjelp.
+- Færre gjentatte spørsmål om pris, behandlinger og åpningstider.
+- Færre uteblitte timer takket være SMS-påminnelser.
+- Nettsiden oppleves gjennomført og profesjonell.
 
 ## Omfang
 
-**Med i første versjon (v1):**
-- Informasjonsside om klinikken og de fem behandlingskategoriene, med priser og varighet.
-- Kalendervisning med faktisk ledige tider for én behandler, etter bookingreglene over.
-- Selvbetjent booking med enkelt kontaktskjema (navn, telefon, e-post, valgt behandling) — ingen helse-/hudopplysninger.
-- Beskyttelse mot dobbeltbooking i databasen.
-- Betaling i klinikken (ingen nettbetaling).
-- Adminpanel med innlogging: oversikt over timer, avlyse/flytte booking, blokkere tid, åpningstider og behandlinger/priser. Egen tilgang for utvikleren.
-- Lokal kjøring med seed-data (fiktive behandlinger, testkalender, test-admin og fiktive testkunder).
+**Med:**
+- Nettside med om oss, bilder av klinikken og behandlerne, behandlinger med priser, slik foregår det, åpningstider og kontakt.
+- «Send melding»-side som videresender kundens melding til behandleren på SMS, Facebook og/eller Instagram, pluss direkte kontaktlenker.
+- Adminpanel for innhold, bilder og åpningstider.
+- Registrering av avtalte timer med automatisk SMS-bekreftelse og påminnelse.
+- Nyhetsbrev med på- og avmelding.
+- Push-varsler med på- og avmelding.
+- Lokal kjøring med seed-data (fiktive behandlinger, test-admin og fiktive testkunder).
 
-**Trinn 2 (når kjerneflyten er ferdig og stabil):**
-- Bekreftelse på e-post ved booking, med en lenke kunden kan bruke til å avbestille selv innenfor avbestillingsfristen.
-
-**Eksplisitt utenfor v1 (bevisst utsatt, ikke avvist):**
-- Nettbetaling / depositum via Vipps — planlagt som v2, se Visjon.
-- SMS-påminnelser.
+**Utenfor:**
+- Kalender og selvbetjent booking: passer ikke klinikkens arbeidsflyt med konsultasjon og legegodkjenning.
+- Nettbetaling.
 - Kundekonto/innlogging for kunder.
-- Innsamling av hudtilstand/allergi-informasjon i bookingskjemaet — ville utløst strengere GDPR-krav (helsedata, art. 9); ikke en del av planen nå.
-- Flere behandlere / ressursbasert kalender — klinikken har én behandler i dag.
-- Domene og produksjonshosting — klinikkens sak, og ikke nødvendig for at løsningen kan kjøres og vurderes lokalt.
+- Opplasting av bilder og innsamling av helseinformasjon fra kunder: ville utløst strengere GDPR-krav (helsedata, art. 9).
+- Domene og produksjonshosting: klinikkens sak.
 
 ## Tekniske rammer
 
 Konkret stakk velges og begrunnes i arkitekturfasen, innenfor disse rammene:
 
-- **Enkel stakk med én database.** Velg vanlig, godt dokumentert teknologi; ingen mer kompleksitet enn en bookingnettside for én behandler trenger.
-- **Kjørbar lokalt.** Én kommando (eller noen få steg i README) starter appen med seed-data. Ingen betalte API-er eller eksterne kontoer kreves i v1.
-- **Hemmeligheter og data.** Repoet er offentlig: admin-passord og andre hemmeligheter ligger i `.env` utenfor Git (med en `.env.example` i repoet), og kun fiktive testkunder brukes i utvikling og testing — ekte kundedata committes aldri.
-- **Innhold fra Facebook.** Bilder og tekster fra klinikkens Facebook-side legges bare i repoet etter avklaring med klinikkeieren; ellers brukes plassholdere.
+- **Enkel stakk med én database.** Vanlig, godt dokumentert teknologi.
+- **Kjørbar lokalt.** Én kommando (eller noen få steg i README) starter appen med seed-data.
+- **Eksterne tjenester bak et grensesnitt.** SMS, e-post og push sendes via en ekstern leverandør i produksjon, men lokalt brukes en testversjon som logger meldingene i stedet for å sende dem. Ingen betalte kontoer kreves for å kjøre og vurdere løsningen.
+- **Videresending til Facebook og Instagram.** SMS-videresending er enkelt å få til. Å sende meldinger inn i Messenger eller Instagram krever Metas API med bedriftskonto og godkjenning, så det avklares i arkitekturfasen. Om det ikke lar seg gjøre, sendes meldingen på SMS (og eventuelt e-post), og nettsiden lenker direkte til klinikkens Messenger og Instagram.
+- **Personvern.** Telefonnummer og e-post lagres kun til formålet (timeavtaler, nyhetsbrev, varsler). Nyhetsbrev og push krever aktivt samtykke, og kunden kan melde seg av når som helst.
+- **Hemmeligheter.** Repoet er offentlig: hemmeligheter ligger i `.env` utenfor Git, med `.env.example` i repoet. Ekte kundedata committes aldri.
+- **Bilder.** Bilder av klinikken og de ansatte legges bare i repoet etter samtykke fra klinikken; ellers brukes plassholdere.
 
 ## Visjon
 
-Neste steg etter en fungerende v1 er å legge til nettbetaling via Vipps — enten for hele beløpet eller som depositum ved booking for å redusere no-shows — en vanlig praksis blant sammenlignbare klinikker. Om løsningen fungerer godt for AURA SKIN Klinikk, kan den også bli en dokumentert, gjenbrukbar mal for bookingnettsider til andre små enkeltmannsklinikker.
+Nettsiden kan bli klinikkens hovedkanal for kundekommunikasjon. Videre kan den utvides med nettbetaling, og den kan bli en gjenbrukbar mal for nettsider til andre små klinikker.
