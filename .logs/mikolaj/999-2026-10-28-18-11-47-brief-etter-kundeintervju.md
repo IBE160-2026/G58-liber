@@ -21,3 +21,18 @@ Oppdatere brief, PRD og intervjudokument etter møtet med klinikkeieren. Klinikk
 - Bekrefte at «Hifo» i notatene betyr behandlingen HIFU.
 - Undersøke om det går å videresende meldinger til Messenger/Instagram via Metas API, eller om reserveløsningen med SMS/e-post må brukes.
 - Åpne spørsmål i PRD §9: reseptpliktige legemidler, Meta-bedriftskonto, mottaker per behandler, hvem som betaler for SMS, domene/hosting og frist.
+
+## 2026-10-28 kl. 19:00 — Mikolaj
+
+### Oppgave
+Forklare problemet med videresending til Messenger/Instagram og lage konkrete spørsmål til klinikkeieren.
+
+### Plan
+- Legge inn en oppfølgingsdel i kundeintervju/sporsmal.md med seks spørsmål og fylle ut svar der notatene dekker det.
+
+### Resultat
+- Ny del «Oppfølging: videresending av meldinger» i kundeintervju/sporsmal.md. Ingen av de seks spørsmålene er fullt avklart; spørsmål 4 er delvis besvart.
+- Commit e947668, pushet til origin/main.
+
+### Åpne punkter
+- Få svar fra klinikken på de seks spørsmålene og oppdatere brief og PRD (FR-8) etter om Meta-løsningen kan brukes.
