@@ -10,3 +10,5 @@
 - [ ] 2026-10-28 [prd-grunnlag](998-2026-10-28-19-18-58-prd-grunnlag.md) — Få behandlingsliste, priser og legegodkjenningskrav fra klinikken
 - [ ] 2026-10-28 [prd-grunnlag](998-2026-10-28-19-18-58-prd-grunnlag.md) — Verifisere regelverk for omtale av reseptpliktige behandlinger og Metas regler mot offisiell dokumentasjon
 - [ ] 2026-10-28 [prd-grunnlag](998-2026-10-28-19-18-58-prd-grunnlag.md) — Rydde utdaterte bookingspørsmål i `kundeintervju/sporsmal.md`
+- [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Spørre klinikken om eksisterende domene, eier og e-postløsning (PRD §12 nr. 7)
+- [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Velge stack og hostingtjeneste i arkitekturfasen, og gjøre overleveringsguiden (NFR-13) konkret for valgt leverandør
