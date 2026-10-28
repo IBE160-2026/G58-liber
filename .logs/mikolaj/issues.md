@@ -2,7 +2,7 @@
 
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Avklare klinikkens sted: Salhus eller Haugesund
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Bekrefte at «Hifo» betyr HIFU
-- [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Undersøke om meldinger kan videresendes til Messenger/Instagram via Metas API
+- [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Undersøke om meldinger kan videresendes til Messenger/Instagram via Metas API (løst 2026-10-28: nettskjema kan ikke videresendes til innboksen, se [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md))
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Få svar fra klinikken på de åpne spørsmålene i PRD §9
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Få svar fra klinikken på de seks oppfølgingsspørsmålene om videresending, og oppdater brief og PRD (FR-8) etter om Meta-løsningen kan brukes
 - [ ] 2026-10-28 [prd-grunnlag](998-2026-10-28-19-18-58-prd-grunnlag.md) — Avgjøre om en FAQ-side skal inn i PRD-en
@@ -14,3 +14,9 @@
 - [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Velge stack og hostingtjeneste i arkitekturfasen, og gjøre overleveringsguiden (NFR-13) konkret for valgt leverandør
 - [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Sende spørsmålslisten og domeneguiden til klinikken, og føre svarene inn i PRD §12
 - [ ] 2026-10-28 [domene-og-hosting](997-2026-10-28-19-35-00-domene-og-hosting.md) — Sjekke pris og organisasjonsnummer-krav for `.no` i domeneguiden mot registraren, og åpne begge PDF-ene visuelt før de sendes
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Lese forskrift § 7 og markedsføringsloven § 15 på Lovdata, og avgjøre om § 7 også gjelder SMS-påminnelser
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Finne ut hva lovendringen LOV-2026-06-19-42 endrer i helsepersonelloven (i kraft 2026-07-01)
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Spørre DMP om merkenavn i prislister, og la klinikkens lege godkjenne endelige behandlingstekster
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Teste at bilder sendt via `m.me`/`ig.me` kommer fram i Business Suite hos klinikken
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Manuelt Google-søk fra Molde og lese anmeldelser av konkurrentene
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Oppdatere PRD v2 med funnene (ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending i FR-8, FAQ, nyhetsbrev, push)
