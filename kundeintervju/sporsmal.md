@@ -75,3 +75,18 @@ _Dato:_ 2026-10-28
 - **Ønsket innhold:** om oss med presentasjon og bilder av klinikken og behandlerne; info om behandlinger (f.eks. HIFU), hva de innebærer og pris; åpningstider.
 - **Kontakt:** en «Send melding»-side der meldingen videresendes til behandleren på SMS, Facebook og/eller Instagram, pluss lenker til SMS, Facebook, Instagram og e-post.
 - **Kundekommunikasjon:** SMS til kunder om avtalte timer, nyhetsbrev og push-varsler.
+
+## Oppfølging: videresending av meldinger
+
+Avgjør om meldinger fra «Send melding»-siden kan sendes inn i Messenger og Instagram (krever Metas API), eller om SMS brukes. Svar hentet fra intervjunotatene 2026-10-28 der de finnes; resten må spørres om.
+
+| Spørsmål | Svar |
+|---|---|
+| 1. Er Facebook-siden til klinikken en bedriftsside, eller en privat profil? | Ikke avklart. Klinikken bruker Facebook til kundekontakt i dag. |
+| 2. Er Instagram-kontoen en bedrifts-/profesjonell konto, og er den koblet til Facebook-siden? | Ikke avklart. Klinikken bruker Instagram til kundekontakt i dag. |
+| 3. Hvem er administrator på Facebook-siden, og kan utvikleren få tilgang til å sette opp en kobling? | Ikke avklart. |
+| 4. Hvor svarer dere helst på meldinger: SMS, Messenger eller Instagram? Er det nok at meldingen kommer på SMS? | Delvis: foretrekker private meldinger, i dag på Facebook/Instagram og telefon. Ikke avklart om SMS alene er nok. |
+| 5. Skal meldingene gå til ett felles nummer/én konto, eller til hver behandler? | Ikke avklart. Klinikken har to ansatte. |
+| 6. Hvilket mobilnummer skal meldingene sendes til? | Ikke avklart. |
+
+**Slik brukes svarene:** Nei på 1 eller 2 → SMS + direkte lenker til Messenger/Instagram. Ja på 1–3 → Meta-løsningen undersøkes i arkitekturfasen. Ja på 4 → SMS velges uansett.
