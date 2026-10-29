@@ -36,3 +36,5 @@
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Rydde motstrid om push i PRD (FR-15/FR-17 vs. §9, SM-1 validerer FR-17)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Legge cookies/samtykkebanner og statistikk inn i PRD (kart i FR-4 kan sette cookies)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Kontrastsjekke tynn overskriftsfont på rosa bakgrunn mot WCAG AA (NFR-3) i designfasen
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Føre inn i PRD (FR-3) at «Om oss» viser to behandlere med bilde, navn og rolle (bilder, navn og samtykke fra klinikken er allerede åpent over)
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Beslutte om designforslaget (artefakt 94QD2GUanVRctBpxEKVhCG) skal lagres i repoet, og koble hamburger-knappen til menyrammen
