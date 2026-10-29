@@ -24,3 +24,6 @@
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gå gjennom PRD v3, committe den og kjøre `bmad-prd` i validate-modus
 - [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Sende oppdatert melding/PDF til klinikkeieren og få svar på om Instagram er en profesjonell konto koblet til Facebook-siden, og hvem som er administrator (spm. 6–7)
 - [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Verifisere ordlyden «Bytt til personlig konto» mot norsk Instagram-grensesnitt, og åpne den nye PDF-en visuelt før den sendes
+- [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Få navn, bakgrunn og bilder av de to behandlerne, og behandlingsliste med priser, fra klinikken
+- [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Avklare om meldinger fra Kontakt oss går til felles mottaker eller valgt behandler (spm. 9)
+- [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Kjøre bmad-review (struktur og prosa) på brief v2
