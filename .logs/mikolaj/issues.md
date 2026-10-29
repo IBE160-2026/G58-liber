@@ -27,3 +27,4 @@
 - [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Få navn, bakgrunn og bilder av de to behandlerne, og behandlingsliste med priser, fra klinikken
 - [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Avklare om meldinger fra Kontakt oss går til felles mottaker eller valgt behandler (spm. 9)
 - [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Kjøre bmad-review (struktur og prosa) på brief v2
+- [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Avstemme PRD v3 (FR-8, §9) med briefens ønske om Messenger/Instagram-videresending, og undersøke i arkitekturfasen om Meta tillater det
