@@ -32,3 +32,7 @@
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Kjøre `bmad-prd` i valideringsmodus på PRD v4 (reviewer-gate er ikke kjørt)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Undersøke i arkitekturfasen om Meta tillater videresending fra skjema til Messenger/Instagram, hvis klinikken fortsatt vil ha det (FR-8)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Sende meldingen til klinikken (behandlinger/priser, lege/medisinsk ansvarlig, legemiddelnavn, mottaker, administrator), og føre svarene inn i PRD §12
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Spørre klinikken om kundeomtaler, knappetekst og meny, og om domene/one.com-konto (PRD §12 spm. 7, 21, 22)
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Rydde motstrid om push i PRD (FR-15/FR-17 vs. §9, SM-1 validerer FR-17)
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Legge cookies/samtykkebanner og statistikk inn i PRD (kart i FR-4 kan sette cookies)
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Kontrastsjekke tynn overskriftsfont på rosa bakgrunn mot WCAG AA (NFR-3) i designfasen
