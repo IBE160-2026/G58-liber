@@ -15,7 +15,7 @@ Tidligere utkast la opp til at kunden booker direkte i en kalender. Etter kundei
 
 ## Videresending til Facebook og Instagram (FR-8, FR-9)
 
-Avgjort etter research 2026-10-28: videresending fra skjemaet til Messenger og Instagram bygges ikke.
+Status etter research 2026-10-28 og brief versjon 2 (2026-10-29): videresending fra skjemaet til Messenger og Instagram er ikke med i første versjon. Klinikken ønsker det, og briefen fører det som et ønske som avgjøres i arkitekturfasen; PRD-en garanterer bare SMS og e-post pluss samtalelenker.
 
 - Metas Instagram Messaging API lar en app sende en melding til en bruker først etter at brukeren har skrevet til kontoen. For Messenger åpnes meldingsvinduet (24 timer, 7 dager etter annonser med «Click-to-Messenger/Direct») av brukerhandlinger. En skjemainnsending står ikke på listen. Slutningen «skjema kan ikke åpne et vindu» er utledet, ikke ordrett bekreftet.
 - Et eget Meta-oppsett ville krevd en Meta-app, tillatelsen `instagram_business_manage_messages` og webhook-infrastruktur. Krav til App Review og Business Verification er ikke undersøkt.

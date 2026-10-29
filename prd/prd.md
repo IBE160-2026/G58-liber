@@ -1,22 +1,22 @@
 ---
 title: "PRD: AURA SKIN Klinikk – nettside"
 status: draft
-version: 3
+version: 4
 created: 2026-09-27
-updated: 2026-10-28
+updated: 2026-10-29
 ---
 
 # PRD: AURA SKIN Klinikk – nettside
 
 ## 0. Om dokumentet
 
-Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på produktbriefen (`product-brief/brief.md`), kundeintervjuet 2026-10-28 (`kundeintervju/sporsmal.md`) og tilleggsmaterialet i `product-brief/addendum.md` og `prd/addendum.md`, og samler det viktigste fra disse i ett dokument. Versjon 3 legger i tillegg inn funnene fra research av regler og kanaler (2026-10-28, `.docs/planning-artifacts/research/domain-norwegian-clinic-site-rules-and-channels-2026-10-28/research.md`). Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
+Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på produktbriefen (`product-brief/brief.md`), kundeintervjuet 2026-10-28 (`kundeintervju/sporsmal.md`) og tilleggsmaterialet i `product-brief/addendum.md` og `prd/addendum.md`, og samler det viktigste fra disse i ett dokument. Versjon 3 legger i tillegg inn funnene fra research av regler og kanaler (2026-10-28, `.docs/planning-artifacts/research/domain-norwegian-clinic-site-rules-and-channels-2026-10-28/research.md`). Versjon 4 (2026-10-29) samkjører PRD-en med produktbrief versjon 2: klinikkens ønske om at meldinger også kan sendes til Messenger og Instagram er ført som et ønske som avgjøres i arkitekturfasen (FR-8, §9, §10), adressen Bøvegen 60, 4260 Salhus (Karmøy) er ført konsekvent, og åpne spørsmål og antakelser er gått gjennom (ingen er lukket, siden klinikken ikke har svart ennå). Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
 
 - Begrepene i §4 brukes konsekvent. Kravene er nummerert FR-1 til FR-21 (funksjon) og NFR-1 til NFR-13 (kvalitet); numrene er stabile mellom versjoner.
 - Antakelser som må bekreftes er merket `[ASSUMPTION]` og samlet i §13. Forslag som ikke er besluttet er merket `[FORSLAG]`.
 - Funn fra researchen som ikke er verifisert mot lovtekst eller kildedokumentasjon er merket `[ASSUMPTION]`. Les lovtekst på Lovdata og dmp.no før de brukes som endelige krav.
 - Tekniske valg og bakgrunn står i `prd/addendum.md`. Oppsummering av avklart/uklart/forslag står i `prd/prd-grunnlag.md`.
-- Forrige versjon (versjon 2) finnes i git-historikken; versjon 1 (FR-1–FR-20) siste gang i commit `0e38f3a`.
+- Forrige versjon (versjon 3) finnes i git-historikken, sammen med versjon 2; versjon 1 (FR-1–FR-20) siste gang i commit `0e38f3a`.
 
 ## 1. Visjon
 
@@ -30,7 +30,7 @@ Klinikken styrer innholdet selv fra et enkelt adminpanel. Når en time er avtalt
 
 | Tema | Avklart |
 |---|---|
-| Klinikken | To ansatte, blant dem en kosmetisk sykepleier. Bøvegen 60, 4260 Salhus (Karmøy). |
+| Klinikken | To ansatte, blant dem en kosmetisk sykepleier. Bøvegen 60, 4260 Salhus (Karmøy). Har ingen nettside i dag (bekreftet 2026-10-29). |
 | Kapasitet | Rundt 3 kunder om dagen, ca. 1 time hver. |
 | Åpningstider | 10–20, kun etter avtale. Ingen drop-in. |
 | Arbeidsflyt | Konsultasjon alltid først. Mange behandlinger må godkjennes av lege. |
@@ -187,7 +187,7 @@ Kunden kan sende en melding til klinikken ved å oppgi navn, mobilnummer, ønske
 En innsendt melding videresendes til behandleren på SMS og e-post.
 - Meldingen inneholder kundens navn, mobilnummer, ønsket behandling og fritekst.
 - Feiler én kanal, sendes meldingen likevel på den andre, og den lagres alltid i adminpanelet.
-- Videresending til Messenger eller Instagram er ikke et krav. Metas meldings-API lar en side bare svare brukere som har skrevet først, og et nettskjema er ikke en handling som åpner meldingsvinduet. `[ASSUMPTION: utledet av Metas vindusregler og API-dokumentasjon; ingen Meta-side sier ordrett at en skjemainnsending ikke kan åpne et vindu]`
+- Videresending til Messenger eller Instagram er ikke et krav i første versjon. Klinikken ønsker det, og briefen (versjon 2) fører det som et ønske som avgjøres i arkitekturfasen; SMS og e-post er garantert, og samtalelenkene (FR-9) er reserveløsningen. Metas meldings-API lar en side bare svare brukere som har skrevet først, og et nettskjema er ikke en handling som åpner meldingsvinduet. `[ASSUMPTION: utledet av Metas vindusregler og API-dokumentasjon; ingen Meta-side sier ordrett at en skjemainnsending ikke kan åpne et vindu]`
 
 #### FR-9: Direkte kontaktlenker
 Kunden kan også kontakte klinikken direkte via lenker som åpner SMS, Facebook Messenger (`m.me`), Instagram (`ig.me`) eller e-post.
@@ -320,13 +320,13 @@ Forslag til rekkefølge, som avtales når omfanget for nyhetsbrev og push er avk
 3. **Nyhetsbrev:** FR-15–FR-16, begrenset til innhold som ikke omtaler injeksjons- eller fillerbehandlinger, og først etter at forskriften § 7 og markedsføringsloven § 15 er lest i fulltekst og avklart.
 4. **Push (FR-17):** ikke med i første versjon. Vurderes bare hvis klinikken ber om det etter lansering.
 
-Videresending til Messenger og Instagram via Metas API er tatt ut av omfanget (FR-8).
+Videresending til Messenger og Instagram via Metas API er ikke med i første versjon. Klinikkens ønske om det avgjøres i arkitekturfasen, etter at klinikken har svart om Facebook-siden og Instagram-kontoen (spørsmål 1) og Meta-reglene er testet (FR-8, §10).
 
 ## 10. Risikoer
 
 | Risiko | Konsekvens | Tiltak |
 |---|---|---|
-| Meta tillater ikke at et nettskjema sender meldinger inn i klinikkens innboks. Meta er bygget for at kunden skriver først. (Inntruffet: researchen bekrefter at det ikke er mulig.) | Klinikkens ønske om videresending til Messenger og Instagram oppfylles ikke. | FR-8 er endret til SMS og e-post pluss `m.me`- og `ig.me`-lenker (FR-9). Test at bilder via lenkene kommer frem i klinikkens innboks. |
+| Meta tillater ikke at et nettskjema sender meldinger inn i klinikkens innboks. Meta er bygget for at kunden skriver først. (Inntruffet: researchen bekrefter at det ikke er mulig.) | Klinikkens ønske om videresending til Messenger og Instagram oppfylles ikke. | FR-8 er endret til SMS og e-post pluss `m.me`- og `ig.me`-lenker (FR-9). Ønsket står i briefen og avgjøres i arkitekturfasen. Test at bilder via lenkene kommer frem i klinikkens innboks. |
 | Bilder fra kunder kommer ikke frem via `m.me`/`ig.me`. | Klinikken får bildene på en annen måte enn i dag. | Test med klinikkens egen side før lansering; ellers avtal bildeopplasting i konsultasjonen (spørsmål 14). |
 | Nyhetsbrev om kosmetiske inngrep er forbudt (forskriften § 7). | FR-15–FR-16 kan ikke brukes til tilbud på injeksjoner og fillers. | Begrens innholdet; les § 7 og markedsføringsloven § 15 i fulltekst og avklar med klinikkens lege eller DMP før bygging. |
 | SMS-misbruk eller spam på skjemaet. | Kostnad og støy. | Rate-limiting, bot-beskyttelse, tak på utsending (NFR-4). |
@@ -368,8 +368,8 @@ Videresending til Messenger og Instagram via Metas API er tatt ut av omfanget (F
 
 | # | Spørsmål | Hvem |
 |---|---|---|
-| 1 | Er Facebook-siden en bedriftsside og Instagram en bedriftskonto koblet til den? Hvem er administrator? Holder det med SMS og e-post som mottakskanal, med `m.me`/`ig.me`-lenker for de som vil skrive i Messenger eller Instagram? Videresending fra skjemaet til Meta er ikke mulig (§2.4). (Seks oppfølgingsspørsmål i `kundeintervju/sporsmal.md`.) | Klinikken |
-| 2 | Hvilke behandlinger finnes, hva koster de, og hvilke krever legegodkjenning? Bekreft at «Hifo» er HIFU. | Klinikken |
+| 1 | Facebook-siden er bekreftet som en bedriftsside, og Instagram-kontoen er en profesjonell konto koblet til den (2026-10-29). Hvem er administrator? Holder det med SMS og e-post som mottakskanal, med `m.me`/`ig.me`-lenker for de som vil skrive i Messenger eller Instagram, eller vil klinikken fortsatt ha forsøk på videresending til Meta (§2.4, FR-8)? (Spørsmål 6–7 i `kundeintervju/sporsmal-oppfolging.md`.) | Klinikken |
+| 2 | Hvilke behandlinger finnes, hva koster de, og hvilke krever legegodkjenning? «Hifo» er bekreftet som HIFU (2026-10-29). | Klinikken |
 | 3 | Hvem er legen (ansatt, ekstern, samarbeidspartner), og skal siden nevne legen? | Klinikken |
 | 4 | Hvilke behandlinger bruker reseptpliktige legemidler, og hvilke betegnelser skal brukes? | Klinikken |
 | 5 | Skal meldinger gå til én felles mottaker eller til en bestemt behandler? Hvilket mobilnummer? | Klinikken |
@@ -379,9 +379,9 @@ Videresending til Messenger og Instagram via Metas API er tatt ut av omfanget (F
 | # | Spørsmål | Hvem |
 |---|---|---|
 | 6 | Hvem betaler for SMS-utsending, og hva er forventet volum? | Klinikken |
-| 7 | Domene og hosting: har klinikken domene i dag, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. | Klinikken og utvikleren |
+| 7 | Klinikken har ingen nettside i dag (bekreftet 2026-10-29). Domene og hosting: har klinikken et domene eller e-post på eget domene, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. | Klinikken og utvikleren |
 | 8 | Når skal nettsiden være ferdig? | Klinikken |
-| 9 | Adresse: Bøvegen 60, 4260 Salhus (oppgitt 2026-10-29). Kommunen (Karmøy) er ikke bekreftet av klinikken. | Klinikken |
+| 9 | Adresse: Bøvegen 60, 4260 Salhus (oppgitt 2026-10-29). Kommunen (Karmøy) er ikke bekreftet av klinikken (spørsmål 23 i `kundeintervju/sporsmal-oppfolging.md`). | Klinikken |
 | 10 | Logo, farger, stil og bilder. Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
 | 11 | Ønsker klinikken nyhetsbrev og push, hvor ofte, og hvem skriver innholdet? | Klinikken |
 | 12 | Hva er antall henvendelser og gjentatte spørsmål per uke i dag (baseline for SM-3)? | Klinikken |

@@ -69,8 +69,8 @@ Sortert etter hvor mye svaret påvirker PRD-en.
 
 ### Må avklares før PRD-en låses
 
-1. **Messenger/Instagram-videresending (FR-8).** Seks oppfølgingsspørsmål står ubesvart i `kundeintervju/sporsmal.md`: bedriftsside eller privat profil? Instagram-bedriftskonto koblet til siden? Hvem er administrator? Foretrukket mottakskanal, og holder SMS? Felles mottaker eller per behandler? Hvilket nummer?
-2. **Hvilke behandlinger finnes, og hva koster de?** Ingen behandlingsliste eller prisliste er mottatt. «HIFU» er eneste navngitte behandling, og «Hifo» i notatene er ikke bekreftet som HIFU.
+1. **Messenger/Instagram-videresending (FR-8).** Seks oppfølgingsspørsmål står ubesvart i `kundeintervju/sporsmal.md`: ~~bedriftsside eller privat profil?~~ (bekreftet bedriftsside 2026-10-29) ~~Instagram-bedriftskonto koblet til siden?~~ (profesjonell konto koblet til siden, bekreftet 2026-10-29) Hvem er administrator? Foretrukket mottakskanal, og holder SMS? Felles mottaker eller per behandler? Hvilket nummer?
+2. **Hvilke behandlinger finnes, og hva koster de?** Ingen behandlingsliste eller prisliste er mottatt. «HIFU» er eneste navngitte behandling, og «Hifo» i notatene er bekreftet som HIFU (2026-10-29).
 3. **Hvilke behandlinger krever legegodkjenning**, og hvem er legen (ansatt, ekstern, fast samarbeidspartner)? Skal siden nevne legen?
 4. **Reseptpliktige legemidler (FR-6/NFR-9).** Hvilke behandlinger bruker slike, og hvilke betegnelser vil klinikken bruke?
 5. **Mottaker per melding.** Én felles mottaker eller den behandleren kunden velger? Skal kunden kunne velge behandler?
