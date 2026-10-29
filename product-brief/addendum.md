@@ -2,7 +2,7 @@
 title: "Addendum: AURA SKIN Klinikk – nettside"
 status: draft
 created: 2026-09-13
-updated: 2026-10-28
+updated: 2026-10-29
 ---
 
 # Addendum
@@ -30,9 +30,24 @@ Norske hudpleie-/skjønnhetsklinikker bruker typisk ferdige SaaS-plattformer:
 
 Vurdering: disse plattformene er bygget rundt selvbetjent booking, som ikke passer en klinikk der konsultasjon og legegodkjenning kommer først. En skreddersydd nettside konkurrerer på tilpasning til arbeidsflyten, merkevarekontroll og en egen kanal til kundene.
 
+## Endringer i versjon 2 (2026-10-29)
+
+- **Omfang snevret inn til kjernen:** Om oss, Behandlinger og Kontakt oss, pluss adminpanel for innhold og meldinger. Brukerens ønske, i tråd med PRD v3 §9.
+- **Fase 2:** registrering av avtalte timer med SMS-bekreftelse og påminnelse (var en del av versjon 1 av briefen).
+- **Tatt ut av versjon 1:** push-varsler og nyhetsbrev. Researchen 2026-10-28 fant at forskriften om markedsføring av kosmetiske inngrep § 7 trolig forbyr markedsføringshenvendelser om slike inngrep på e-post og SMS, at push på iPhone krever at siden er lagt på hjemskjermen, og at klinikkens volum er lavt.
+- **Adresse:** Bøvegen 60, 4260 Salhus (Karmøy), bekreftet av brukeren. Tidligere dokumenter sa Haugesund. Klinikken bekrefter kommunen i spørsmål 23.
+- **Kontakt oss:** meldingen sendes på e-post og SMS. Brukeren vil at den også kan sendes på Facebook og Instagram, hvis det lar seg gjøre. Briefen fører det som et ønske som avgjøres i arkitekturfasen, siden researchen tyder på at et skjema ikke kan åpne en samtale (se under).
+
 ## Videresending til Facebook og Instagram
 
-Å sende meldinger inn i Messenger og Instagram krever Metas API, bedriftskontoer og godkjenning fra Meta. Reserveløsningen er videresending på SMS/e-post og direkte lenker til Messenger og Instagram. Se `prd/addendum.md`.
+Status etter research 2026-10-28 (PRD v3 bygger det ikke; briefen versjon 2 beholder det som ønske, avgjøres i arkitekturfasen): skjemameldinger ser ikke ut til å kunne sendes inn i Messenger eller Instagram. Metas Instagram-API lar en app bare sende melding til en bruker som har skrevet først, og et nettskjema åpner ikke samtalevinduet i Messenger. Løsningen er SMS og e-post til behandlerne, pluss lenker (`m.me`, `ig.me`) som kunden trykker på for å skrive selv. Se `prd/addendum.md`.
+
+## Regler for innhold (fra research 2026-10-28)
+
+- Ikke nevn legemiddelnavn, virkestoff eller kodeord («toksin», «BTX») for reseptpliktige behandlinger. DMP har ilagt en klinikk 5 000 kr per dag i tvangsmulkt for slikt.
+- Ingen før/etter-bilder for injeksjoner og fillere, og den medisinsk ansvarlige skal navngis (forskrift om markedsføring av kosmetiske inngrep §§ 4–5).
+- Prislister uten påstander om legemidlet er tillatt. Nøytrale behandlingsnavn som «rynkebehandling» ser ut til å være lov, men det er en slutning og ikke bekreftet av DMP.
+- Lovtekstene er lest via sammendrag og må leses i fulltekst før tekstene godkjennes. Klinikkens lege bør godkjenne de endelige behandlingstekstene.
 
 ## Personvern / GDPR-vurdering
 
@@ -51,5 +66,7 @@ Vurdering: disse plattformene er bygget rundt selvbetjent booking, som ikke pass
 
 - Domenenavn og hosting er ikke valgt.
 - Tekster, bilder og priser leveres av klinikken.
-- Om klinikken har bedriftskontoer på Facebook og Instagram som kan kobles til Metas API.
+- Facebook-siden er en bedriftsside (sjekket 2026-10-29). Om Instagram er en profesjonell konto koblet til siden, og hvem som er administrator, er ikke avklart.
+- Navn, bakgrunn og bilder av de to behandlerne, og behandlingsliste med priser, leveres av klinikken.
+- Om meldinger fra «Kontakt oss» går til ett felles nummer eller til valgt behandler (spørsmål 9 i spørsmålslisten).
 - Teknisk plattform avklares i arkitekturfasen.
