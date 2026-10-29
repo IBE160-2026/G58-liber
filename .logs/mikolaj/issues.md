@@ -45,3 +45,4 @@
 - [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Få tekst, bilder, varighet og pris til hver behandlingsside fra klinikken, og navn på de to andre behandlingene
 - [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Avgjøre kartløsning for den ferdige siden: eget kartbilde med lenke eller innebygd Google-kart (cookies, PRD FR-4)
 - [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Beslutte om designforslaget skal lagres i repoet, og i så fall hvor (for eksempel `design/` utenfor `prd/`)
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Avstemme PRD med designet: «Slik foregår det» (FR-5) og menyen i §6 finnes ikke lenger som egen side, og info om hvordan behandling foregår skal skrives under Behandlinger
