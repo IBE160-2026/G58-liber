@@ -17,7 +17,7 @@ Samlet utgangspunkt for å skrive (eller revidere) PRD-en. Dokumentet samler det
 
 | Tema | Avklart (kilde: intervju 2026-10-28 om ikke annet er sagt) |
 |---|---|
-| Klinikken | AURA SKIN Klinikk, Haugesund. To ansatte, blant dem en kosmetisk sykepleier. |
+| Klinikken | AURA SKIN Klinikk, Bøvegen 60, 4260 Salhus (Karmøy). To ansatte, blant dem en kosmetisk sykepleier. |
 | Kapasitet | Rundt 3 kunder om dagen, ca. 1 time hver. |
 | Åpningstider | 10–20. Kun etter avtale, ingen drop-in. |
 | Arbeidsflyt | Konsultasjon alltid først. Mange behandlinger må godkjennes av lege. |
@@ -48,7 +48,7 @@ Slik det står i dag (PRD §2.1) pluss det intervjuet og bransjen tyder på:
 | Få svar på vanlige spørsmål uten å måtte spørre (hvordan forbereder jeg meg, hva skjer etterpå, er det trygt for meg) | **Nei.** Ingen FAQ-side. |
 | Bli bekreftet og minnet på timen | Ja (FR-11–FR-13) |
 | Vite hva som skjer med opplysningene mine | Ja (NFR-5–NFR-8) |
-| Finne klinikken via Google («hudpleie Haugesund») | **Nei.** Ikke omtalt (synlighet i søk). |
+| Finne klinikken via Google («hudpleie Karmøy») | **Nei.** Ikke omtalt (synlighet i søk). |
 
 ### Klinikken
 | Behov | Dekket i PRD? |
@@ -81,7 +81,7 @@ Sortert etter hvor mye svaret påvirker PRD-en.
 7. **Bedriftskontoer** på Facebook og Instagram, og hvem eier dem.
 8. **Domene og hosting:** finnes noe i dag, og hvem eier det?
 9. **Frist:** når skal nettsiden være ferdig?
-10. **Klinikkens sted:** den eldre memloggen sa «Salhus (Haugesund korrigert)», intervjuet sier «Haugesund klinikk». Dokumentene sier nå Haugesund; bekreft eksakt adresse.
+10. **Klinikkens sted:** adressen er Bøvegen 60, 4260 Salhus (oppgitt 2026-10-29; tidligere dokumenter sa Haugesund). Bekreft kommunen (Karmøy) med klinikken.
 11. **Logo, farger, stil og bilder.** Spørsmål 13–15 fra den opprinnelige lista er ikke besvart i notatene. Kan bilder og tekster fra Facebook ligge i et offentlig repo?
 12. **Påminnelsestidspunkt (FR-12):** antatt kl. 12:00 dagen før. Bekreft.
 13. **Oppbevaringstid (NFR-8):** antatt 12 måneder. Bekreft.
@@ -119,7 +119,7 @@ Sortert etter hvor mye svaret påvirker PRD-en.
 - **Forhåndsvalgt behandling i «Send melding»** (allerede i FR-2) – bekreft at det virker godt på mobil.
 - **«Bli oppringt»-alternativ** i stedet for kun fritekst, med foretrukket tidspunkt.
 - **Hva skal skje med bilder?** Siden sier «send ikke bilder», men klinikken får dem i dag. Avklar en trygg måte (f.eks. at behandleren ber om dem i konsultasjonen).
-- **Lokal synlighet:** sidetittel, beskrivelser og Google Business-profil for «hudpleie Haugesund».
+- **Lokal synlighet:** sidetittel, beskrivelser og Google Business-profil for «hudpleie Karmøy».
 - **Anmeldelser/omtaler** som innholdselement (bransjestandard), med forbehold om markedsføringsregler.
 - **Behandlervalg** hvis to behandlere har ulik kompetanse.
 

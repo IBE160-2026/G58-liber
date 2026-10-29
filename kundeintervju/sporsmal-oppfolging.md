@@ -2,7 +2,7 @@
 title: "Oppfølging: komplett spørsmålsliste til klinikkeier"
 status: utkast
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-10-29
 ---
 
 # Oppfølging: komplett spørsmålsliste til klinikkeier
@@ -23,8 +23,8 @@ Listen starter med **hva klinikken har i dag**, ikke hva den ønsker seg. Svaren
 
 ## B. Meldinger og SMS
 
-6. Er Facebook-siden til klinikken en bedriftsside, og er Instagram en bedriftskonto som er koblet til den?
-7. Hvem er administrator på dem? Kan utvikleren få hjelpe til med å sette opp en kobling uten at du gir fra deg passordet?
+6. Facebook-siden til klinikken er en bedriftsside (den har «Følg»-knapp, ikke «Legg til venn»), så den er i orden. Er Instagram-kontoen en profesjonell konto (bedrift eller skaper), og er den koblet til Facebook-siden? Hvis du ser «Bytt til personlig konto» under innstillingene i Instagram, er den allerede profesjonell. Ser du ikke det, send gjerne en skjermdump av profilen.
+7. Hvem logger inn og styrer Facebook-siden og Instagram-kontoen? Du trenger ikke gi fra deg passord. Det holder at du senere legger utvikleren til som hjelper.
 8. Hvor svarer dere helst på meldinger: SMS, Messenger eller Instagram? Er det nok at meldinger fra nettsiden kommer på SMS?
 9. Skal meldingene gå til ett felles nummer eller til en bestemt behandler? Hvilket mobilnummer?
 10. Hvem skal betale for SMS-utsending, og hvor mange SMS tror dere sendes i måneden?
@@ -49,7 +49,7 @@ Listen starter med **hva klinikken har i dag**, ikke hva den ønsker seg. Svaren
 
 21. Har dere logo, farger eller en stil siden skal følge? Hvilket inntrykk vil dere gi, for eksempel luksus, trygghet eller personlig preg?
 22. Har dere bilder av klinikken og behandlerne? Koden til nettsiden ligger åpent på GitHub. Er det greit at bilder og tekster fra Facebook ligger der, eller skal det brukes plassholdere til siden er i drift?
-23. Hva er den eksakte adressen? Eldre notater nevner Salhus, intervjuet sier Haugesund. Skal parkering og kart med?
+23. Vi har notert adressen Bøvegen 60, 4260 Salhus (Karmøy). Stemmer det? Skal parkering og kart med?
 24. Hva skal stå i «om oss»-delen, og hvem skriver teksten?
 
 ## F. Daglig bruk og personvern
