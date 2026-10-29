@@ -1,7 +1,7 @@
 # Åpne punkter
 
 - [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Avklare klinikkens sted: Salhus eller Haugesund (løst 2026-10-29: Bøvegen 60, 4260 Salhus, Karmøy; kommunen er ikke bekreftet av klinikken, spørres i spm. 23)
-- [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Bekrefte at «Hifo» betyr HIFU
+- [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Bekrefte at «Hifo» betyr HIFU (løst 2026-10-29: bekreftet av brukeren, se [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md))
 - [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Undersøke om meldinger kan videresendes til Messenger/Instagram via Metas API (løst 2026-10-28: nettskjema kan ikke videresendes til innboksen, se [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md))
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Få svar fra klinikken på de åpne spørsmålene i PRD §9
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Få svar fra klinikken på de seks oppfølgingsspørsmålene om videresending, og oppdater brief og PRD (FR-8) etter om Meta-løsningen kan brukes
@@ -31,3 +31,4 @@
 - [ ] 2026-10-29 [brief-versjon-2](994-2026-10-29-14-55-00-brief-versjon-2.md) — Gjenopprette overlevering/domene-guide-for-klinikken.pdf i arbeidskopien (CRLF-skadet etter rebase) før den sendes til klinikken
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Kjøre `bmad-prd` i valideringsmodus på PRD v4 (reviewer-gate er ikke kjørt)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Undersøke i arkitekturfasen om Meta tillater videresending fra skjema til Messenger/Instagram, hvis klinikken fortsatt vil ha det (FR-8)
+- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Sende meldingen til klinikken (behandlinger/priser, lege/medisinsk ansvarlig, legemiddelnavn, mottaker, administrator), og føre svarene inn i PRD §12
