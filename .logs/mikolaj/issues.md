@@ -37,4 +37,11 @@
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Legge cookies/samtykkebanner og statistikk inn i PRD (kart i FR-4 kan sette cookies)
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Kontrastsjekke tynn overskriftsfont på rosa bakgrunn mot WCAG AA (NFR-3) i designfasen
 - [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Føre inn i PRD (FR-3) at «Om oss» viser to behandlere med bilde, navn og rolle (bilder, navn og samtykke fra klinikken er allerede åpent over)
-- [ ] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Beslutte om designforslaget (artefakt 94QD2GUanVRctBpxEKVhCG) skal lagres i repoet, og koble hamburger-knappen til menyrammen
+- [x] 2026-10-29 [prd-versjon-4](993-2026-10-29-16-11-59-prd-versjon-4.md) — Beslutte om designforslaget (artefakt 94QD2GUanVRctBpxEKVhCG) skal lagres i repoet, og koble hamburger-knappen til menyrammen (løst 2026-10-29: hamburger-knappen er koblet til menyen; lagring i repoet er ført som eget punkt i [design-nettside](992-2026-10-29-22-04-08-design-nettside.md))
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Gå gjennom designforslaget i spillmodus: lenker mellom sider, infobokser, sidehøyder og at Google Maps-lenkene lander på Karmøy (ikke testet)
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Føre oppgitte kontaktopplysninger inn i PRD: åpningstider med ukedager (§6, FR-4), telefon, e-post og Instagram-lenke (profil, ikke `ig.me`)
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Få klinikken til å bekrefte Facebook-adressen, Messenger-navnet (`m.me/auraskinklinikk`) og kartnålen på Bøvegen 60
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Avklare om menylenkene skal åpne i ny fane (brukerens ønske er uavklart)
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Få tekst, bilder, varighet og pris til hver behandlingsside fra klinikken, og navn på de to andre behandlingene
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Avgjøre kartløsning for den ferdige siden: eget kartbilde med lenke eller innebygd Google-kart (cookies, PRD FR-4)
+- [ ] 2026-10-29 [design-nettside](992-2026-10-29-22-04-08-design-nettside.md) — Beslutte om designforslaget skal lagres i repoet, og i så fall hvor (for eksempel `design/` utenfor `prd/`)
