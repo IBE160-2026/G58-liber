@@ -1,6 +1,6 @@
 # Åpne punkter
 
-- [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Avklare klinikkens sted: Salhus eller Haugesund
+- [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Avklare klinikkens sted: Salhus eller Haugesund (løst 2026-10-29: Bøvegen 60, 4260 Salhus, Karmøy; kommunen er ikke bekreftet av klinikken, spørres i spm. 23)
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Bekrefte at «Hifo» betyr HIFU
 - [x] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Undersøke om meldinger kan videresendes til Messenger/Instagram via Metas API (løst 2026-10-28: nettskjema kan ikke videresendes til innboksen, se [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md))
 - [ ] 2026-10-28 [brief-etter-kundeintervju](999-2026-10-28-18-11-47-brief-etter-kundeintervju.md) — Få svar fra klinikken på de åpne spørsmålene i PRD §9
@@ -20,7 +20,7 @@
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Teste at bilder sendt via `m.me`/`ig.me` kommer fram i Business Suite hos klinikken
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Manuelt Google-søk fra Molde og lese anmeldelser av konkurrentene
 - [x] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Oppdatere PRD v2 med funnene (ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending i FR-8, FAQ, nyhetsbrev, push) (løst 2026-10-28: PRD v3 skrevet, ikke committet)
-- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gjøre konkurrentdelen om for Haugesund (den ble kjørt for Molde)
+- [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gjøre konkurrentdelen om for Karmøy (den ble kjørt for Molde)
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gå gjennom PRD v3, committe den og kjøre `bmad-prd` i validate-modus
 - [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Sende oppdatert melding/PDF til klinikkeieren og få svar på om Instagram er en profesjonell konto koblet til Facebook-siden, og hvem som er administrator (spm. 6–7)
 - [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Verifisere ordlyden «Bytt til personlig konto» mot norsk Instagram-grensesnitt, og åpne den nye PDF-en visuelt før den sendes
