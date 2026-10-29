@@ -22,3 +22,5 @@
 - [x] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Oppdatere PRD v2 med funnene (ordvalgsregel, før/etter-forbud, `m.me`/`ig.me` i stedet for videresending i FR-8, FAQ, nyhetsbrev, push) (løst 2026-10-28: PRD v3 skrevet, ikke committet)
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gjøre konkurrentdelen om for Haugesund (den ble kjørt for Molde)
 - [ ] 2026-10-28 [research-regler-og-kanaler](996-2026-10-28-19-58-15-research-regler-og-kanaler.md) — Gå gjennom PRD v3, committe den og kjøre `bmad-prd` i validate-modus
+- [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Sende oppdatert melding/PDF til klinikkeieren og få svar på om Instagram er en profesjonell konto koblet til Facebook-siden, og hvem som er administrator (spm. 6–7)
+- [ ] 2026-10-29 [facebook-bedriftsside-sporsmal](995-2026-10-29-14-45-00-facebook-bedriftsside-sporsmal.md) — Verifisere ordlyden «Bytt til personlig konto» mot norsk Instagram-grensesnitt, og åpne den nye PDF-en visuelt før den sendes
