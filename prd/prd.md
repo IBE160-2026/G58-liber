@@ -16,6 +16,7 @@ Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som 
 - Antakelser som må bekreftes er merket `[ASSUMPTION]` og samlet i §13. Forslag som ikke er besluttet er merket `[FORSLAG]`.
 - Funn fra researchen som ikke er verifisert mot lovtekst eller kildedokumentasjon er merket `[ASSUMPTION]`. Les lovtekst på Lovdata og dmp.no før de brukes som endelige krav.
 - Tekniske valg og bakgrunn står i `prd/addendum.md`. Oppsummering av avklart/uklart/forslag står i `prd/prd-grunnlag.md`.
+- Klinikkens designeksempel (laget i one.com Website Builder, mottatt 2026-10-29) er lagt inn i §6 og FR-1. Eksempelet er en ferdig mal med malens egne tekster og stockbilder, så det styrer stil og oppbygging, ikke innhold.
 - Forrige versjon (versjon 3) finnes i git-historikken, sammen med versjon 2; versjon 1 (FR-1–FR-20) siste gang i commit `0e38f3a`.
 
 ## 1. Visjon
@@ -137,6 +138,8 @@ Mia lurer på hvor lenge hun må vente før hun kan trene etter en behandling. H
 Kunden kan navigere mellom Forside, Behandlinger, Om oss, Slik foregår det, Vanlige spørsmål og Send melding.
 - Navigasjonen fungerer på alle sider, også på mobil.
 - «Send melding» er synlig på alle sider uten å scrolle på mobil.
+- Faste kontaktknapper for telefon, kart og e-post ligger langs kanten av skjermen på alle sider, slik klinikken viser i designeksempelet (§6).
+- Menyen er kort. Eksempelet bruker Hjem, Vårt team, Tjenester og Kontakt. Menyen har ikke «Kjøp» eller handlekurv (nettbetaling er utenfor omfanget, §8). `[ASSUMPTION: endelige menynavn avtales med klinikken, og «Slik foregår det» og «Vanlige spørsmål» ligger under Tjenester eller som egne sider utenfor hovedmenyen]`
 
 #### FR-2: Behandlingsside
 Kunden kan se alle behandlinger og åpne én for å se detaljer.
@@ -248,8 +251,16 @@ Klinikken kan se alle innsendte meldinger, markere dem som besvart, og velge hvi
 
 ## 6. Design og tone
 
-- **Visuelt:** Følger klinikkens farger, logo og visuelle uttrykk. Rolig og luftig, få elementer per skjerm.
-- **Bilder:** Bilder av klinikken og behandlerne står sentralt og bygger tillit.
+Klinikken har laget et designeksempel i one.com Website Builder. Det viser stilen de ønsker.
+
+- **Farger:** Dempet lys rosa (ca. #FFD6CC) som bakgrunn i de fargede seksjonene, hvit mellom dem, mørk rød (ca. #9B2C2C) på knapper og aksenter, mørk grå brødtekst. Fargekodene er anslått fra skjermbilder. `[ASSUMPTION: klinikken oppgir endelige fargekoder og logo]`
+- **Typografi:** Overskrifter i en tynn, håndskrevet skriftfont, brødtekst i en ren, rund sans-serif. Tynn skrift på rosa bakgrunn må kontrastsjekkes mot NFR-3.
+- **Former:** Avrundede kort, runde knapper og ovale bildeutsnitt. Rolig og luftig, få elementer per skjerm.
+- **Forsiden, i eksempelets rekkefølge:** hero med overskrift, kort tekst, hovedknapp og stort portrettbilde; en fremhevet behandling med bilde; «Vår ekspertise» med «Les mer»; tre fordelskort; kundeomtaler.
+- **Hovedknapp:** Eksempelet har «Bestill tid». Siden har ingen booking (§8), så knappen heter «Send melding» eller «Ta kontakt» og går til FR-7.
+- **Kundeomtaler** `[FORSLAG]`: Seksjonen tas bare med hvis klinikken har ekte omtaler med samtykke fra de som er sitert. Malens fiktive omtaler brukes ikke. Omtalene følger FR-6 og NFR-9, så de sier ingenting om resultat av injeksjons- eller fillerbehandlinger.
+- **Påstander:** Malens formuleringer («avansert teknologi», «skreddersydde», «naturlige resultater», laserterapi og IPL) er plassholdere. Klinikken bekrefter hva de kan stå inne for. Laser og IPL er ikke undersøkt (NFR-9).
+- **Bilder:** Bilder av klinikken og behandlerne står sentralt og bygger tillit. Malens stockbilder erstattes av klinikkens egne (§7.4).
 - **Tone:** Varm, personlig og faglig trygg. Kort og tydelig språk, uten overdrevne løfter om resultater.
 - **Språk:** Norsk (bokmål).
 - `[ASSUMPTION: klinikken leverer logo, farger, bilder, tekster og priser]`
@@ -336,6 +347,7 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 | Bilder eller tekster fra konkurrenter eller klinikkens egne kanaler bryter før/etter-forbudet. | Brudd på forskriften § 5. | Ikke kopier resultatsider med bilder; se NFR-9. |
 | Personopplysninger sendes via Meta og SMS-leverandør. | GDPR-krav om databehandleravtale, mulig tredjelandsoverføring. | Avklar i arkitekturfasen (NFR-5–NFR-8). |
 | Klinikken leverer ikke innhold (tekster, bilder, priser) i tide. | Nettsiden kan ikke publiseres. | Plassholdere og tidlig be om innholdet. |
+| Malens tekster, stockbilder og fiktive kundeomtaler fra designeksempelet publiseres uendret. | Uriktige påstander, ugyldige omtaler og uavklart bildelisens. | Bruk eksempelet bare som stil (§6). Alt innhold byttes mot klinikkens eget og gjennomgås etter NFR-9. |
 
 ## 11. Suksesskriterier
 
@@ -379,10 +391,10 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 | # | Spørsmål | Hvem |
 |---|---|---|
 | 6 | Hvem betaler for SMS-utsending, og hva er forventet volum? | Klinikken |
-| 7 | Klinikken har ingen nettside i dag (bekreftet 2026-10-29). Domene og hosting: har klinikken et domene eller e-post på eget domene, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. | Klinikken og utvikleren |
+| 7 | Klinikken har ingen nettside i dag (bekreftet 2026-10-29). Domene og hosting: har klinikken et domene eller e-post på eget domene, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. Designeksempelet er laget i one.com Website Builder, trolig på en gratisplan; det er ikke bekreftet at klinikken har et domene eller webhotell hos one.com. Hvis de har webhotell der, må det sjekkes om det kan kjøre en applikasjon (§7.5). | Klinikken og utvikleren |
 | 8 | Når skal nettsiden være ferdig? | Klinikken |
 | 9 | Adresse: Bøvegen 60, 4260 Salhus (oppgitt 2026-10-29). Kommunen (Karmøy) er ikke bekreftet av klinikken (spørsmål 23 i `kundeintervju/sporsmal-oppfolging.md`). | Klinikken |
-| 10 | Logo, farger, stil og bilder. Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
+| 10 | Logo, endelige farger, stil og bilder. Designeksempelet bruker malens stockbilder og tekster; hvilke egne bilder og tekster skal erstatte dem? Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
 | 11 | Ønsker klinikken nyhetsbrev og push, hvor ofte, og hvem skriver innholdet? | Klinikken |
 | 12 | Hva er antall henvendelser og gjentatte spørsmål per uke i dag (baseline for SM-3)? | Klinikken |
 | 13 | Skal det være en FAQ-side (FR-21)? | Klinikken og utvikleren |
@@ -393,6 +405,8 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 | 18 | Hvem er medisinsk ansvarlig, og hvem hos klinikken gjennomgår behandlingstekstene før publisering? | Klinikken |
 | 19 | Hvilke regler gjelder for laserbehandling og kjemisk peeling (hvem kan utføre dem, hva kan sies)? Ikke undersøkt. | Utvikleren |
 | 20 | Hvilke nettsider rangerer for «hudpleie Karmøy», og hva har de felles? Krever manuelt Google-søk fra stedet. Konkurrentoversikten er laget for Molde-området, ikke Karmøy. | Utvikleren |
+| 21 | Skal siden ha kundeomtaler (§6)? Har klinikken ekte omtaler, og samtykke fra de som er sitert? | Klinikken |
+| 22 | Hovedknappen i eksempelet heter «Bestill tid». Er «Send melding» eller «Ta kontakt» greit, siden klinikken ikke vil ha booking? Er menyen i eksempelet (Hjem, Vårt team, Tjenester, Kontakt) endelig? | Klinikken |
 
 ## 13. Antakelser
 
@@ -407,5 +421,6 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 - §7.3 NFR-9: Klinikkens lege eller medisinsk ansvarlige gjennomgår behandlingstekstene. Laser og kjemisk peeling har ikke vært undersøkt.
 - §5.3 FR-12: Påminnelsen sendes kl. 12:00 dagen før.
 - §5.5 FR-18: Tofaktor er ikke et krav i første versjon.
-- §6: Klinikken leverer logo, farger, bilder, tekster og priser.
+- §6: Klinikken leverer logo, farger, bilder, tekster og priser. Fargekodene i §6 er anslått fra skjermbilder av designeksempelet.
+- §5.1 FR-1: Menynavnene i designeksempelet er ikke endelige.
 - §7.2 NFR-8: Opplysninger slettes etter 12 måneder.
