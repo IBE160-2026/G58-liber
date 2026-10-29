@@ -358,9 +358,9 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 4. Når klinikken endrer innhold, vises endringen på nettsiden uten at utvikleren gjør noe.
 5. Når klinikken registrerer en time, sendes SMS-bekreftelse og senere påminnelse.
 6. Kunder kan melde seg på og av nyhetsbrev, og klinikken kan sende til de påmeldte (push avgjøres i §9).
-9. Ingen side bruker legemiddelnavn, kodeord eller før- og etter-bilder av injeksjons- eller fillerbehandlinger, og medisinsk ansvarlig er oppgitt (FR-3, FR-6, NFR-9).
 7. Adminpanelet er kun tilgjengelig etter innlogging.
 8. Appen kan startes lokalt etter README med seed-data (NFR-11).
+9. Ingen side bruker legemiddelnavn, kodeord eller før- og etter-bilder av injeksjons- eller fillerbehandlinger, og medisinsk ansvarlig er oppgitt (FR-3, FR-6, NFR-9).
 
 ## 12. Åpne spørsmål
 
