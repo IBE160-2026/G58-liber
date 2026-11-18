@@ -52,7 +52,7 @@
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Få svar fra klinikken innen 2026-12-01 på spørsmålene som blokkerer publisering (PRD §12 nr. 1–5, 7, 10, 19, 28, 29)
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Lese markedsføringsloven § 15 ordrett før nyhetsbrev bygges, og avklare om SMS-påminnelser om avtalte timer er tillatt
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Avklare om HIFU regnes som kosmetisk inngrep (PRD §12 nr. 28, forskriften § 3)
-- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Lage en kort melding eller PDF til klinikken med de blokkerende spørsmålene
+- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Sende meldingen i `kundeintervju/sporsmal-frist-2026-12-01.md` til klinikken (frist 2026-12-01) og åpne PDF-en visuelt først
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Oppdatere designforslaget: forhåndsvalgt behandling, `ig.me`, risiko og aldersgrense på behandlingssidene, organisasjonsnummer i bunnen
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Bekrefte rettsgrunnlag og databehandleravtaler (NFR-16) med klinikken eller en jurist
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Lese OpenStreetMaps bruksvilkår og kildekrav for kartbildet (FR-4)
