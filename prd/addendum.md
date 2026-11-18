@@ -2,7 +2,7 @@
 title: "Addendum: PRD AURA SKIN Klinikk – nettside"
 status: draft
 created: 2026-09-27
-updated: 2026-10-28
+updated: 2026-11-01
 ---
 
 # Addendum til PRD
@@ -40,6 +40,20 @@ Status etter research 2026-10-28 og brief versjon 2 (2026-10-29): videresending 
 - Markedsføringsloven § 15 krever forhåndssamtykke for e-post og SMS-markedsføring til privatpersoner. Ekomloven § 3-15 krever samtykke for lagring av og tilgang til data på brukerens enhet; om push faller under den, er ikke avklart.
 - Forskriften om markedsføring av kosmetiske inngrep § 7 ser ut til å forby markedsføringshenvendelser om slike inngrep til forbrukere på e-post og SMS. Må leses i fulltekst.
 - EasySalon (booking, brukt av en konkurrent) har gratisversjon og betalt fra 199 kr per måned eks. mva. (dato ukjent). Ikke aktuelt for dette prosjektet siden klinikken ikke vil ha selvbetjent booking.
+
+## Designforslaget (2026-10-29)
+
+Klikkbar skisse i en privat artefakt, ikke lagret i repoet. Sider: forside, Behandlinger, Om oss, Kontakt oss, Send melding og tre behandlingssider (HIFU og to plassholdere), alle i versjon for datamaskin og mobil. Lenkene mellom sidene virker bare i spillmodus. Krav som følger av designet står i PRD-ens FR-1 til FR-9 og §6; her står bare detaljer til arkitekturfasen.
+
+- **Kart:** statisk bilde fra OpenStreetMap (flis, zoom 16) med nål og kildeangivelsen «© OpenStreetMap-bidragsytere». Nålen ligger på 59.371629, 5.288586, der OpenStreetMap plasserer «Bøvegen 60, 4260». Lenker til Google Maps bruker koordinater, ikke adressetekst:
+  - Åpne: `https://www.google.com/maps/search/?api=1&query=59.371629,5.288586`
+  - Veibeskrivelse: `https://www.google.com/maps/dir/?api=1&destination=59.371629,5.288586`
+  - Begge åpnes i ny fane.
+- **Kontaktlenker:** `tel:+4746962914`, `sms:+4746962914`, `mailto:auraskin.as@hotmail.com`, `https://m.me/auraskinklinikk` (antatt navn), `https://www.instagram.com/Auraskinklinikk` (profil, sporingsparametere fjernet), `https://www.facebook.com/auraskinklinikk` (antatt adresse). Facebook, Messenger og Instagram åpnes i ny fane.
+- **Kontaktknapper:** tre faste knapper (telefon, kart, e-post). På datamaskin langs høyre kant, på mobil i en fast linje nederst sammen med «Send melding». Hver åpner en infoboks som lukkes med en egen knapp. Infoboksene må kunne brukes med tastatur og skjermleser (NFR-3).
+- **Fonter:** designforslaget laster Dancing Script og Montserrat fra Google Fonts. Det sender besøkendes IP-adresse til Google. Vurder å hoste fontene selv i den ferdige siden (NFR-5).
+- **Menyvalg:** Hjem, Behandlinger, Om oss, Kontakt oss og knappen Send melding. Sidene «Slik foregår det» og «Besøk oss» fra tidligere utkast finnes ikke lenger; Besøk oss er slått sammen med Kontakt oss.
+- **Ikke gjort:** cookies, samtykkebanner og statistikk er ikke tatt inn i PRD-en. Innebygd Google-kart ville gjort det nødvendig (PRD §12 nr. 26).
 
 ## Tekniske hensyn for arkitekturfasen
 
