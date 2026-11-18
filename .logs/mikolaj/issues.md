@@ -56,5 +56,5 @@
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Oppdatere designforslaget: forhåndsvalgt behandling, `ig.me`, risiko og aldersgrense på behandlingssidene, organisasjonsnummer i bunnen
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Bekrefte rettsgrunnlag og databehandleravtaler (NFR-16) med klinikken eller en jurist
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Lese OpenStreetMaps bruksvilkår og kildekrav for kartbildet (FR-4)
-- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Avklare om kurset krever bestemte teknologivalg (språk, rammeverk, database, hosting) før arkitekturfasen
-- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Kjøre `bmad-prd` i valideringsmodus på nytt på v7
+- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Spørre Bård om `technology.md` er en anbefaling eller bare et eksempel, og velge teknologi i arkitekturfasen (SMS-leverandør, hosting i EU/EØS)
+- [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Kjøre `bmad-prd` i valideringsmodus på nytt på v8
