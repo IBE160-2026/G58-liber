@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<title>PRD-validering: PRD: AURA SKIN Klinikk – nettside (versjon 6)</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --border: #e7e5e4;
+    --text: #1c1917;
+    --muted: #78716c;
+
+    --verdict-strong: #16a34a;
+    --verdict-adequate: #65a30d;
+    --verdict-thin: #d97706;
+    --verdict-broken: #dc2626;
+
+    --sev-low: #64748b;
+    --sev-medium: #ca8a04;
+    --sev-high: #ea580c;
+    --sev-critical: #dc2626;
+
+    --grade-exc: #16a34a;
+    --grade-good: #65a30d;
+    --grade-fair: #d97706;
+    --grade-poor: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  header.report-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .title h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+  .title .subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .grade {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .grade-excellent { background: var(--grade-exc); }
+  .grade-good { background: var(--grade-good); }
+  .grade-fair { background: var(--grade-fair); }
+  .grade-poor { background: var(--grade-poor); }
+
+  .synthesis {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--muted);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    font-size: 15.5px;
+  }
+  .synthesis p { margin: 0 0 10px; }
+  .synthesis p:last-child { margin-bottom: 0; }
+
+  .dimension-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .dim-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .dim-card .dim-name { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .dim-card .dim-verdict { font-size: 14px; font-weight: 600; }
+
+  section.dimension, section.reviewer-section { margin-bottom: 14px; }
+  section.dimension details, section.reviewer-section details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  section summary {
+    padding: 14px 20px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  section summary::-webkit-details-marker { display: none; }
+  section summary::before {
+    content: "▸";
+    display: inline-block;
+    color: var(--muted);
+    transition: transform 0.15s ease;
+  }
+  section details[open] summary::before { transform: rotate(90deg); }
+  section summary h2 {
+    display: inline;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    flex: 1;
+  }
+  .verdict-pill {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+  }
+  .verdict-strong { background: var(--verdict-strong); }
+  .verdict-adequate { background: var(--verdict-adequate); }
+  .verdict-thin { background: var(--verdict-thin); }
+  .verdict-broken { background: var(--verdict-broken); }
+
+  .dim-body { padding: 4px 20px 18px; }
+  .dim-judgment { color: var(--text); font-size: 14.5px; }
+  .dim-judgment p { margin: 0 0 10px; }
+
+  .findings-list { padding: 0 20px 4px; }
+  article.finding {
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+  }
+  article.finding:first-child { border-top: none; }
+  article.finding header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .badge {
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+  .badge-sev-low { background: rgba(100, 116, 139, 0.12); color: var(--sev-low); }
+  .badge-sev-medium { background: rgba(202, 138, 4, 0.14); color: var(--sev-medium); }
+  .badge-sev-high { background: rgba(234, 88, 12, 0.14); color: var(--sev-high); }
+  .badge-sev-critical { background: rgba(220, 38, 38, 0.14); color: var(--sev-critical); }
+  .finding-title { margin: 0; font-size: 15px; font-weight: 500; flex: 1; min-width: 200px; }
+  .finding-location { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px; color: var(--muted); }
+  .finding-note, .finding-fix { margin-top: 6px; font-size: 14px; }
+  .finding-fix strong { color: var(--muted); font-weight: 500; }
+
+  .reviewer-source {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  .mechanical {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+  .mechanical h3 { margin: 0 0 10px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .mechanical ul { margin: 0; padding-left: 20px; }
+  .mechanical li { margin-bottom: 4px; color: var(--text); }
+
+  footer.report-footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  footer .meta { display: flex; gap: 24px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="container">
+<header class="report-header"><div class="title"><h1>PRD: AURA SKIN Klinikk – nettside (versjon 6) — Valideringsrapport</h1><div class="subtitle">prd/prd.md</div></div><div class="grade grade-fair">Fair</div></header>
+<div class="synthesis"><p>Dette er en uvanlig ærlig og velfundert PRD: visjonen er konkret (konsultasjon først, ingen selvbetjent booking), avgrensningene er eksplisitte, og de juridiske usikkerhetene er merket i stedet for å glattes over. Det som setter lanseringen 2026-12-15 i fare, er ikke mangel på substans, men tre ting: lanseringskritiske spørsmål er klassifisert som «kan avklares senere», regelverket (forskriften § 7, HIFU som kosmetisk inngrep) kan tømme fase 2–3 (SMS-påminnelser og nyhetsbrev) uten at scope-logikken sier hva som da skjer, og SMS-, timer- og adminkravene (FR-10–FR-20) mangler testbare konsekvenser.</p><p>Den adversarielle gjennomgangen skjerper bildet og vurderer PRD-en som «ikke klar til å låse» (3 kritiske funn). Den peker på tre ting rubrikken bare berører: personvernkravene motsier funksjonene (NFR-6 «ingen helseopplysninger» mot behandlingsnavn i skjema og SMS, uten rettsgrunnlag eller STOPP-rutine), omfanget (21 FR + 15 NFR + test + live-sette) er ikke realistisk på rundt fire uker for én person, og NFR-14 («ingen tredjepart») strider mot spam-vern og kart. Karakteren er satt til Fair etter rubrikken (ingen kritiske funn der); med den adversarielle vurderingen alene ville den vært lavere.</p></div>
+<div class="dimension-summary"><div class="dim-card"><div class="dim-name">Decision-readiness</div><div class="dim-verdict" style="color: var(--verdict-adequate)">adequate</div></div><div class="dim-card"><div class="dim-name">Substance over theater</div><div class="dim-verdict" style="color: var(--verdict-adequate)">adequate</div></div><div class="dim-card"><div class="dim-name">Strategic coherence</div><div class="dim-verdict" style="color: var(--verdict-adequate)">adequate</div></div><div class="dim-card"><div class="dim-name">Done-ness clarity</div><div class="dim-verdict" style="color: var(--verdict-thin)">thin</div></div><div class="dim-card"><div class="dim-name">Scope honesty</div><div class="dim-verdict" style="color: var(--verdict-strong)">strong</div></div><div class="dim-card"><div class="dim-name">Downstream usability</div><div class="dim-verdict" style="color: var(--verdict-adequate)">adequate</div></div><div class="dim-card"><div class="dim-name">Shape fit</div><div class="dim-verdict" style="color: var(--verdict-strong)">strong</div></div></div>
+<section class="dimension"><details><summary><h2>Decision-readiness</h2><span class="verdict-pill verdict-adequate">adequate</span></summary><div class="dim-body"><div class="dim-judgment"><p>Beslutningene er stort sett stilt opp som beslutninger med begrunnelse (kart, ig.me, NFR-14, prioriteringen i §9), og konservativ håndtering av HIFU er en reell beslutning under usikkerhet. Svakheten er at §12 sorterer åpne spørsmål feil i forhold til lanseringsfristen, og at statusmerkingen ikke har fulgt beslutningene.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">Lanseringskritiske spørsmål ligger under «Kan avklares senere»</h3><span class="finding-location">§12 nr. 7, 10, 18, 19</span></header><div class="finding-note">Domene og hosting (nr. 7), logo/bilder/tekster/priser (nr. 10) og medisinsk ansvarlig/legegjennomgang (nr. 18) er forutsetninger for å gå live (forskriften § 4, FR-3, NFR-9). Nr. 19 avgjør om laser/peeling-sider kan publiseres. Under «Må avklares» står bare 1–5.</div><div class="finding-fix"><strong>Fix:</strong> Flytt nr. 7, 10, 18 (og 19 hvis laser/peeling tilbys) til «Må avklares», og sett en dato per spørsmål som er tidligere enn 2026-12-15.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Statusmerkingen stemmer ikke med beslutningene</h3><span class="finding-location">§9, §7.5, §12</span></header><div class="finding-note">§9 er merket [FORSLAG] men åpner med «avgjort 2026-11-18»; §7.5 er [FORSLAG] mens NFR-12/13 er krav når siden skal live. «Låses» har ingen kriterium eller dato.</div><div class="finding-fix"><strong>Fix:</strong> Fjern [FORSLAG] fra det som er avgjort, og definer hva «låst» betyr.</div></article></div></details></section>
+<section class="dimension"><details><summary><h2>Substance over theater</h2><span class="verdict-pill verdict-adequate">adequate</span></summary><div class="dim-body"><div class="dim-judgment"><p>Ingen persona-, innovasjons- eller visjonsteater; visjonen kunne ikke byttes inn i en annen PRD, og brukerreisene driver faktiske beslutninger. Det som tynger, er at dokumentet har blitt et arbeidsarkiv.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Endringslogg som brødtekst</h3><span class="finding-location">§0</span></header><div class="finding-note">§0 er ett avsnitt på rundt 400 ord som gjenforteller versjon 3–6. Det er git-historikk, og skjuler det en ny leser trenger.</div><div class="finding-fix"><strong>Fix:</strong> Erstatt med tre–fire linjer om formål, kilder og status.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Push-rester gjennom hele dokumentet</h3><span class="finding-location">§3.1, FR-15, FR-17, NFR-7, NFR-11, §10, SM-C1, kontroll 6</span></header><div class="finding-note">Push er «ikke med i første versjon», men dukker opp i krav, risiko, suksesskriterier og kontroller som om det var på vei inn.</div><div class="finding-fix"><strong>Fix:</strong> Samle FR-17 og push-forbeholdene i en kort «Etter lansering»-seksjon og rydd bort resten.</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">Implementasjonsdetaljer dupliseres i PRD og addendum</h3><span class="finding-location">§6, FR-4, FR-9, addendum</span></header><div class="finding-note">Koordinater, lenkeformater og Instagram-beslutningen står to steder: risiko for drift.</div><div class="finding-fix"><strong>Fix:</strong> La én kilde eie hver verdi (anbefalt addendum).</div></article></div></details></section>
+<section class="dimension"><details><summary><h2>Strategic coherence</h2><span class="verdict-pill verdict-adequate">adequate</span></summary><div class="dim-body"><div class="dim-judgment"><p>Tydelig tese: kunden snakker alltid med behandleren først, så nettsiden skal informere, fange en melding og automatisere SMS-oppfølgingen, ikke booke. Spenningen er at to av de tre faseløftene (SMS-påminnelser, nyhetsbrev) er de regelverket truer mest, og at suksessmålene ikke måler tesen.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">Lovklemma på fase 2–3 er ikke gjort til scope-beslutning</h3><span class="finding-location">§5.4, §9, §10, §12 nr. 15 og 28</span></header><div class="finding-note">Forskriften § 7 forbyr markedsføringshenvendelser om kosmetiske inngrep på e-post og SMS, og HIFU behandles som kosmetisk inngrep. Nyhetsbrevet kan da ikke omtale klinikkens fremste behandlinger, og SMS-påminnelser er bare «trolig tjenestemeldinger». Risikotabellen dekker bare nyhetsbrev.</div><div class="finding-fix"><strong>Fix:</strong> Legg inn go/no-go for nyhetsbrev; skriv at SMS bare har tid, sted og «time hos AURA SKIN» som designkrav; legg SMS-påminnelser i risikotabellen med reserveplan.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Suksessmålene måler ikke tesen og kan delvis ikke måles</h3><span class="finding-location">§11</span></header><div class="finding-note">Ingen SM for antall meldinger per uke (tilgjengelig i adminpanelet selv uten statistikk). SM-4 har ingen baseline. SM-3 måles i februar 2027 uten eier. SM-1 validerer FR-16 som kanskje ikke bygges.</div><div class="finding-fix"><strong>Fix:</strong> Legg til SM «meldinger per uke», gi SM-4 baseline eller flytt den, sett tall på SM-C1, og si hvem som følger opp etter lansering.</div></article></div></details></section>
+<section class="dimension"><details open><summary><h2>Done-ness clarity</h2><span class="verdict-pill verdict-thin">thin</span></summary><div class="dim-body"><div class="dim-judgment"><p>Informasjonssidene (FR-1, FR-2, FR-4, FR-7) har kontrollerbare konsekvenser. Kravene som bærer driftsverdien (SMS, timer, nyhetsbrev, adminpanel) er skrevet som én setning uten konsekvenser, og NFR-4/NFR-9 mangler tall eller sjekkpunkter.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">SMS-, timer- og adminkravene har ingen testbare konsekvenser</h3><span class="finding-location">FR-11–FR-14, FR-16, FR-18, FR-20</span></header><div class="finding-note">FR-13 «kunden får beskjed på SMS» (innhold? påminnelsen som allerede er planlagt?); FR-12 sier ikke hva som skjer ved time under 24 timer unna; FR-14 sier ikke hvilke felter; FR-18 sier ikke hva som skjer ved glemt passord; FR-20 «besvart» har ingen konsekvens. §11 dekker ikke FR-13 og FR-14.</div><div class="finding-fix"><strong>Fix:</strong> Legg til to–tre testbare linjer per krav (inndata, utfall, kanttilfelle) og utvid §11.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Feil som ingen ser</h3><span class="finding-location">FR-8, FR-12, NFR-4</span></header><div class="finding-note">Hva skjer når begge kanaler feiler, eller når påminnelsesjobben stopper? Ingen vet at en melding ligger der.</div><div class="finding-fix"><strong>Fix:</strong> Krev synlig feilstatus i adminpanelet og at feilede utsendelser logges og kan sendes på nytt.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Spam- og kostnadsbeskyttelse uten tall</h3><span class="finding-location">FR-7, NFR-4, §12 nr. 6</span></header><div class="finding-note">«Rate-limiting» og «tak på utsendelser» er adjektiver, ikke grenser, selv om hver melding koster en SMS.</div><div class="finding-fix"><strong>Fix:</strong> Sett startverdier (maks N per IP/time, maks M SMS per døgn) og hva som skjer når taket nås.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Lovkravene i NFR-9 er ikke fullt ut sjekkbare</h3><span class="finding-location">NFR-9, kontroll 9</span></header><div class="finding-note">Kontroll 9 dekker ikke «ikke rettet mot under 18» eller «nedtoner ikke risiko», og gjennomgangen av legen har ingen definert prosess.</div><div class="finding-fix"><strong>Fix:</strong> Gjør NFR-9 til en sjekkliste per behandlingstekst som legen kan avkrysse.</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">Mindre uferdige mål</h3><span class="finding-location">NFR-2, SM-5, FR-7</span></header><div class="finding-note">Ingen metrikk for «under 3 sekunder», ingen metode for WCAG-sjekk, ingen definert telefonformat.</div><div class="finding-fix"><strong>Fix:</strong> Velg metrikk, verktøy og aksepterte nummerformat.</div></article></div></details></section>
+<section class="dimension"><details><summary><h2>Scope honesty</h2><span class="verdict-pill verdict-strong">strong</span></summary><div class="dim-body"><div class="dim-judgment"><p>Dokumentets sterkeste side: §8 gjør arbeid, §9 de-scoper åpent, [ASSUMPTION] brukes gjennomgående og lovusikkerhet gjengis med grad. Tettheten av åpne punkter er stor for fire ukers frist, men ærlig.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Ingen definisjon av «klar for lansering»</h3><span class="finding-location">§9, §11, §7.5</span></header><div class="finding-note">Innhold levert, legegjennomgang, personvernerklæring, databehandleravtaler, DNS, SPF/DKIM og verifisert sikkerhetskopi står spredt. Tiltaket «Plassholdere og tidlig be om innholdet» har ingen dato.</div><div class="finding-fix"><strong>Fix:</strong> Legg til en kort «Lanseringsklar»-liste og avklar hva som skjer 2026-12-15 hvis innhold mangler.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">Behandlingsgrunnlag for SMS og timedata er ikke dekket</h3><span class="finding-location">§7.2, FR-10–FR-13, NFR-8</span></header><div class="finding-note">NFR-5–8 dekker skjema og nyhetsbrev, ikke at klinikken registrerer en kunde og sender SMS. «Anonymisere» er ikke definert, og utvikleren har permanent tilgang til kundedata (FR-18).</div><div class="finding-fix"><strong>Fix:</strong> Legg til grunnlag og informasjon til kunden, definer «anonymisere», og gjør utviklertilgang til et bevisst valg.</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">Støy i antakelsesmerkingen</h3><span class="finding-location">§13</span></header><div class="finding-note">Mange [ASSUMPTION] er leveranser fra klinikken, ikke antakelser som kan vise seg feil.</div><div class="finding-fix"><strong>Fix:</strong> Skill avhengigheter fra risikable antakelser.</div></article></div></details></section>
+<section class="dimension"><details><summary><h2>Downstream usability</h2><span class="verdict-pill verdict-adequate">adequate</span></summary><div class="dim-body"><div class="dim-judgment"><p>Stabile ID-er (FR-1–21, NFR-1–15), ordliste og datert avgjørelser gjør uttrekk enkelt. Hovedproblemet er en indre motsigelse en arkitekt vil snuble i, pluss litt ordliste- og brukerreisedrift.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">NFR-14 er i konflikt med to andre krav</h3><span class="finding-location">NFR-14, kontroll 12, FR-4, FR-7, NFR-4</span></header><div class="finding-note">FR-4 sier «kartflisene hentes fra OpenStreetMaps flistjener» mens NFR-14 sier ingen tredjeparts kart. Spam-vern (FR-7/NFR-4) bruker vanligvis tredjeparts captcha som sender IP.</div><div class="finding-fix"><strong>Fix:</strong> Si at kartet hentes én gang ved bygging og lagres som fil, og krev selvhostet spam-vern (honeypot, tidsfelt, rate-limit).</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">Brukerreisene dekker få flyter</h3><span class="finding-location">§3.3</span></header><div class="finding-note">UJ-2 og UJ-3 mangler navngitt protagonist; ingen reise for adminpanelet, flytting/avlysning eller påmelding.</div><div class="finding-fix"><strong>Fix:</strong> Navngi behandleren og legg til én admin-reise og én flytte/avlys-reise.</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">Ordlistedrift</h3><span class="finding-location">§4, FR-1, FR-7</span></header><div class="finding-note">«Bekreftelse» brukes om både SMS og skjermkvittering, «Forside»/«Hjem» om samme side, og «Kosmetisk inngrep» mangler i ordlisten.</div><div class="finding-fix"><strong>Fix:</strong> Definer «Kosmetisk inngrep» med forskriftens ordlyd og rydd termene.</div></article></div></details></section>
+<section class="dimension"><details><summary><h2>Shape fit</h2><span class="verdict-pill verdict-strong">strong</span></summary><div class="dim-body"><div class="dim-judgment"><p>Formen passer produktet: et kundevendt nettsted med to flater (offentlig side og adminpanel), brukerreiser med navngitte kunder og en kort funksjonsspesifikasjon for admin. Ingen egne funn.</p></div></div><div class="findings-list"></div></details></section>
+<section class="reviewer-section"><details><summary><h2>Adversarial review</h2><span class="reviewer-source">review-adversarial-general.md</span></summary><div class="dim-body"><div class="dim-judgment"><p>Adversarial vurdering: «ikke klar til å låse som grunnlag for live 2026-12-15». 3 kritiske, 8 høye, 11 middels, 6 lave funn (28). Jusspåstander som ikke ble lest i lovtekst er merket «bør verifiseres» i kildefilen. Full tekst med alle sitater: review-adversarial-general.md.</p></div></div><div class="findings-list"><article class="finding"><header><span class="badge badge-sev-critical">critical</span><h3 class="finding-title">K1 Alt som må avklares før publisering står under «Kan avklares senere»</h3><span class="finding-location">§12 nr. 2, 3, 4, 10, 18, 19, 28</span></header><div class="finding-note">HIFU-klassifisering, medisinsk ansvarlig, lege, behandlinger og priser kreves av FR-3, NFR-9 og kontroll 9 før publisering, men klinikken har ikke svart og §12 har ingen frister.</div><div class="finding-fix"><strong>Fix:</strong> Flytt til «blokkerer publisering» med frist (anbefalt innholdsfrys 2026-12-01) og fallback: uten svar publiseres HIFU uten bilder og resultatpåstander, eller uten HIFU-siden. Slå sammen nr. 3 og 18.</div></article><article class="finding"><header><span class="badge badge-sev-critical">critical</span><h3 class="finding-title">K2 NFR-6 «ingen helseopplysninger» motsier funksjonene; rettsgrunnlag og STOPP mangler</h3><span class="finding-location">NFR-6, FR-7, FR-8, FR-10–FR-13</span></header><div class="finding-note">Fritekst, behandlingsvalg og SMS med «hva timen gjelder» kan avsløre helseforhold. Videresending går over vanlig SMS og en hotmail-adresse. Ingen rettsgrunnlag (art. 6), informasjon til kunden eller STOPP-rutine, og FR-10 validerer ikke nummeret slik at en fremmed kan få SMS med navn og behandling.</div><div class="finding-fix"><strong>Fix:</strong> Skriv NFR-6 ærlig, velg og dokumenter rettsgrunnlag, la SMS bare nevne dato, tid og sted, la videresending si «ny melding, se adminpanelet», legg til «ikke send SMS»-flagg og nummervalidering.</div></article><article class="finding"><header><span class="badge badge-sev-critical">critical</span><h3 class="finding-title">K3 Omfanget rekker ikke på fire uker, og avskjæringen er inkonsistent</h3><span class="finding-location">§9, §11 (SM-1, kontroll 6), §10</span></header><div class="finding-note">Kjerne + timer + 15 NFR + test + live-sette på fire uker alene, avhengig av klinikkens innhold, domene og SMS-leverandør. §9 sier nyhetsbrev «hvis tiden rekker», men SM-1 og kontroll 6 krever det.</div><div class="finding-fix"><strong>Fix:</strong> Lag en minimumsrelease som eneste definisjon av ferdig (FR-1–5, FR-7–9, FR-18–20), flytt FR-10–16 og FR-21 til etter lansering eller kutt, sett cut-line 2026-12-08 og en testuke, og rett SM-1 og kontroll 6.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H1 Spam-vern og kart motsier NFR-14</h3><span class="finding-location">NFR-14, NFR-4, FR-7, FR-4, §13</span></header><div class="finding-note">Standard captcha er tredjepartsskript. FR-4 beskriver flisehenting som antakelse mens §13 sier at bildet er lagret som fil.</div><div class="finding-fix"><strong>Fix:</strong> Serverside spam-vern uten tredjepart; kartbildet er en egen fil i repoet med ODbL-kildeangivelse.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H2 Ingen feildeteksjon, retry eller varsling for videresending og påminnelser</h3><span class="finding-location">FR-7, FR-8, FR-20</span></header><div class="finding-note">Kunden får «sendt» uavhengig av levering, begge kanaler kan svikte uten at noen vet det, og FR-20 lar klinikken slå av begge kanaler.</div><div class="finding-fix"><strong>Fix:</strong> Sendestatus per kanal, retry, tydelig feilstatus og ulest-teller i adminpanelet, og minst én kanal alltid på.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H3 Databehandler, drift og tilgang er ikke avklart</h3><span class="finding-location">§7.2, FR-18, §4, §10</span></header><div class="finding-note">Utvikleren er databehandler uten avtale og har permanent tilgang. Ingen krav til drift etter lansering eller restore-test. SMS-/e-postleverandør ikke vurdert mot EU/EØS.</div><div class="finding-fix"><strong>Fix:</strong> Skriv at klinikken er behandlingsansvarlig og utvikleren databehandler med avtale, velg EU/EØS-leverandører, skill utviklerkonto fra de ansattes, og krev restore-test.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H4 Innsyn og sletting er lovet, men ingen funksjon finnes</h3><span class="finding-location">NFR-5, NFR-8, FR-19, FR-20</span></header><div class="finding-note">Ingen funksjon for å slette melding/kunde/påmeldt eller eksportere data. Oppbevaring er bare en antakelse (12 måneder) og dekker ikke samtykkelogg, logger og leverandørlogger. Mulig konflikt med journalkrav (bør verifiseres).</div><div class="finding-fix"><strong>Fix:</strong> Legg til FR for sletting og eksport, definer oppbevaring per datatype, og si at siden ikke er journal.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H5 Nyhetsbrev: samtykkebevis mangler, innholdet kan bli tomt, lovteksten er ulest</h3><span class="finding-location">FR-15, FR-16, NFR-7, §5.4, UJ-3</span></header><div class="finding-note">Ingen double opt-in eller samtykkelogg. Markedsføringsloven § 15 er ikke lest ordrett. Innholdsrommet er smalt, og UJ-3-eksempelet kan selv falle under «inngrep i hud og underhud».</div><div class="finding-fix"><strong>Fix:</strong> Anbefaling: dropp nyhetsbrev fra første versjon. Ellers double opt-in, samtykkelogg, ett-klikks avmelding og innholdsregel; les § 15 først og skriv om UJ-3.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H6 Påminnelser og timer: ikke testbare og med åpne kanttilfeller</h3><span class="finding-location">FR-10–FR-14, SM-4</span></header><div class="finding-note">Time under 24 timer unna, omlegging etter planlagt påminnelse, jobb som ikke kjørte, idempotens, validering av datoer og åpningstider, og SM-4 uten baseline.</div><div class="finding-fix"><strong>Fix:</strong> Skriv reglene eksplisitt (under 24 timer: bare bekreftelse; omlegging kansellerer og sender ny; jobb idempotent), legg til valideringer og fjern SM-4 eller legg til «møtte opp».</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H7 Overdrevne sikkerhetsmarkører og interne motsigelser</h3><span class="finding-location">§10, §2.4, §13, §12 nr. 16, NFR-14, NFR-2</span></header><div class="finding-note">Meta-påstanden har tre ulike graderinger; § 7 er både «lest på Lovdata» og «lest én gang via sammendrag»; nr. 16 er en jusspåstand ført som beslutning; IP-logging og kontrastberegning for hånd er ikke dekket.</div><div class="finding-fix"><strong>Fix:</strong> Én skala for sikkerhet, rett §10 og §13, flytt nr. 16, beskriv IP-logging i personvernerklæringen og gi NFR-2 en målemetode.</div></article><article class="finding"><header><span class="badge badge-sev-high">high</span><h3 class="finding-title">H8 HIFU-håndteringen er delvis</h3><span class="finding-location">NFR-9, FR-2, FR-19, FR-7</span></header><div class="finding-note">Bare bilder og nyhetsbrev er kravsatt, mens forskriften § 4 (risiko, under 18) gjelder alt innhold. Ingen felt for risiko/bivirkninger, ingen aldersgrense i skjemaet, og organisasjonsnummer/pris inkl. mva er ikke nevnt (bør verifiseres).</div><div class="finding-fix"><strong>Fix:</strong> Obligatoriske felt for risiko og aldersgrense 18 år, organisasjonsnummer i bunnen, og oppdater alle berørte FR i én endring når nr. 28 er svart.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M1 Telefonnummer og SMS-format</h3><span class="finding-location">FR-7, FR-9, FR-10</span></header><div class="finding-note">Formater, utenlandske og fasttelefonnumre er ikke spesifisert, og æøå gir flere SMS-segmenter.</div><div class="finding-fix"><strong>Fix:</strong> Normaliser til E.164, avvis fasttelefon, sett maks tegn for fritekst.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M2 Duplikatinnsending og tak uten tall</h3><span class="finding-location">FR-7, NFR-4, §12 nr. 6</span></header><div class="finding-note">Ingen beskyttelse mot dobbeltklikk eller dobbelt skjema, ingen tall på tak.</div><div class="finding-fix"><strong>Fix:</strong> Idempotens-token, deaktivert knapp, sammenslåing av like meldinger og definerte tak.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M3 Testbarhet av kvalitetskravene</h3><span class="finding-location">NFR-1, NFR-3, NFR-4, SM-5</span></header><div class="finding-note">Ingen testmetode for nettlesere, WCAG eller passordkrav.</div><div class="finding-fix"><strong>Fix:</strong> Skriv testmetode og bestått-nivå per NFR, og passordhash, sesjonsutløp og tilbakestilling.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M4 Innlogging uten roller eller tofaktor med kundedata i panelet</h3><span class="finding-location">FR-18</span></header><div class="finding-note">Ingen sesjonsutløp, endringslogg eller kontooversikt.</div><div class="finding-fix"><strong>Fix:</strong> Krev sesjonsutløp, sterke passord eller tofaktor og enkel endringslogg.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M5 FR-20 og «behandleren» er udefinert</h3><span class="finding-location">FR-8, FR-20, §12 nr. 5</span></header><div class="finding-note">Ingen regel for hvem som mottar, ferie eller sykdom.</div><div class="finding-fix"><strong>Fix:</strong> Ett nummer og én e-postadresse i .env, kanalvalget fjernes fra FR-20.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M6 SM-kriteriene ligger etter fristen</h3><span class="finding-location">SM-1–SM-4</span></header><div class="finding-note">SM-1, SM-3 og SM-4 faller etter 2026-12-15, og SM-3 mangler baseline.</div><div class="finding-fix"><strong>Fix:</strong> Skill «før lansering» fra «etter lansering», og bruk en teller i admin som erstatning for statistikk.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M7 FR-6 går utenfor det siden kan kontrollere</h3><span class="finding-location">FR-6, kontroll 9</span></header><div class="finding-note">PRD-en kan ikke kreve noe av Instagram-innlegg, og ordlisten er ikke uttømmende eller håndhevet.</div><div class="finding-fix"><strong>Fix:</strong> Begrens til nettsiden og adminpanelet, legg ordlisten som vedlegg og sperr i adminfeltene.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M8 FAQ med helsefaglig innhold uten gjennomgang</h3><span class="finding-location">FR-21, NFR-9, §13</span></header><div class="finding-note">«Forberedelse, etterpå» er medisinsk råd uten eksplisitt legegjennomgang.</div><div class="finding-fix"><strong>Fix:</strong> Krev godkjenning av medisinsk ansvarlig, eller kutt FR-21 fra første versjon.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M9 Demo og seed-data kan bli en sikkerhetsrisiko</h3><span class="finding-location">§7.5, NFR-11</span></header><div class="finding-note">Offentlig demo med test-admin og gratisplan som sover.</div><div class="finding-fix"><strong>Fix:</strong> Aldri seed i produksjon, noindex og basic auth på demo, produksjonshosting som ikke sover.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M10 Hardkodede verdier mot NFR-12</h3><span class="finding-location">FR-9, FR-4, FR-1, FR-19</span></header><div class="finding-note">Telefon, adresse og koordinater står flere steder.</div><div class="finding-fix"><strong>Fix:</strong> Én kilde for kontaktdata brukt av alle visninger og markering.</div></article><article class="finding"><header><span class="badge badge-sev-medium">medium</span><h3 class="finding-title">M11 Alder og samtykke i skjemaet</h3><span class="finding-location">FR-7, NFR-9</span></header><div class="finding-note">Ingen aldersbekreftelse eller rutine for mindreårige.</div><div class="finding-fix"><strong>Fix:</strong> «Du må være 18 år eller eldre» og en rutine for behandleren.</div></article><article class="finding"><header><span class="badge badge-sev-low">low</span><h3 class="finding-title">L1–L6 Mindre punkter</h3><span class="finding-location">§12, §0, FR-9, FR-1, FR-7, addendum</span></header><div class="finding-note">Rekkefølge på FR/NFR og hull i §12-numrene som ser ut som feil; designforslaget ligger ikke i repoet; kontaktlenker mangler fallback per enhet; fast bunnlinje kan dekke innhold med tastatur åpent; kontekstavhengig «Send melding»-knapp; SMS-kostnad uten budsjettanslag.</div><div class="finding-fix"><strong>Fix:</strong> Sorter eller indekser, lagre en eksport av designet, skriv fallbacks, test på 360 px, la knappen alltid gå til Send melding-siden og legg inn budsjettanslag.</div></article></div></details></section>
+<div class="mechanical"><h3>Mechanical notes</h3><ul><li>§0 refererer til «versjon 4» som forrige versjon; skal være versjon 5.</li><li>NFR-ene står i rekkefølgen 1–4, 10, 14, 15, 11, 5–9, 12, 13, og FR-21 står mellom FR-6 og FR-7. ID-ene er komplette og unike.</li><li>Innebygde [ASSUMPTION] som mangler i §13: NFR-7, prislisteraden i §2.4 og FR-6s andre antakelse. §13 sier «Push faller under samme samtykkekrav» mens §5.4 sier «ikke avklart».</li><li>§13 sier «Kartbildet lagres som egen fil», mens FR-4 beskriver flisehenting (se Downstream usability).</li><li>UJ-2 og UJ-3 mangler navngitt protagonist. `prd/prd-grunnlag.md` bør sjekkes mot v6.</li></ul></div>
+<footer class="report-footer"><div class="meta"><span>Rubric: .claude/skills/bmad-prd/assets/prd-validation-checklist.md</span><span>Generated: 2026-11-18T13:02:32+01:00</span></div></footer></div></body></html>
