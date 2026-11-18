@@ -75,3 +75,25 @@ Legemiddelforskriften § 13-4 forbyr reklame for reseptpliktige legemidler rette
 - Håndhevelse: DMP har offentliggjort omtrent 14 vedtak om botulinumtoksin siden september 2022. Vedtaket mot Lead Partner AS (2025-04-23) ga tvangsmulkt på 5 000 kr per dag; ulovlig innhold var positive utsagn om legemiddelet, klinikklister og priser på botox.
 - Fillers regnes som medisinsk utstyr, ikke legemiddel. Reglene om markedsføring av kosmetiske inngrep gjelder likevel (ett sammendrag som eneste kilde for resten av fillers-reglene).
 - Se research-rapporten for lenker og sikkerhetsgrad per påstand.
+
+## Ordliste for FR-6 (startliste)
+
+Brukes av adminpanelets advarsel (FR-6) og av kontroll 9 i PRD §11. Startlisten er utviklerens forslag og må gjennomgås av klinikkens lege eller medisinsk ansvarlige. Søket ser etter ordene som del av ord, uavhengig av store og små bokstaver.
+
+- Virkestoff og kodeord: botulinum, botulinumtoksin, toksin, BTX.
+- Merkenavn: Botox, Dysport, Bocouture, Azzalure, Vistabel, Xeomin.
+- Om merkenavn kan stå i en prisliste er uavklart (PRD §12 nr. 17); inntil svaret kommer, står de ikke på siden.
+
+## Funn fra validering 2026-11-18 som ikke er ført inn i PRD-en
+
+Rapport og kilder: `.docs/planning-artifacts/prds/prd-aura-skin-klinikk-2026-11-18/` (`validation-report.md`). Funnene i PRD v7 dekker de kritiske og høye. Disse gjenstår og tas i arkitektur- og byggefasen:
+
+- **Testmetode (NFR-1, NFR-3, SM-5):** velg verktøy for WCAG-sjekk (automatisk og manuell tastatur- og skjermlesertest) og testenheter for Safari, Chrome og Samsung Internet. Mål ytelse med Lighthouse på mobil.
+- **Brukerreiser:** navngi behandleren i UJ-2 og UJ-3, og legg til én reise for adminpanelet (endre pris) og én for flytting og avlysning. Velg «Forside» eller «Hjem» som navn.
+- **FR-7:** «Send melding»-knappen i menyen har kontekstavhengig oppførsel (forsiden eller egen side). Vurder at den alltid går til Send melding-siden.
+- **FR-1:** den faste linjen nederst på mobil kan dekke innhold og skjemafelt når tastaturet er åpent. Test på 360 px.
+- **FR-9:** lag en reserve per enhet for kontaktlenker (på datamaskin vises nummer og e-post som tekst).
+- **Designforslaget** ligger ikke i repoet. Lagre en eksport (skjermbilder eller HTML) hvis det skal være kilde for byggingen. Forslaget må også oppdateres med forhåndsvalgt behandling, `ig.me`, risiko og aldersgrense på behandlingssidene, og organisasjonsnummer i bunnen.
+- **Budsjett:** lag et anslag for SMS-kostnad (3 kunder per dag, bekreftelse, påminnelse og videresending) som klinikken godkjenner.
+- **§13:** skill avhengigheter til klinikken (logo, bilder, tekster, priser) fra antakelser som kan vise seg feil.
+- **Kilder:** forskriften § 7 ble lest på Lovdata, men bare første del av setningen ble gjengitt ordrett. Markedsføringsloven § 15 og reglene for laser og peeling er ikke lest ordrett.
