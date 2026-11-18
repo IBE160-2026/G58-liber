@@ -2,7 +2,7 @@
 title: "Addendum: PRD AURA SKIN Klinikk – nettside"
 status: draft
 created: 2026-09-27
-updated: 2026-11-01
+updated: 2026-11-18
 ---
 
 # Addendum til PRD
@@ -51,9 +51,10 @@ Klikkbar skisse i en privat artefakt, ikke lagret i repoet. Sider: forside, Beha
   - Begge åpnes i ny fane.
 - **Kontaktlenker:** `tel:+4746962914`, `sms:+4746962914`, `mailto:auraskin.as@hotmail.com`, `https://m.me/auraskinklinikk` (antatt navn), `https://www.instagram.com/Auraskinklinikk` (profil, sporingsparametere fjernet), `https://www.facebook.com/auraskinklinikk` (antatt adresse). Facebook, Messenger og Instagram åpnes i ny fane.
 - **Kontaktknapper:** tre faste knapper (telefon, kart, e-post). På datamaskin langs høyre kant, på mobil i en fast linje nederst sammen med «Send melding». Hver åpner en infoboks som lukkes med en egen knapp. Infoboksene må kunne brukes med tastatur og skjermleser (NFR-3).
-- **Fonter:** designforslaget laster Dancing Script og Montserrat fra Google Fonts. Det sender besøkendes IP-adresse til Google. Vurder å hoste fontene selv i den ferdige siden (NFR-5).
+- **Fonter:** designforslaget laster Dancing Script og Montserrat fra Google Fonts. Det sender besøkendes IP-adresse til Google. Fontene hostes selv i den ferdige siden (avgjort 2026-11-18, NFR-14).
 - **Menyvalg:** Hjem, Behandlinger, Om oss, Kontakt oss og knappen Send melding. Sidene «Slik foregår det» og «Besøk oss» fra tidligere utkast finnes ikke lenger; Besøk oss er slått sammen med Kontakt oss.
-- **Ikke gjort:** cookies, samtykkebanner og statistikk er ikke tatt inn i PRD-en. Innebygd Google-kart ville gjort det nødvendig (PRD §12 nr. 26).
+- **Cookies:** ingen statistikk eller sporing i første versjon, og kartet er et eget bilde, så samtykkebanner trengs ikke (NFR-14, avgjort 2026-11-18).
+- **Instagram:** knappen bruker `https://ig.me/m/Auraskinklinikk` (brukernavnet må bekreftes). Designforslaget går til profilen og må oppdateres, det samme gjelder forhåndsvalgt behandling i skjemaet.
 
 ## Tekniske hensyn for arkitekturfasen
 

@@ -1,18 +1,18 @@
 ---
 title: "PRD: AURA SKIN Klinikk – nettside"
 status: draft
-version: 5
+version: 6
 created: 2026-09-27
-updated: 2026-11-01
+updated: 2026-11-18
 ---
 
 # PRD: AURA SKIN Klinikk – nettside
 
 ## 0. Om dokumentet
 
-Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på produktbriefen (`product-brief/brief.md`), kundeintervjuet 2026-10-28 (`kundeintervju/sporsmal.md`) og tilleggsmaterialet i `product-brief/addendum.md` og `prd/addendum.md`, og samler det viktigste fra disse i ett dokument. Versjon 3 legger i tillegg inn funnene fra research av regler og kanaler (2026-10-28, `.docs/planning-artifacts/research/domain-norwegian-clinic-site-rules-and-channels-2026-10-28/research.md`). Versjon 4 (2026-10-29) samkjører PRD-en med produktbrief versjon 2: klinikkens ønske om at meldinger også kan sendes til Messenger og Instagram er ført som et ønske som avgjøres i arkitekturfasen (FR-8, §9, §10), adressen Bøvegen 60, 4260 Salhus (Karmøy) er ført konsekvent, og åpne spørsmål og antakelser er gått gjennom (ingen er lukket, siden klinikken ikke har svart ennå). Versjon 5 (2026-11-01) samkjører PRD-en med designforslaget fra 2026-10-29 (§6): ny sidestruktur og meny (FR-1), egen Send melding-side (FR-7), faste kontaktknapper med infobokser, faktiske kontaktopplysninger og åpningstider med ukedager (FR-4), vanlige spørsmål på forsiden i stedet for egen side (FR-21), «Slik foregår det» flyttet under Behandlinger (FR-5), og push skilt ut av første versjon i FR-15 og FR-17 slik at kravene stemmer med §9. Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
+Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på produktbriefen (`product-brief/brief.md`), kundeintervjuet 2026-10-28 (`kundeintervju/sporsmal.md`) og tilleggsmaterialet i `product-brief/addendum.md` og `prd/addendum.md`, og samler det viktigste fra disse i ett dokument. Versjon 3 legger i tillegg inn funnene fra research av regler og kanaler (2026-10-28, `.docs/planning-artifacts/research/domain-norwegian-clinic-site-rules-and-channels-2026-10-28/research.md`). Versjon 4 (2026-10-29) samkjører PRD-en med produktbrief versjon 2: klinikkens ønske om at meldinger også kan sendes til Messenger og Instagram er ført som et ønske som avgjøres i arkitekturfasen (FR-8, §9, §10), adressen Bøvegen 60, 4260 Salhus (Karmøy) er ført konsekvent, og åpne spørsmål og antakelser er gått gjennom (ingen er lukket, siden klinikken ikke har svart ennå). Versjon 5 (2026-11-01) samkjører PRD-en med designforslaget fra 2026-10-29 (§6): ny sidestruktur og meny (FR-1), egen Send melding-side (FR-7), faste kontaktknapper med infobokser, faktiske kontaktopplysninger og åpningstider med ukedager (FR-4), vanlige spørsmål på forsiden i stedet for egen side (FR-21), «Slik foregår det» flyttet under Behandlinger (FR-5), og push skilt ut av første versjon i FR-15 og FR-17 slik at kravene stemmer med §9. Versjon 6 (2026-11-18) fører inn utviklerens beslutninger (§12, «Avgjort»), fristen 2026-12-15 og rekkefølgen i §9, og lukker lovlesingen fra §12 nr. 15–16 så langt kildene rekker: forskriften om markedsføring av kosmetiske inngrep er lest på Lovdata (§§ 1–10, § 7 bare delvis ordrett), mens markedsføringsloven § 15 ikke ble hentet ordrett. Nye krav: ingen cookies eller statistikk og fonter hostet selv (NFR-14), målbare krav til ytelse og nettlesere (NFR-1, NFR-2) og sikkerhetskopi (NFR-15). Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
 
-- Begrepene i §4 brukes konsekvent. Kravene er nummerert FR-1 til FR-21 (funksjon) og NFR-1 til NFR-13 (kvalitet); numrene er stabile mellom versjoner.
+- Begrepene i §4 brukes konsekvent. Kravene er nummerert FR-1 til FR-21 (funksjon) og NFR-1 til NFR-15 (kvalitet); numrene er stabile mellom versjoner.
 - Antakelser som må bekreftes er merket `[ASSUMPTION]` og samlet i §13. Forslag som ikke er besluttet er merket `[FORSLAG]`.
 - Funn fra researchen som ikke er verifisert mot lovtekst eller kildedokumentasjon er merket `[ASSUMPTION]`. Les lovtekst på Lovdata og dmp.no før de brukes som endelige krav.
 - Tekniske valg og bakgrunn står i `prd/addendum.md`. Oppsummering av avklart/uklart/forslag står i `prd/prd-grunnlag.md`.
@@ -65,7 +65,8 @@ Funnene under styrer kravene i §5, §7, §9 og §10. Kildene og graden av sikke
 | Prislister | Prislister er tillatt så lenge de ikke inneholder påstander om legemiddelet. Kilder er uenige om merkenavn kan stå i prislister. | `[ASSUMPTION]` |
 | Markedsføring av kosmetiske inngrep | Forskrift FOR-2005-07-01-749: ingen før- og etter-bilder (§ 5), medisinsk ansvarlig skal navngis med kontaktinformasjon (§ 4), ikke rettet mot under 18 (§ 4). Gjelder også injeksjoner og fillers. | Verifisert (Lovdata) |
 | Utøvere | Kosmetiske injeksjoner kan bare utføres av helsepersonell (helsepersonelloven § 4 a), og ikke på under 18 år uten medisinsk begrunnelse (§ 4 b). | Verifisert |
-| Direkte markedsføring | Forskriften § 7 ser ut til å forby markedsføringshenvendelser om kosmetiske inngrep til forbrukere på e-post og SMS. Markedsføringsloven § 15 krever forhåndssamtykke for e-post og SMS-markedsføring. | `[ASSUMPTION]` (§ 7 lest én gang via sammendrag) |
+| Direkte markedsføring | Forskriften § 7 (lest på Lovdata 2026-11-18) forbyr markedsføringshenvendelser om kosmetiske inngrep til forbrukere via elektroniske kanaler som tillater individuell kommunikasjon, med e-post og SMS som eksempler. Forskriften § 3 definerer kosmetiske inngrep som plastikkirurgiske inngrep og «inngrep i hud og underhud», pluss injeksjoner og fillers der kosmetiske grunner er avgjørende. Om HIFU faller under dette er ikke avklart (§12 nr. 28). Markedsføringsloven § 15 krever forhåndssamtykke for e-post og SMS-markedsføring, med unntak for egne, tilsvarende tjenester til eksisterende kunder og krav om enkel, gratis avmelding (ikke hentet ordrett; sammendrag). | § 7 verifisert (Lovdata, bare første del av setningen ordrett). Markedsføringsloven § 15 `[ASSUMPTION]` |
+| Utøvere og laser/peeling | Helsepersonelloven § 4 a og § 4 b er uendret av LOV-2026-06-19-42, som gjelder pasienters rett til å ha andre til stede og ikke berører kosmetiske behandlinger. Helsedirektoratets kommentar til § 4 a nevner dypere kjemisk peeling og laser fra klasse 3b som områder med strengere kompetansekrav; laser reguleres også av strålevernforskriften (DSA). | Verifisert (§ 4 a, § 4 b); laser/peeling `[ASSUMPTION]`, lest via søkesammendrag |
 | Meta | Et nettskjema kan ikke legge en melding i klinikkens Messenger- eller Instagram-innboks. Meta åpner meldingsvinduet (24 timer) bare når kunden skriver først. `m.me`- og `ig.me`-lenker er den støttede veien inn. | Verifisert (med forbehold: «ikke mulig» er utledet av vindusreglene) |
 | Meta: bilder og chat-plugin | Om bilder sendt via `m.me`/`ig.me` kommer frem i klinikkens innboks er ikke sjekket. Chat-pluginen er rapportert fjernet i mai 2024, bare bekreftet av tredjepart. | Uverifisert |
 | FAQ | Google fjernet FAQ-rike resultater i 2026. Ingen kilde viste at en FAQ-side reduserer henvendelser eller hjelper søkerangering. | Verifisert (Google), ellers ingen belegg |
@@ -144,7 +145,8 @@ Kunden kan navigere mellom Forside, Behandlinger (med en egen side per behandlin
 - «Send melding» er synlig på alle sider uten å scrolle på mobil: knappen ligger i menyen på datamaskin og i en fast linje nederst på skjermen på mobil.
 - Faste kontaktknapper for telefon, kart og e-post ligger på alle sider, langs høyre kant på datamaskin og i den faste linjen nederst på mobil, slik klinikken viser i designeksempelet (§6). Hver knapp åpner en infoboks: telefon viser nummeret og «Ring nå», kart viser adresse, åpningstider, «Åpne i Google Maps» og «Veibeskrivelse», e-post viser adressen og «Send e-post».
 - Bunnen på alle sider viser adresse, åpningstider, ikoner for Facebook og Instagram (åpnes i ny fane) og lenke til personvernerklæringen (NFR-5).
-- `[ASSUMPTION: menynavnene kommer fra designforslaget og avtales med klinikken. Klinikkens eget eksempel bruker Hjem, Vårt team, Tjenester og Kontakt (§6). Om menylenkene skal åpne i ny fane er uavklart (§12 nr. 24)]`
+- Lenker til andre sider på nettsiden, inkludert menyen, åpnes i samme fane. Bare eksterne lenker (Google Maps, Facebook, Instagram, Messenger) åpnes i ny fane (avgjort 2026-11-18).
+- `[ASSUMPTION: menynavnene kommer fra designforslaget og avtales med klinikken. Klinikkens eget eksempel bruker Hjem, Vårt team, Tjenester og Kontakt (§6)]`
 
 #### FR-2: Behandlingsside
 Kunden kan se alle behandlinger og åpne én for å se detaljer.
@@ -152,8 +154,8 @@ Kunden kan se alle behandlinger og åpne én for å se detaljer.
 - Kun behandlinger klinikken har markert som synlige vises.
 - Behandlinger-siden viser alle synlige behandlinger som kort med lenke til behandlingens egen side. Forsiden viser et utdrag.
 - Hver behandlingsside har bilde, overskrift, kort beskrivelse, en faktaboks (varighet, pris, om legegodkjenning kreves), «Om behandlingen» og lenker til de andre behandlingene. Den sier at alle behandlinger starter med en konsultasjon.
-- Fra hver behandling kan kunden gå til «Send melding» («Send melding om HIFU»). `[ASSUMPTION: behandlingen er forhåndsvalgt i skjemaet. Designforslaget viser ikke dette; avgjøres i §12 nr. 25]`
-- Behandlingssider viser ikke før- og etter-bilder for injeksjons- eller fillerbehandlinger (se NFR-9).
+- Fra hver behandling kan kunden gå til «Send melding» («Send melding om HIFU»), og behandlingen er da forhåndsvalgt i skjemaet (avgjort 2026-11-18; designforslaget viser ikke dette og må oppdateres).
+- Behandlingssider viser ikke før- og etter-bilder for injeksjons- eller fillerbehandlinger, og heller ikke for andre behandlinger som kan regnes som kosmetiske inngrep, for eksempel HIFU, til det er avklart (se NFR-9 og §12 nr. 28).
 - Priser vises uten påstander om legemiddelet (se FR-6).
 
 #### FR-3: Om oss
@@ -166,7 +168,7 @@ Kunden kan lese om klinikken og hver behandler, med bilder av klinikken og behan
 Nettsiden viser åpningstider, at klinikken kun tar imot etter avtale (ingen drop-in), adresse, telefon, e-post, kart og parkering.
 - Åpningstider (oppgitt 2026-10-29): man–fre 10–20, lør–søn 10–18, kun etter avtale. Adresse: Bøvegen 60, 4260 Salhus, Karmøy. Telefon: 469 62 914. E-post: auraskin.as@hotmail.com.
 - Kontakt oss-siden viser adresse, åpningstider, telefon, e-post og parkering med små ikoner, kartet og knappene «Åpne i Google Maps» og «Veibeskrivelse». Nederst på forsiden vises fire kort for adresse, telefon, e-post og åpningstider. Samme opplysninger står i infoboksene til kontaktknappene (FR-1) og i bunnen.
-- Kartet er et statisk kartbilde fra OpenStreetMap, med nål og kildeangivelsen «© OpenStreetMap-bidragsytere», som lenker til Google Maps. Lenkene bruker koordinater (59.371629, 5.288586), fordi adressen som tekst kan gi treff på Salhus ved Bergen. Et innebygd Google-kart kan sette cookies og ville krevd samtykkebanner. `[FORSLAG: statisk kartbilde med lenke]`
+- Kartet er et statisk kartbilde fra OpenStreetMap, med nål og kildeangivelsen «© OpenStreetMap-bidragsytere», som lenker til Google Maps. Lenkene bruker koordinater (59.371629, 5.288586), fordi adressen som tekst kan gi treff på Salhus ved Bergen. Et innebygd Google-kart kan sette cookies og ville krevd samtykkebanner. Valgt 2026-11-18: statisk kartbilde med lenke, fordi OpenStreetMap-flis er gratis å bruke med kildeangivelse og kartet ikke setter cookies. `[ASSUMPTION: kartflisene hentes fra OpenStreetMaps flistjener, som har bruksvilkår for lav trafikk; bildet lagres heller som egen fil i repoet så siden ikke avhenger av flistjeneren. Vilkårene må leses i arkitekturfasen]`
 - Parkering: innhold fra klinikken (plassholder i designforslaget).
 - `[ASSUMPTION: kartnålen ved Bøvegen 60 er plassert av OpenStreetMap og må bekreftes av klinikken (§12 nr. 23)]`
 
@@ -195,7 +197,7 @@ Kunden kan lese svar på vanlige spørsmål om behandlinger, forberedelse, etter
 
 #### FR-7: Sende melding
 Kunden kan sende en melding til klinikken ved å oppgi navn, mobilnummer, ønsket behandling (valgfritt) og fritekst.
-- Skjemaet ligger både på forsiden og på en egen Send melding-side, med de samme feltene. Knappen «Send melding» i menyen går til skjemaet på forsiden når kunden står der, og ellers til Send melding-siden. Knappene «Send melding om …» på behandlingssidene åpner Send melding-siden.
+- Skjemaet ligger både på forsiden og på en egen Send melding-side, med de samme feltene. Knappen «Send melding» i menyen går til skjemaet på forsiden når kunden står der, og ellers til Send melding-siden. Knappene «Send melding om …» på behandlingssidene åpner Send melding-siden med behandlingen forhåndsvalgt.
 - Navn, mobilnummer og melding er påkrevd; mobilnummer valideres. «Ønsket behandling» er en nedtrekksliste med «Vet ikke ennå» og klinikkens behandlinger.
 - Kunden må samtykke til at opplysningene brukes til å svare på henvendelsen, med lenke til personvernerklæringen.
 - Skjemaet ber ikke om bilder eller helseopplysninger, og opplyser om at slike ikke skal sendes. `[ASSUMPTION: behandleren ber om bilder i konsultasjonen, på en måte klinikken velger]`
@@ -212,8 +214,8 @@ En innsendt melding videresendes til behandleren på SMS og e-post.
 #### FR-9: Direkte kontaktlenker
 Kunden kan også kontakte klinikken direkte via lenker som åpner SMS (`sms:+4746962914`), Facebook Messenger (`m.me/auraskinklinikk`), Instagram eller e-post.
 - Lenkene ligger ved siden av skjemaet, på forsiden og på Send melding-siden, under teksten «Vil du heller skrive i en app, eller sende bilder?».
-- Instagram-knappen i designforslaget går til klinikkens profil (`instagram.com/Auraskinklinikk`). En `ig.me`-lenke åpner i stedet en samtale der kunden skriver først, og er det researchen og FR-8 bygger på. `[ASSUMPTION: profil-lenken brukes til klinikken har bestemt seg; valget står i §12 nr. 27]`
-- `ig.me` virker ikke på Instagram Web; siden viser da et alternativ.
+- Instagram-knappen bruker en `ig.me`-lenke som åpner en samtale der kunden skriver først (avgjort 2026-11-18; designforslaget går til profilen `instagram.com/Auraskinklinikk` og må oppdateres). Brukernavnet i `ig.me`-lenken må bekreftes av klinikken (§12 nr. 23).
+- `ig.me` virker ikke på Instagram Web; siden lenker da til profilen i stedet.
 - Chat-pluginen fra Meta (innebygd chatboble) brukes ikke. Den er rapportert fjernet i 2024. `[ASSUMPTION: bekreftet bare av tredjepartskilder]`
 
 ### 5.3 Avtalte timer og SMS
@@ -239,7 +241,7 @@ Klinikken kan se kommende avtalte timer i en dags- og ukesliste.
 
 Omfanget av denne delen avgjøres i §9: det er uavklart om klinikken vil ha begge. Researchen gir tre begrensninger:
 
-- **Innhold:** Forskriften om markedsføring av kosmetiske inngrep § 7 ser ut til å forby markedsføringshenvendelser om slike inngrep til forbrukere på e-post og SMS. Nyhetsbrev kan derfor ikke omtale injeksjons- eller fillerbehandlinger. Tilbud og kampanjer på botulinumtoksin er uansett forbudt (FR-6). `[ASSUMPTION: § 7 er lest én gang via sammendrag og må leses i fulltekst på Lovdata. Om forbudet også gjelder SMS-påminnelser om avtalte timer er uavklart; påminnelser er trolig tjenestemeldinger, ikke markedsføring]`
+- **Innhold:** Forskriften om markedsføring av kosmetiske inngrep § 7 forbyr markedsføringshenvendelser om slike inngrep til forbrukere på e-post og SMS (lest på Lovdata 2026-11-18). Nyhetsbrev kan derfor ikke omtale injeksjons- eller fillerbehandlinger, og heller ikke andre behandlinger som regnes som kosmetiske inngrep (forskriften § 3: «inngrep i hud og underhud»). Om HIFU regnes som det er uavklart (§12 nr. 28); til det er avklart omtaler ikke nyhetsbrev HIFU. Tilbud og kampanjer på botulinumtoksin er uansett forbudt (FR-6). `[ASSUMPTION: bare første del av § 7 ble gjengitt ordrett; resten er lest som sammendrag. Om forbudet også gjelder SMS-påminnelser om avtalte timer er uavklart; påminnelser er trolig tjenestemeldinger, ikke markedsføring, siden de gjelder en avtalt time kunden selv har bedt om]`
 - **Samtykke:** Markedsføringsloven § 15 krever forhåndssamtykke for e-post og SMS-markedsføring. Unntaket for eksisterende kunder gjelder bare egne, tilsvarende tjenester og krever enkel, gratis avmelding. `[ASSUMPTION: lest via sammendrag]`
 - **Push:** På iPhone fungerer push bare for en nettside som er lagt til på hjemskjermen. Om push faller under ekomloven § 3-15 eller markedsføringsloven § 15 er ikke avklart. Det finnes ingen data på hvor mange som slår på push. Forslag: utelat push fra første versjon.
 
@@ -260,6 +262,7 @@ Klinikken kan skrive og sende et kort push-varsel, med lenke til en side på net
 #### FR-18: Innlogging
 Klinikkens ansatte og utvikleren logger inn med hver sin personlige konto.
 - Bare innloggede brukere har tilgang til adminpanelet og kundeopplysninger.
+- Alle brukere har samme rettigheter, ingen roller (avgjort 2026-11-18).
 - `[ASSUMPTION: tofaktor vurderes, men er ikke et krav i første versjon]`
 
 #### FR-19: Innhold
@@ -274,7 +277,7 @@ Klinikken kan se alle innsendte meldinger, markere dem som besvart, og velge hvi
 Klinikken har laget et designeksempel i one.com Website Builder. Det viser stilen de ønsker. Designforslaget fra 2026-10-29 (en klikkbar skisse, ikke lagret i repoet) viser oppbyggingen av nettsiden i stilen fra eksempelet: sider og meny i FR-1, kontaktknapper i FR-1, behandlingssider i FR-2 og Send melding i FR-7.
 
 - **Farger:** Dempet lys rosa (ca. #FFD6CC) som bakgrunn i de fargede seksjonene, hvit mellom dem, mørk rød (ca. #9B2C2C) på knapper og aksenter, mørk brun-grå (#3B2A2A) brødtekst. Fargekodene er anslått fra skjermbilder av klinikkens eksempel, og designforslaget bruker dem. `[ASSUMPTION: klinikken oppgir endelige fargekoder og logo]`
-- **Typografi:** Overskrifter i en håndskrevet skriftfont, brødtekst i en ren, rund sans-serif. Designforslaget bruker Dancing Script (vekt 600) og Montserrat. Beregnet kontrast: mørk rød mot lys rosa 5,6:1, brødtekst mot lys rosa 10,2:1, hvit tekst på mørk rød 7,5:1 (WCAG AA krever 4,5:1 for vanlig tekst; beregnet for hånd fra fargekodene, ikke målt med verktøy). Tynnere skriftvekt enn i forslaget må kontrastsjekkes på nytt mot NFR-3.
+- **Typografi:** Overskrifter i en håndskrevet skriftfont, brødtekst i en ren, rund sans-serif. Designforslaget bruker Dancing Script (vekt 600) og Montserrat, lastet fra Google Fonts; i den ferdige siden hostes fontene selv (NFR-14). Beregnet kontrast: mørk rød mot lys rosa 5,6:1, brødtekst mot lys rosa 10,2:1, hvit tekst på mørk rød 7,5:1 (WCAG AA krever 4,5:1 for vanlig tekst; beregnet for hånd fra fargekodene, ikke målt med verktøy). Tynnere skriftvekt enn i forslaget må kontrastsjekkes på nytt mot NFR-3.
 - **Former:** Avrundede kort, runde knapper og ovale bildeutsnitt. Rolig og luftig, få elementer per skjerm.
 - **Forsiden, i eksempelets rekkefølge:** hero med overskrift, kort tekst, hovedknapp og stort portrettbilde; en fremhevet behandling med bilde; «Vår ekspertise» med «Les mer»; tre fordelskort; kundeomtaler.
 - **Forsiden i designforslaget:** hero, et utdrag av behandlinger (tre kort med «Les mer»), Send melding (skjema og kontaktlenker, FR-7 og FR-9), Vanlige spørsmål (FR-21) og Kontakt oss (fire kort, FR-4). Forslaget har ikke seksjonene for fordelskort og kundeomtaler fra klinikkens eksempel.
@@ -290,12 +293,14 @@ Klinikken har laget et designeksempel i one.com Website Builder. Det viser stile
 
 ### 7.1 Kvalitet
 
-- **NFR-1 Mobil først:** Alle sider fungerer fra 360 px bredde.
-- **NFR-2 Ytelse:** Sidene laster raskt på mobilnett; en kunde kan sende en melding på under 1 minutt.
+- **NFR-1 Mobil først:** Alle sider fungerer fra 360 px bredde, og i de to siste versjonene av Safari (iOS), Chrome og Samsung Internet.
+- **NFR-2 Ytelse:** Sidene er brukbare på under 3 sekunder på mobil over 4G, målt på forsiden og en behandlingsside; en kunde kan sende en melding på under 1 minutt. `[ASSUMPTION: målet er rimelig for en liten innholdsside; målemetode (for eksempel Lighthouse) velges i arkitekturfasen]`
 - **NFR-3 Universell utforming:** WCAG 2.1 nivå AA.
 - **NFR-4 Sikkerhet:** HTTPS, passord lagres ikke i klartekst, spam-beskyttelse og rate-limiting på skjemaer.
 - **NFR-10 Søkesynlighet:** Sidene har beskrivende titler og tekster slik at klinikken kan bli funnet på søk som «hudpleie Karmøy». Nettsiden har `LocalBusiness`-markering (navn, adresse, åpningstider, telefon), og klinikken oppfordres til å ha en verifisert Google-bedriftsprofil. Det brukes ikke `FAQPage`-markering. `[FORSLAG]`
   - Det er ikke undersøkt hvilke nettsider som rangerer for «hudpleie Karmøy», eller om dette trenger mer enn grunnleggende tiltak.
+- **NFR-14 Ingen sporing:** Første versjon bruker ingen statistikkverktøy, annonsepiksler eller andre sporings-cookies, og laster ingen ressurser fra tredjepart som sender besøkendes IP-adresse dit. Fonter og kartbilde hostes selv. Siden trenger da ikke samtykkebanner. Setter siden senere cookies utover det som er strengt nødvendig, kreves samtykkebanner først. (Avgjort 2026-11-18.)
+- **NFR-15 Sikkerhetskopi:** Databasen sikkerhetskopieres daglig. Kopier slettes etter 30 dager, slik at data som er slettet etter NFR-8 også forsvinner fra kopiene. `[ASSUMPTION: 30 dager er utviklerens forslag; fastsettes i arkitekturfasen]`
 - **NFR-11 Lokal kjøring:** Appen kan startes lokalt etter README med seed-data (fiktive behandlinger, fiktive kunder) og en test-admin. SMS, e-post og eventuelt push bruker en testversjon som logger i stedet for å sende, så ingen betalte kontoer kreves.
 
 ### 7.2 Personvern (GDPR)
@@ -309,13 +314,14 @@ Klinikken har laget et designeksempel i one.com Website Builder. Det viser stile
 ### 7.3 Lovlig markedsføring
 
 - **NFR-9:** Nettsiden følger regelverket for markedsføring av kosmetiske behandlinger, inkludert forbudet mot reklame for reseptpliktige legemidler (se FR-6). Konkret:
-  - Ingen før- og etter-bilder i markedsføring av kosmetiske inngrep, inkludert injeksjoner og fillers (forskriften § 5, verifisert).
+  - Ingen før- og etter-bilder i markedsføring av kosmetiske inngrep, inkludert injeksjoner og fillers (forskriften § 5, verifisert). Forskriften § 3 definerer kosmetiske inngrep også som «inngrep i hud og underhud», så HIFU og lignende behandlinger kan omfattes. Til det er avklart (§12 nr. 28) behandles de som kosmetiske inngrep: ingen før- og etter-bilder og ingen omtale i nyhetsbrev. `[ASSUMPTION]`
+  - Kompetansekrav: kosmetiske inngrep og injeksjoner som kan gi alvorlig skade kan bare utføres av helsepersonell (helsepersonelloven § 4 a, verifisert).
   - Medisinsk ansvarlig og kontaktinformasjon er oppgitt (forskriften § 4, verifisert; se FR-3).
   - Markedsføringen er ikke rettet mot personer under 18 år og skal ikke nedtone risiko (forskriften § 4, verifisert). Behandlinger uten medisinsk begrunnelse utføres ikke på under 18 år (helsepersonelloven § 4 b, verifisert).
   - Ingen tilbud om forbrukerlån (forskriften § 6).
   - Tilsyn føres av Statsforvalteren og Statens helsetilsyn (forskriften § 9) og av DMP for legemidler og medisinsk utstyr.
   - Før publisering gjennomgås behandlingstekstene av klinikkens lege eller medisinsk ansvarlige. `[ASSUMPTION: gjennomgangen er klinikkens ansvar]`
-  - Laserbehandling og kjemisk peeling er ikke undersøkt, og kan ha egne krav. `[ASSUMPTION]`
+  - Laserbehandling og kjemisk peeling kan ha egne krav: Helsedirektoratets kommentar til § 4 a nevner dypere kjemisk peeling og laser fra klasse 3b som områder med strengere kompetansekrav, og laser reguleres av strålevernforskriften (DSA). Behandlingstekster om laser og peeling tas ikke med før klinikken har bekreftet hva de tilbyr og hvem som utfører det. `[ASSUMPTION: lest via søkesammendrag, ikke i lovtekst]`
 
 ### 7.4 Repoet
 
@@ -338,18 +344,19 @@ Nettsiden skal kunne legges på klinikkens eget domene (for eksempel `auraskin.n
 - Kalender og selvbetjent booking: passer ikke klinikkens arbeidsflyt med konsultasjon og legegodkjenning.
 - Nettbetaling.
 - Kundekonto med innlogging.
-- Opplasting av bilder og innsamling av helseopplysninger.
+- Opplasting av bilder fra kunder og innsamling av helseopplysninger. (Klinikken laster selv opp bilder av klinikken og behandlerne i adminpanelet, FR-19.)
+- Statistikk, annonsepiksler og samtykkebanner i første versjon (NFR-14).
 - Digital flyt for legegodkjenning.
 - Andre språk enn norsk.
 - Kjøp og drift av domene og produksjonshosting (klinikkens ansvar). Å gjøre nettsiden klar for klinikkens domene og levere en overleveringsguide er med (§7.5).
 
 ## 9. Omfang og fasering `[FORSLAG]`
 
-Forslag til rekkefølge, som avtales når omfanget for nyhetsbrev og push er avklart:
+**Frist og rammer (avgjort 2026-11-18):** Nettsiden skal være ferdig 2026-12-15, og skal kjøres live hos klinikken etter tester. Én utvikler bygger. Det gir rundt fire uker, så rekkefølgen under er også prioriteringen: det som ikke rekkes, utsettes til etter fristen.
 
 1. **Kjerne:** informasjonssider (FR-1–FR-6, FR-21), Send melding med SMS og e-post (FR-7–FR-8), samtalelenker til Messenger og Instagram (FR-9), adminpanel for innhold og meldinger (FR-18–FR-20).
 2. **Timer:** registrering av avtalte timer med SMS-bekreftelse og -påminnelse (FR-10–FR-14).
-3. **Nyhetsbrev:** FR-15–FR-16, begrenset til innhold som ikke omtaler injeksjons- eller fillerbehandlinger, og først etter at forskriften § 7 og markedsføringsloven § 15 er lest i fulltekst og avklart.
+3. **Nyhetsbrev (siste, bare hvis tiden rekker):** FR-15–FR-16, begrenset til innhold som ikke omtaler injeksjons- eller fillerbehandlinger, eller andre kosmetiske inngrep (se NFR-9). Forskriften § 7 er lest; markedsføringsloven § 15 skal leses ordrett før bygging.
 4. **Push (FR-17):** ikke med i første versjon. Vurderes bare hvis klinikken ber om det etter lansering.
 
 Videresending til Messenger og Instagram via Metas API er ikke med i første versjon. Klinikkens ønske om det avgjøres i arkitekturfasen, etter at klinikken har svart om Facebook-siden og Instagram-kontoen (spørsmål 1) og Meta-reglene er testet (FR-8, §10).
@@ -368,6 +375,9 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 | Bilder eller tekster fra konkurrenter eller klinikkens egne kanaler bryter før/etter-forbudet. | Brudd på forskriften § 5. | Ikke kopier resultatsider med bilder; se NFR-9. |
 | Personopplysninger sendes via Meta og SMS-leverandør. | GDPR-krav om databehandleravtale, mulig tredjelandsoverføring. | Avklar i arkitekturfasen (NFR-5–NFR-8). |
 | Klinikken leverer ikke innhold (tekster, bilder, priser) i tide. | Nettsiden kan ikke publiseres. | Plassholdere og tidlig be om innholdet. |
+| Én utvikler og frist 2026-12-15 (rundt fire uker). | Ikke alt rekkes; kvaliteten på kjernen går ned hvis nyhetsbrev og timer presser seg inn. | Fast prioritering i §9: kjerne først, timer, nyhetsbrev sist. Nyhetsbrev utsettes uten at kjernen påvirkes. |
+| Klinikken har ikke domene, hosting og kontoer klare til fristen. | Siden kan ikke gå live 2026-12-15 selv om den er ferdig. | Demo på hostingtjenestens gratisadresse (§7.5); spør klinikken om domene og e-post (§12 nr. 7) nå. |
+| HIFU regnes som kosmetisk inngrep (forskriften § 3). | Før- og etter-bilder og nyhetsbrev om HIFU er forbudt, og HIFU er klinikkens fremste eksempel. | Behandle HIFU som kosmetisk inngrep til det er avklart (NFR-9); spør klinikkens lege eller Statens helsetilsyn (§12 nr. 28). |
 | Malens tekster, stockbilder og fiktive kundeomtaler fra designeksempelet publiseres uendret. | Uriktige påstander, ugyldige omtaler og uavklart bildelisens. | Bruk eksempelet bare som stil (§6). Alt innhold byttes mot klinikkens eget og gjennomgås etter NFR-9. |
 
 ## 11. Suksesskriterier
@@ -395,7 +405,9 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 8. Appen kan startes lokalt etter README med seed-data (NFR-11).
 9. Ingen side bruker legemiddelnavn, kodeord eller før- og etter-bilder av injeksjons- eller fillerbehandlinger, og medisinsk ansvarlig er oppgitt (FR-3, FR-6, NFR-9).
 10. Kontaktknappene (telefon, kart, e-post) ligger på alle sider, også på mobil, og hver åpner riktig infoboks med riktig lenke. Google Maps-lenkene lander ved Bøvegen 60 på Karmøy (FR-1, FR-4).
-11. Menyvalgene og lenkene mellom Forside, Behandlinger, behandlingssidene, Om oss, Kontakt oss og Send melding fører til riktig side (FR-1).
+11. Menyvalgene og lenkene mellom Forside, Behandlinger, behandlingssidene, Om oss, Kontakt oss og Send melding fører til riktig side i samme fane, og bare eksterne lenker åpner i ny fane (FR-1).
+12. Siden setter ingen cookies utover det som er strengt nødvendig, og laster ingen fonter, kart eller skript fra tredjepart (NFR-14).
+13. «Send melding om …» på en behandlingsside åpner skjemaet med den behandlingen valgt (FR-2).
 
 ## 12. Åpne spørsmål
 
@@ -413,28 +425,36 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 
 | # | Spørsmål | Hvem |
 |---|---|---|
-| 6 | Hvem betaler for SMS-utsending, og hva er forventet volum? | Klinikken |
 | 7 | Klinikken har ingen nettside i dag (bekreftet 2026-10-29). Domene og hosting: har klinikken et domene eller e-post på eget domene, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. Designeksempelet er laget i one.com Website Builder, trolig på en gratisplan; det er ikke bekreftet at klinikken har et domene eller webhotell hos one.com. Hvis de har webhotell der, må det sjekkes om det kan kjøre en applikasjon (§7.5). | Klinikken og utvikleren |
-| 8 | Når skal nettsiden være ferdig? | Klinikken |
 | 9 | Adresse: Bøvegen 60, 4260 Salhus (oppgitt 2026-10-29). Kommunen (Karmøy) er ikke bekreftet av klinikken (spørsmål 23 i `kundeintervju/sporsmal-oppfolging.md`). | Klinikken |
 | 10 | Logo, endelige farger, stil og bilder. Designeksempelet bruker malens stockbilder og tekster; hvilke egne bilder og tekster skal erstatte dem? Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
 | 11 | Ønsker klinikken nyhetsbrev og push, hvor ofte, og hvem skriver innholdet? | Klinikken |
 | 12 | Hva er antall henvendelser og gjentatte spørsmål per uke i dag (baseline for SM-3)? | Klinikken |
-| 13 | Skal forsiden ha en liste med vanlige spørsmål (FR-21)? | Klinikken og utvikleren |
 | 14 | Hvordan skal bilder fra kunder håndteres i konsultasjonen, siden nettsiden ikke tar imot dem? Kommer bilder sendt via `m.me`/`ig.me` frem i klinikkens innboks? (Test med klinikkens egen side.) | Klinikken og utvikleren |
-| 15 | Forskriften § 7 (FOR-2005-07-01-749) og markedsføringsloven § 15: forbyr de nyhetsbrev om kosmetiske inngrep, og gjelder det SMS-påminnelser? Les lovteksten på Lovdata og avklar med klinikkens lege eller Statens helsetilsyn. | Utvikleren |
-| 16 | Hva endrer lovendringen LOV-2026-06-19-42 (i kraft 2026-07-01) i helsepersonelloven? | Utvikleren |
+| 15 | Forskriften § 7 er lest på Lovdata (2026-11-18): den forbyr markedsføringshenvendelser om kosmetiske inngrep til forbrukere på e-post og SMS. Gjenstår: les markedsføringsloven § 15 ordrett (ble ikke hentet), og avklar med klinikkens lege eller Statens helsetilsyn om SMS-påminnelser om avtalte timer er tillatt. | Utvikleren |
 | 17 | Kan merkenavn stå i en prisliste? Kilder er uenige. Spør DMP. | Utvikleren |
 | 18 | Hvem er medisinsk ansvarlig, og hvem hos klinikken gjennomgår behandlingstekstene før publisering? | Klinikken |
-| 19 | Hvilke regler gjelder for laserbehandling og kjemisk peeling (hvem kan utføre dem, hva kan sies)? Ikke undersøkt. | Utvikleren |
+| 19 | Laser og kjemisk peeling: Helsedirektoratet og DSA har strengere krav for dypere peeling og laser fra klasse 3b (lest via søkesammendrag). Tilbyr klinikken dette, hvem utfører det, og er det avtale med lege? | Klinikken og utvikleren |
 | 20 | Hvilke nettsider rangerer for «hudpleie Karmøy», og hva har de felles? Krever manuelt Google-søk fra stedet. Konkurrentoversikten er laget for Molde-området, ikke Karmøy. | Utvikleren |
 | 21 | Skal siden ha kundeomtaler (§6)? Har klinikken ekte omtaler, og samtykke fra de som er sitert? | Klinikken |
 | 22 | Hovedknappen i eksempelet heter «Bestill tid». Er «Send melding» (som i designforslaget) eller «Ta kontakt» greit, siden klinikken ikke vil ha booking? Er menyen i designforslaget (Hjem, Behandlinger, Om oss, Kontakt oss og knappen Send melding) greit, i stedet for eksempelets (Hjem, Vårt team, Tjenester, Kontakt)? | Klinikken |
-| 23 | Stemmer Facebook-adressen (`facebook.com/auraskinklinikk`), Messenger-navnet (`m.me/auraskinklinikk`) og kartnålen ved Bøvegen 60 (FR-4, FR-9)? | Klinikken |
-| 24 | Skal menylenkene åpne i ny fane (FR-1)? Ønsket er nevnt, men ikke presisert. | Utvikleren |
-| 25 | Skal behandlingen være forhåndsvalgt i skjemaet når kunden kommer fra en behandlingsside (FR-2, FR-7)? Designforslaget viser det ikke. | Utvikleren |
-| 26 | Kartløsning på den ferdige siden: statisk kartbilde med lenke til Google Maps (som i forslaget) eller innebygd Google-kart? Innebygd kart kan sette cookies og krever samtykkebanner (FR-4). | Utvikleren |
-| 27 | Skal Instagram-knappen åpne klinikkens profil (som i designforslaget) eller en samtale via `ig.me` (FR-9)? | Klinikken og utvikleren |
+| 23 | Stemmer Facebook-adressen (`facebook.com/auraskinklinikk`), Messenger-navnet (`m.me/auraskinklinikk`), Instagram-navnet i `ig.me`-lenken (`ig.me/m/Auraskinklinikk`) og kartnålen ved Bøvegen 60 (FR-4, FR-9)? | Klinikken |
+| 28 | Regnes HIFU som kosmetisk inngrep etter forskriften § 3 («inngrep i hud og underhud»)? Det avgjør om før- og etter-bilder og nyhetsbrev om HIFU er forbudt (NFR-9, §5.4). Spør klinikkens lege eller Statens helsetilsyn. | Utvikleren og klinikken |
+
+**Avgjort 2026-11-18** (utviklerens beslutninger; numrene er beholdt fra tidligere versjoner)
+
+| # | Beslutning |
+|---|---|
+| 6 | Klinikken står for kostnaden til SMS. Utvikleren setter likevel et tak på utsendelser mot misbruk (NFR-4). |
+| 8 | Frist: 2026-12-15 (§9). |
+| 13 | Vanlige spørsmål tas med på forsiden som forslag (FR-21), uten å vente på klinikken. |
+| 16 | LOV-2026-06-19-42 endrer helsepersonelloven § 10 (pasientens rett til å ha andre til stede og medvirkning). Den berører ikke § 4 a, § 4 b eller kosmetiske behandlinger, og gir ingen nye krav til nettsiden. |
+| 24 | Interne lenker åpnes i samme fane, eksterne i ny fane (FR-1). |
+| 25 | Behandlingen er forhåndsvalgt i skjemaet fra behandlingssider (FR-2, FR-7). |
+| 26 | Kart: statisk OpenStreetMap-bilde med lenke til Google Maps (FR-4). |
+| 27 | Instagram-knappen bruker `ig.me` (FR-9). |
+| – | Ingen statistikk eller cookies i første versjon, fonter hostes selv (NFR-14). Alle i adminpanelet har samme rettigheter (FR-18). Nyhetsbrev bygges sist og bare hvis tiden rekker (§9). Nettsiden skal gå live hos klinikken etter tester (§9, §7.5). |
+
 
 ## 13. Antakelser
 
@@ -446,13 +466,14 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 - §5.2 FR-9: Meta-chat-pluginen er fjernet (bare tredjepartskilder).
 - §5.4: Forskriften § 7 forbyr e-post- og SMS-markedsføring om kosmetiske inngrep til forbrukere (lest én gang via sammendrag). Push faller under samme samtykkekrav (ikke avklart).
 - §2.4: Konkurrentoversikten fra Molde-området sier noe om bransjen, men ikke om konkurransen på Karmøy.
-- §7.3 NFR-9: Klinikkens lege eller medisinsk ansvarlige gjennomgår behandlingstekstene. Laser og kjemisk peeling har ikke vært undersøkt.
+- §7.3 NFR-9: Klinikkens lege eller medisinsk ansvarlige gjennomgår behandlingstekstene. HIFU behandles som kosmetisk inngrep til det er avklart (§12 nr. 28). Laser og kjemisk peeling er bare lest via søkesammendrag.
+- §5.4: Markedsføringsloven § 15 er ikke hentet ordrett; innholdet er lest som sammendrag.
+- §7.1 NFR-2 og NFR-15: Målet på 3 sekunder over 4G og 30 dagers oppbevaring av sikkerhetskopier er utviklerens forslag.
 - §5.3 FR-12: Påminnelsen sendes kl. 12:00 dagen før.
 - §5.5 FR-18: Tofaktor er ikke et krav i første versjon.
 - §6: Klinikken leverer logo, farger, bilder, tekster og priser. Fargekodene i §6 er anslått fra skjermbilder av designeksempelet.
-- §5.1 FR-1: Menynavnene (fra designforslaget) er ikke endelige, og det er uavklart om menylenkene åpner i ny fane.
-- §5.1 FR-2: Behandlingen er forhåndsvalgt i skjemaet når kunden kommer fra en behandlingsside (ikke vist i designforslaget).
-- §5.1 FR-4: Kartnålen ved Bøvegen 60 er riktig, og et statisk kartbilde med lenke til Google Maps er løsningen (ikke bekreftet av klinikken).
+- §5.1 FR-1: Menynavnene (fra designforslaget) er ikke endelige.
+- §5.1 FR-4: Kartnålen ved Bøvegen 60 er riktig (ikke bekreftet av klinikken). Kartbildet lagres som egen fil, og OpenStreetMaps bruksvilkår for kartfliser er ikke lest.
 - §5.1 FR-5: De fire stegene (ta kontakt, konsultasjon, eventuell legegodkjenning, behandling) vises i en eller annen form under Behandlinger.
-- §5.2 FR-9: Facebook-adressen og Messenger-navnet (`auraskinklinikk`) er antatt, ikke bekreftet. Instagram-knappen går til profilen til klinikken har valgt.
+- §5.2 FR-9: Facebook-adressen og Messenger-navnet (`auraskinklinikk`) er antatt, ikke bekreftet, og det samme gjelder Instagram-navnet i `ig.me`-lenken.
 - §7.2 NFR-8: Opplysninger slettes etter 12 måneder.
