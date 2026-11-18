@@ -1,7 +1,7 @@
 ---
 title: "PRD: AURA SKIN Klinikk – nettside"
 status: draft
-version: 7
+version: 8
 created: 2026-09-27
 updated: 2026-11-18
 ---
@@ -10,7 +10,7 @@ updated: 2026-11-18
 
 ## 0. Om dokumentet
 
-Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på kildene under: produktbrief, kundeintervju, research om regler og kanaler og designforslaget. Versjon 7 (2026-11-18) er stramet inn etter valideringen: første versjon er en minimumsrelease med frist 2026-12-15 (§9), spørsmål som blokkerer publisering har egen tabell med frist (§12), og kravene til personvern, feilhåndtering, spam-vern og HIFU er skjerpet. Funn som ikke er ført inn står i `prd/addendum.md`. Endringshistorikken ligger i git. Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
+Denne PRD-en beskriver hva nettsiden for AURA SKIN Klinikk skal gjøre, hva som er avklart med klinikken og hva som gjenstår. Den bygger på kildene under: produktbrief, kundeintervju, research om regler og kanaler og designforslaget. Versjon 7 (2026-11-18) er stramet inn etter valideringen: første versjon er en minimumsrelease med frist 2026-12-15 (§9), spørsmål som blokkerer publisering har egen tabell med frist (§12), og kravene til personvern, feilhåndtering, spam-vern og HIFU er skjerpet. Versjon 8 gjør flere krav testbare og legger til brukerreiser og et suksesskriterium som kan testes før levering (etter tilbakemeldingen i `prd/tilbakemelding-prd.md`). Funn som ikke er ført inn står i `prd/addendum.md`. Endringshistorikken ligger i git. Dokumentet er grunnlaget for UX-design, arkitektur og oppdeling i oppgaver.
 
 - Begrepene i §4 brukes konsekvent. Kravene er nummerert FR-1 til FR-22 (funksjon) og NFR-1 til NFR-16 (kvalitet); numrene er stabile mellom versjoner.
 - Antakelser som må bekreftes er merket `[ASSUMPTION]` og samlet i §13. Forslag som ikke er besluttet er merket `[FORSLAG]`.
@@ -105,14 +105,22 @@ Funnene under styrer kravene i §5, §7, §9 og §10. Kildene og graden av sikke
 Ida (34) ser et innlegg fra AURA SKIN Klinikk på Instagram og går inn på nettsiden fra mobilen. På behandlingssiden leser hun hva HIFU innebærer, hvor lang tid det tar, hva hun kan forvente, og hva det koster. Hun ser at behandlingen starter med en konsultasjon. Hun trykker «Send melding», fyller inn navn og telefonnummer, velger HIFU og skriver at hun helst vil komme på ettermiddagen. Skjermen bekrefter at meldingen er sendt. Behandleren får meldingen på SMS og e-post, og ringer Ida tilbake samme dag.
 **Kanttilfelle:** Hvis videresendingen til én kanal feiler, kommer meldingen likevel frem på den andre kanalen og vises alltid i adminpanelet.
 
-**UJ-2. Behandleren setter opp timen.**
-Etter samtalen med Ida logger behandleren inn i adminpanelet og registrerer en konsultasjon torsdag kl. 16:00. Ida får straks en SMS med tid, sted og hva timen gjelder, og en påminnelse dagen før.
+**UJ-2. Nora setter opp timen.**
+Etter samtalen med Ida logger behandleren Nora inn i adminpanelet og registrerer en konsultasjon torsdag kl. 16:00. Ida får straks en SMS med dato, tid og sted, og en påminnelse dagen før.
+**Kanttilfelle:** Ida ringer onsdag og flytter timen til fredag. Nora flytter timen i adminpanelet, den planlagte påminnelsen kanselleres, og Ida får SMS med ny tid og en ny påminnelse.
 
-**UJ-3. Klinikken sender ut nyheter.** `[FORSLAG]`
-Klinikken har en ny hudpleiebehandling å fortelle om. Behandleren skriver et nyhetsbrev og sender det til kunder som har meldt seg på. Eksempelet er under forbehold: en utsendelse kan ikke omtale injeksjons- eller fillerbehandlinger, og kan ikke være et tilbud på botulinumtoksin (se §5.4 og §2.4). Push-varsel er ikke med i første versjon.
+**UJ-3. Nora sender ut nyheter.** `[FORSLAG]`
+Nora har en ny hudpleiebehandling å fortelle om og skriver et nyhetsbrev og sender det til kunder som har meldt seg på. Eksempelet er under forbehold: en utsendelse kan ikke omtale injeksjons- eller fillerbehandlinger, og kan ikke være et tilbud på botulinumtoksin (se §5.4 og §2.4). Push-varsel er ikke med i første versjon.
+**Kanttilfelle:** inneholder utkastet et ord fra ordlisten (FR-6), må Nora kvittere en advarsel før det sendes, og et nyhetsbrev om injeksjoner eller fillers sendes ikke (NFR-9).
 
 **UJ-4. Kunden har bare et spørsmål.**
 Mia lurer på hvor lenge hun må vente før hun kan trene etter en behandling. Hun finner svaret under «Vanlige spørsmål» på forsiden uten å sende melding. Klinikken slipper å svare på spørsmålet enda en gang.
+
+**UJ-5. Nora oppdaterer en pris.**
+Nora logger inn i adminpanelet fra telefonen, åpner behandlingen og endrer prisen fra 1 200 til 1 300 kr. Endringen vises på behandlingssiden med en gang. Prøver Nora å gjøre en ny behandling synlig uten å fylle ut risiko og aldersgrense, avvises det med en melding om hva som mangler (FR-19).
+
+**UJ-6. Mia melder seg på nyhetsbrev.** `[FORSLAG]`
+Mia legger inn e-postadressen sin og krysser av for samtykke. Hun får en e-post med en bekreftelseslenke, og først når hun trykker på den er hun påmeldt (FR-15). Hver utsendelse har en avmeldingslenke, og ett klikk er nok for å melde seg av (FR-16).
 
 ## 4. Begreper
 
@@ -132,6 +140,7 @@ Mia lurer på hvor lenge hun må vente før hun kan trene etter en behandling. H
 - **Påminnelse:** SMS til kunden før en avtalt time.
 - **Nyhetsbrev:** E-post klinikken sender til kunder som har meldt seg på.
 - **Push-varsel:** Varsel i nettleseren eller på mobilen til kunder som har slått det på.
+- **Utsendelse:** Én SMS, e-post eller ett nyhetsbrev som nettsiden sender (melding videresendt til behandleren, bekreftelse, påminnelse, nyhetsbrev).
 - **Adminpanel:** Den innloggede delen av nettsiden der klinikken styrer innhold, meldinger, timer og utsendelser.
 - **Utvikler:** Rollen som drifter og vedlikeholder nettsiden. Har egen tilgang til adminpanelet.
 
@@ -165,6 +174,7 @@ Kunden kan se alle behandlinger og åpne én for å se detaljer.
 Kunden kan lese om klinikken og hver behandler, med bilder av klinikken og behandlerne.
 - Siden viser to behandlere, hver med portrett, navn og rolle, og en kort tekst om klinikken. Navn, roller, bilder og samtykke til å vise dem kommer fra klinikken.
 - Siden oppgir hvem som er medisinsk ansvarlig og hvordan klinikken kan kontaktes (forskrift om markedsføring av kosmetiske inngrep § 4, verifisert på Lovdata).
+- Navn, telefon og e-post til medisinsk ansvarlig er synlige på siden uten at kunden må åpne noe. En behandler vises bare når klinikken har bekreftet samtykke til navn og bilde.
 - `[ASSUMPTION: klinikken oppgir utdanning/autorisasjon og eventuell tilknyttet lege, hvis de ønsker det vist]`
 
 #### FR-4: Praktisk informasjon
@@ -178,6 +188,7 @@ Nettsiden viser åpningstider, at klinikken kun tar imot etter avtale (ingen dro
 #### FR-5: Slik foregår det (under Behandlinger)
 Nettsiden forklarer at alle behandlinger starter med en konsultasjon, og hva som skjer videre: ta kontakt → konsultasjon → eventuell legegodkjenning → behandling.
 - Forklaringen står under Behandlinger og på behandlingssidene (FR-2), ikke på en egen side og ikke i menyen.
+- De fire stegene vises i rekkefølge, og teksten sier at alle behandlinger starter med en konsultasjon og at noen krever legegodkjenning.
 - `[ASSUMPTION: de fire stegene vises i en eller annen form under Behandlinger. Designforslaget har ikke stegene lenger; teksten skrives senere]`
 
 #### FR-6: Lovlig omtale av behandlinger
@@ -222,6 +233,7 @@ Kunden kan også kontakte klinikken direkte via lenker som åpner SMS (`sms:+474
 - Lenkene ligger ved siden av skjemaet, på forsiden og på Send melding-siden, under teksten «Vil du heller skrive i en app, eller sende bilder?».
 - Instagram-knappen bruker en `ig.me`-lenke som åpner en samtale der kunden skriver først (avgjort 2026-11-18; designforslaget går til profilen `instagram.com/Auraskinklinikk` og må oppdateres). Brukernavnet i `ig.me`-lenken må bekreftes av klinikken (§12 nr. 23).
 - `ig.me` virker ikke på Instagram Web; siden lenker da til profilen i stedet.
+- På mobil åpner hver lenke riktig app eller side (`sms:`, `m.me`, `ig.me`, `mailto:`). På datamaskin vises nummer og e-postadresse som tekst i stedet for SMS-lenke. Alle lenker testes mot klinikkens ekte kontoer før lansering.
 - Chat-pluginen fra Meta (innebygd chatboble) brukes ikke. Den er rapportert fjernet i 2024. `[ASSUMPTION: bekreftet bare av tredjepartskilder]`
 
 ### 5.3 Avtalte timer og SMS
@@ -232,7 +244,9 @@ Ikke med i minimumsreleasen (§9). Tas etter at kjernen er ferdig og testet.
 Klinikken kan registrere en avtalt time med kundens navn, mobilnummer, behandling (eller konsultasjon), dato og tid.
 - Registreringen skal gå raskt (mål: under ett minutt), siden klinikken allerede følger opp timer et annet sted.
 - Mobilnummeret valideres som i FR-7. Tidspunktet kan ikke ligge i fortiden. Registreringen har et valg «Ikke send SMS» for kunder som ikke vil ha SMS; da sendes ingen bekreftelse eller påminnelse.
-- Klinikken forteller kunden at hun får SMS om timen når hun avtaler den (NFR-16).
+- Mangler navn, mobilnummer, dato eller tid, vises en feilmelding og ingenting lagres. Overlapper timen en annen avtalt time, vises en advarsel som kan overstyres.
+- Etter lagring vises timen i timeoversikten (FR-14), og bekreftelsen (FR-11) sendes.
+- Klinikken forteller kunden at det sendes SMS om timen når timen avtales (NFR-16).
 
 #### FR-11: SMS-bekreftelse
 Kunden får SMS med dato, tid og adresse og teksten «time hos AURA SKIN» når timen registreres. SMS-en nevner ikke behandlingen og inneholder ikke markedsføring. Den oppgir klinikkens telefonnummer for å flytte eller avlyse.
@@ -264,10 +278,12 @@ Kunden kan melde seg på nyhetsbrev med e-post. Push-varsler (FR-17) er ikke med
 
 #### FR-16: Sende nyhetsbrev
 Klinikken kan skrive og sende et nyhetsbrev til alle påmeldte fra adminpanelet. Hvert nyhetsbrev har en avmeldingslenke som virker med ett klikk, og avmeldte får ingen flere utsendelser. Innholdet følger NFR-9: ingen omtale av injeksjoner, fillers eller andre kosmetiske inngrep.
+- Før utsending vises en forhåndsvisning og antall mottakere, og klinikken må bekrefte. En utsendelse som feiler for én mottaker, logges og stopper ikke utsendelsen til de andre.
 
 #### FR-17: Sende push-varsel `[FORSLAG]`
 Klinikken kan skrive og sende et kort push-varsel, med lenke til en side på nettsiden, til alle som har slått det på.
 - Ikke med i første versjon (§9). Kravet står her for det tilfellet at klinikken ber om push etter lansering.
+- Varselet har en kort tekst (maks 120 tegn) og én lenke. Slår kunden av varsler, sendes det ingen flere. `[FORSLAG]`
 
 ### 5.5 Adminpanel
 
@@ -331,7 +347,7 @@ Klinikken har laget et designeksempel i one.com Website Builder. Det viser stile
 - **NFR-6:** Det samles bare inn navn, mobilnummer, e-post (nyhetsbrev) og meldingstekst. Siden ber ikke om helseopplysninger eller bilder. Behandlingsvalg, fritekst og avtalte behandlinger kan likevel røpe helseforhold (GDPR art. 9), så de behandles som sensitive: de sendes ikke i SMS, vises bare i adminpanelet og i e-post til klinikken, og slettes etter NFR-8.
 - **NFR-7:** Nyhetsbrev og push-varsler krever eget, aktivt samtykke, adskilt fra kontaktskjemaet (markedsføringsloven § 15). Innholdet følger i tillegg NFR-9. `[ASSUMPTION: se §5.4 for forbehold om forskriften § 7 og push]`
 - **NFR-8:** Meldinger og avtalte timer slettes automatisk 12 måneder etter siste kontakt. Nyhetsbrevadresser slettes når kunden melder seg av, og samtykkeloggen 12 måneder etter avmelding. Nettsiden er ikke klinikkens journal; journalføring skjer i klinikkens eget system. `[ASSUMPTION: 12 måneder er utviklerens forslag; klinikken bekrefter]`
-- **NFR-16 Roller og rettsgrunnlag:** Klinikken er behandlingsansvarlig, og utvikleren er databehandler med skriftlig databehandleravtale. Rettsgrunnlag: skjemaet bygger på samtykke (art. 6 nr. 1 bokstav a, og for fritekst eksplisitt samtykke etter art. 9 nr. 2 bokstav a), avtalte timer og SMS på avtale med kunden (art. 6 nr. 1 bokstav b), nyhetsbrev på samtykke. Kunden informeres om behandlingen når hun avtaler time. Utvikleren har ikke daglig tilgang til kundedata etter overlevering: utviklerkontoen deaktiveres eller begrenses når siden er levert. `[ASSUMPTION: rettsgrunnlagene er utviklerens forslag og må bekreftes av klinikken eller en jurist]`
+- **NFR-16 Roller og rettsgrunnlag:** Klinikken er behandlingsansvarlig, og utvikleren er databehandler med skriftlig databehandleravtale. Rettsgrunnlag: skjemaet bygger på samtykke (art. 6 nr. 1 bokstav a, og for fritekst eksplisitt samtykke etter art. 9 nr. 2 bokstav a), avtalte timer og SMS på avtale med kunden (art. 6 nr. 1 bokstav b), nyhetsbrev på samtykke. Kunden informeres om behandlingen når timen avtales. Utvikleren har ikke daglig tilgang til kundedata etter overlevering: utviklerkontoen deaktiveres eller begrenses når siden er levert. `[ASSUMPTION: rettsgrunnlagene er utviklerens forslag og må bekreftes av klinikken eller en jurist]`
 - Leverandører av hosting, SMS, e-post og push krever databehandleravtale og velges med behandling i EU/EØS.
 
 ### 7.3 Lovlig markedsføring
@@ -422,6 +438,7 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 **Sekundære**
 - **SM-4:** Færre uteblitte timer etter innføring av SMS-påminnelser. Validerer FR-12. Gjelder bare hvis timer kommer med, og krever at klinikken først noterer uteblivelser i noen uker for å få en baseline.
 - **SM-5:** Nettsiden består en WCAG 2.1 AA-sjekk før lansering. Validerer NFR-3.
+- **SM-7:** I testmodus (NFR-11) vises en innsendt melding i adminpanelet og i loggen over utsendelser innen 10 sekunder; er timer med, gir en registrert time en SMS-bekreftelse i loggen innen 10 sekunder. Kan testes uten ekte kontoer. Validerer FR-7, FR-8 og FR-11.
 
 **Motvekt**
 - **SM-C1:** Antall utsendelser. Nyhetsbrev og push skal være nyttige, ikke hyppige; for mange utsendelser fører til avmeldinger. Motvekt til FR-16–FR-17.
@@ -455,7 +472,7 @@ Videresending til Messenger og Instagram via Metas API er ikke med i første ver
 | 2 | Hvilke behandlinger finnes, hva koster de, og hvilke krever legegodkjenning? «Hifo» er bekreftet som HIFU (2026-10-29). | Klinikken |
 | 3 | Hvem er legen og den medisinsk ansvarlige (ansatt, ekstern, samarbeidspartner), skal siden nevne dem, og hvem hos klinikken gjennomgår behandlingstekstene før publisering? (Slått sammen med tidligere nr. 18.) | Klinikken |
 | 4 | Hvilke behandlinger bruker reseptpliktige legemidler, og hvilke betegnelser skal brukes? | Klinikken |
-| 5 | Skal meldinger gå til én felles mottaker eller til en bestemt behandler? Hvilket mobilnummer? | Klinikken |
+| 5 | Skal meldinger gå til én felles mottaker eller til en bestemt behandler? Hvilket mobilnummer? Standard til klinikken svarer: ett felles mobilnummer og én felles e-postadresse (FR-20). | Klinikken |
 | 7 | Klinikken har ingen nettside i dag (bekreftet 2026-10-29). Domene og hosting: har klinikken et domene eller e-post på eget domene, hvem eier og administrerer det, og hvilken e-postløsning brukes på det? Forslag i §7.5: klinikken eier domene og hosting, utvikleren leverer en overleveringsguide. Designeksempelet er laget i one.com Website Builder, trolig på en gratisplan; det er ikke bekreftet at klinikken har et domene eller webhotell hos one.com. Hvis de har webhotell der, må det sjekkes om det kan kjøre en applikasjon (§7.5). | Klinikken og utvikleren |
 | 10 | Logo, endelige farger, stil og bilder. Designeksempelet bruker malens stockbilder og tekster; hvilke egne bilder og tekster skal erstatte dem? Kan bilder og tekster fra Facebook ligge i et offentlig repo? | Klinikken |
 | 19 | Laser og kjemisk peeling: Helsedirektoratet og DSA har strengere krav for dypere peeling og laser fra klasse 3b (lest via søkesammendrag). Tilbyr klinikken dette, hvem utfører det, og er det avtale med lege? | Klinikken og utvikleren |
