@@ -22,13 +22,6 @@ Detaljer som er levert av oppdragsgiver/utvikler og som hører hjemme i PRD og d
 | Dronevideo | Etter avtale | «Be om tilbud» |
 | Tomt / næringsbygg | Etter avtale | «Be om tilbud» |
 
-### Ønsket sidestruktur (3–5 sider)
-Om | Tjenester | Prosess | Galleri | Kontakt
-
-- **Om:** kort tekst om tilbudet, animert «lysshow» som beveger seg, kontaktinfo nederst
-- **Kontakt:** kontaktskjema som sendes til e-post, pluss telefon og e-post
-- **Sosiale medier:** ingen i dag; siden skal være klar for å koble på Instagram, Facebook og YouTube senere
-
 ### Kontaktinfo
 - E-post: andreas.dimmen@gmail.com
 - Telefon: +47 979 71 139
@@ -46,11 +39,3 @@ Om | Tjenester | Prosess | Galleri | Kontakt
 
 ## Materiale
 - Bilder fra tidligere oppdrag ligger på Google Drive; lastes ned til prosjektet av utvikler
-
-## Tekniske rammer (avklart 2026-11-21)
-
-- Arbeidsmetode er BMAD
-- Bygges sannsynligvis med ren HTML, CSS og JavaScript
-- Hosting: Vercel som utgangspunkt (Andreas kan knytte eget domene til senere)
-- «Lysshow»: animasjon som beveger seg mens man blar nedover siden; fri hånd på utformingen
-- Åpent: kontaktskjema til e-post fra en statisk side på Vercel krever enten en ekstern skjematjeneste (f.eks. Formspree) eller en liten serverless-funksjon
