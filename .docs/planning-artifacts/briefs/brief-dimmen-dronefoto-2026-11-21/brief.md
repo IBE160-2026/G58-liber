@@ -13,7 +13,7 @@ Dimmen Dronefoto er et nytt, lite dronefoto-firma som Andreas Dimmen vil starte,
 
 Dette prosjektet er en enkel, stilren nettside som blir selve starten på firmaet. Den skal gjøre én ting godt: la en eiendomsmegler eller boligselger raskt se hva som tilbys, hva det koster og hvordan man bestiller, og gi nok tillit til at de tar kontakt med en helt ukjent aktør.
 
-Prosjektet bygges av ML som et eget prosjekt for en bekjent. [ASSUMPTION] Det inngår i IBE160 og fungerer samtidig som et referanseprosjekt. Det som står på spill er at Andreas får en troverdig nettside han kan bruke til å skaffe de første kundene sine.
+Prosjektet bygges av ML som et eget prosjekt for en bekjent, og nettsiden skal leveres inn i IBE160 innen **15. desember 2026**. [ASSUMPTION] Den fungerer samtidig som et referanseprosjekt. Det som står på spill er at Andreas får en troverdig nettside han kan bruke til å skaffe de første kundene sine.
 
 ## Problemet
 
@@ -56,6 +56,8 @@ Dette er ikke en unik teknologi; det finnes flere etablerte dronefoto-aktører i
 
 ## Omfang
 
+**Frist:** ferdig nettside leveres inn 15. desember 2026, rundt tre og en halv uke fra dette utkastet. Svar fra Andreas (priser, domene, bilder med bruksrett) må derfor komme tidlig, og alt som ikke er avklart innen utgangen av november løses med en enkel standardløsning i stedet for å vente.
+
 **Med i første versjon:**
 - 5 sider (Om, Tjenester, Prosess, Galleri, Kontakt)
 - Kontaktskjema som sender til e-post
@@ -78,7 +80,7 @@ Dette er ikke en unik teknologi; det finnes flere etablerte dronefoto-aktører i
 - Domene, hosting og hvem som vedlikeholder siden etter lansering.
 - Rett til å vise tidligere bilder offentlig. De viser andres boliger.
 - Før Andreas tar betalte oppdrag: droneoperatør-registrering og forsikring må være på plass. Dette gjelder uavhengig av firmaregistrering.
-- Frist og eventuelle krav fra IBE160 (tech stack, innlevering).
+- Eventuelle krav fra IBE160 utover fristen 15. desember 2026 (tech stack, hva som skal leveres inn).
 - Hva menes konkret med «lysshowet»?
 
 ## Visjon
