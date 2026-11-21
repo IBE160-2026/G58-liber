@@ -62,3 +62,7 @@
 - [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — Avklare frist/krav fra IBE160 og hva «lysshow» på Om-siden betyr
 - [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — Kjøre bmad-review (struktur og prosa) på Dimmen-briefen før den settes til ferdig
 - [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — AURA-punktene over peker på gamle stier som nå ligger under `arkiv/aura-skin-klinikk/`; AURA er satt på vent
+- [ ] 2026-11-21 [konkurransesjekk-dimmen-dronefoto](989-2026-11-21-15-10-00-konkurransesjekk-dimmen-dronefoto.md) — Rette briefen etter funnene (fjerne «de fleste konkurrenter krever kontakt for pris», bytte differensiator til klarhet og tillit)
+- [ ] 2026-11-21 [konkurransesjekk-dimmen-dronefoto](989-2026-11-21-15-10-00-konkurransesjekk-dimmen-dronefoto.md) — Avklare med Andreas hva 2 000 kr dekker og om prisen er inkl. eller eks. mva
+- [ ] 2026-11-21 [konkurransesjekk-dimmen-dronefoto](989-2026-11-21-15-10-00-konkurransesjekk-dimmen-dronefoto.md) — Hente skjermbilder av konkurrentene (nettleser-verktøy) før grafikkfasen
+- [ ] 2026-11-21 [konkurransesjekk-dimmen-dronefoto](989-2026-11-21-15-10-00-konkurransesjekk-dimmen-dronefoto.md) — Sjekke Kvadratfotos pakkepris i nettleser og nettleserstøtte for CSS scroll-driven animations
