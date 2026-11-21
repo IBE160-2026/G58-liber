@@ -58,3 +58,7 @@
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Lese OpenStreetMaps bruksvilkår og kildekrav for kartbildet (FR-4)
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Spørre Bård om `technology.md` er en anbefaling eller bare et eksempel, og velge teknologi i arkitekturfasen (SMS-leverandør, hosting i EU/EØS)
 - [ ] 2026-11-18 [prd-versjon-5](991-2026-11-01-22-24-12-prd-versjon-5.md) — Kjøre `bmad-prd` i valideringsmodus på nytt på v8
+- [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — Få svar fra Andreas på de seks spørsmålene (innhold i 2 000 kr, leveringstid, kjørerekkevidde, domene, vedlikehold, bruksrett til bilder) og oppdatere Dimmen-briefen
+- [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — Avklare frist/krav fra IBE160 og hva «lysshow» på Om-siden betyr
+- [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — Kjøre bmad-review (struktur og prosa) på Dimmen-briefen før den settes til ferdig
+- [ ] 2026-11-21 [bytt-til-dimmen-dronefoto](990-2026-11-21-13-44-34-bytt-til-dimmen-dronefoto.md) — AURA-punktene over peker på gamle stier som nå ligger under `arkiv/aura-skin-klinikk/`; AURA er satt på vent
