@@ -25,7 +25,7 @@ For kunden er dronefoto i dag noe man må spørre om. Det er uklart hva det kost
 
 En liten nettside på 3–5 sider: **Om | Tjenester | Prosess | Galleri | Kontakt**.
 
-- **Om:** kort tekst om hva som tilbys, kontaktinfo nederst og et animert «lysshow» som beveger seg og gir siden et særpreg. [ASSUMPTION] Lysshowet tolkes som en subtil animert bakgrunn eller visuell effekt, ikke en tung 3D-opplevelse; avklares med ML.
+- **Om:** kort tekst om hva som tilbys, kontaktinfo nederst og et animert «lysshow» som beveger seg mens besøkende blar nedover siden. Andreas ønsker det og gir fri hånd på utformingen. [ASSUMPTION] Det gjøres subtilt og skal ikke gå utover lastetid eller lesbarhet på mobil.
 - **Tjenester:** boligfoto med drone til fast pris (2 000 kr per oppdrag, vist åpent), samt dronevideo og tomt/næringsbygg «etter avtale» med «Be om tilbud»-knapp.
 - **Prosess:** [ASSUMPTION] 3–4 enkle steg fra kontakt til levering (ta kontakt, avtal tid og pris, flyging, levering), slik at kunden vet hva som skjer etter at de har tatt kontakt.
 - **Galleri:** utvalgte bilder fra tidligere oppdrag, lastet ned fra Google Drive. [ASSUMPTION] Bilder først; video kommer senere via embed når Andreas får en YouTube-kanal.
@@ -58,11 +58,13 @@ Dette er ikke en unik teknologi; det finnes flere etablerte dronefoto-aktører i
 
 **Frist:** ferdig nettside leveres inn 15. desember 2026, rundt tre og en halv uke fra dette utkastet. Svar fra Andreas (priser, domene, bilder med bruksrett) må derfor komme tidlig, og alt som ikke er avklart innen utgangen av november løses med en enkel standardløsning i stedet for å vente.
 
+**Rammer:** arbeidet følger BMAD-metoden, siden bygges med HTML, CSS og JavaScript, og hosting er Vercel som utgangspunkt.
+
 **Med i første versjon:**
 - 5 sider (Om, Tjenester, Prosess, Galleri, Kontakt)
 - Kontaktskjema som sender til e-post
 - Logo, fargepalett og enkel visuell identitet
-- Animert «lysshow» på Om-siden
+- Animert «lysshow» som reagerer på scrolling (Om-siden)
 - Forberedt for lenker til Instagram, Facebook og YouTube
 - Norsk språk
 
@@ -80,8 +82,8 @@ Dette er ikke en unik teknologi; det finnes flere etablerte dronefoto-aktører i
 - Domene, hosting og hvem som vedlikeholder siden etter lansering.
 - Rett til å vise tidligere bilder offentlig. De viser andres boliger.
 - Før Andreas tar betalte oppdrag: droneoperatør-registrering og forsikring må være på plass. Dette gjelder uavhengig av firmaregistrering.
-- Eventuelle krav fra IBE160 utover fristen 15. desember 2026 (tech stack, hva som skal leveres inn).
-- Hva menes konkret med «lysshowet»?
+- Hva som skal leveres inn i IBE160 ved fristen 15. desember 2026 (kun selve nettsiden, eller også dokumentasjon fra BMAD-arbeidet?).
+- Hvordan kontaktskjemaet sender e-post fra en HTML/JS-side på Vercel (ekstern tjeneste som Formspree, eller en liten serverless-funksjon) — avgjøres i arkitekturfasen.
 
 ## Visjon
 
