@@ -26,7 +26,7 @@ For kunden er dronefoto i dag noe man må spørre om. Det er uklart hva det kost
 En liten nettside på 5 sider: **Om | Tjenester | Prosess | Galleri | Kontakt**.
 
 - **Om:** kort tekst om hva som tilbys, kontaktinfo nederst og et animert «lysshow» som beveger seg mens besøkende blar nedover siden. Andreas ønsker lysshowet og gir fri hånd på utformingen. [ASSUMPTION] Det gjøres subtilt og skal ikke gå utover lastetid eller lesbarhet på mobil.
-- **Tjenester:** boligfoto med drone til fast pris (2 000 kr per oppdrag, vist åpent), samt dronevideo og tomt/næringsbygg «etter avtale» med «Be om tilbud»-knapp.
+- **Tjenester:** boligfoto med drone til fast pris (2 000 kr per oppdrag, vist åpent). Alt er inkludert, megler kan bruke bildene fritt, og levering skjer innen 2–3 dager. Dekker Oslo, Asker, Drammen og Lillestrøm. [ASSUMPTION] Ingen reisetillegg, siden reise er inkludert. Dessuten dronevideo og tomt/næringsbygg «etter avtale» med «Be om tilbud»-knapp.
 - **Prosess:** [ASSUMPTION] 3–4 enkle steg fra kontakt til levering (ta kontakt, avtal tid og pris, flyging, levering), slik at kunden vet hva som skjer etter at de har tatt kontakt.
 - **Galleri:** utvalgte bilder fra tidligere oppdrag, lastet ned fra Google Drive. [ASSUMPTION] Bilder først; video kommer senere via embed når Andreas får en YouTube-kanal.
 - **Kontakt:** kontaktskjema som sendes til e-post, i tillegg til telefon og e-post.
@@ -37,14 +37,14 @@ Siden gjøres klar for å koble på Instagram, Facebook og YouTube senere, uten 
 
 Dette er ikke en ny idé; flere etablerte aktører i Oslo-området har tilsvarende nettsider. Forskjellen ligger i hva siden vektlegger:
 
-- **Tydelig fastpris synlig på siden** for den vanligste tjenesten og lav terskel for å bestille, mens de fleste konkurrenter krever kontakt for pris. [ASSUMPTION] Ikke verifisert mot konkurrentenes sider; sjekkes mot referansesidene i addendumet.
+- **Alt samlet på ett sted:** fastpris, hva som er inkludert, leveringstid, bruksrett og trygghet (forsikring). Åpen pris er vanlig hos konkurrentene, men få viser samtidig hva som er inkludert, leveringstid og bruksrett (konkurranseanalysen i `.docs/planning-artifacts/research/competitive-dimmen-dronefoto-konkurrenter-2026-11-21/research.md`). 2 000 kr ligger under konkurrentenes frittstående dronepriser (3 000–5 000 kr), så det må stå tydelig at alt er inkludert.
 - **Rett tone for en nystartet aktør:** proff, men ikke overdrevet. Andreas' egen favoritt (oslodroneogfoto.no) er «litt for proff» for ham; målet er troverdig og ærlig, ikke å late som om firmaet er større enn det er.
 
 ## Hvem dette er for
 
 **Hovedkunder:** eiendomsmeglere og privatpersoner som selger bolig i Oslo og omegn. Meglere kjøper jevnlig og vil ha rask, forutsigbar levering til en klar pris. Privatpersoner kjøper én gang og trenger trygghet og enkelhet. [ASSUMPTION] Meglere er den viktigste gruppen på sikt fordi de gir gjentakende oppdrag.
 
-**Andreas** er den andre brukeren: han skal kunne stå inne for siden som firmaets ansikt utad. [ASSUMPTION] Han endrer ikke innhold selv i første versjon; ML gjør endringer.
+**Andreas** er den andre brukeren: han skal kunne stå inne for siden som firmaets ansikt utad. I første versjon gjør ML endringer, og hvordan Andreas selv kan redigere avtales senere. Begge bør ha tilgang til å endre tekst.
 
 ## Suksesskriterier
 
@@ -59,30 +59,31 @@ Dette er ikke en ny idé; flere etablerte aktører i Oslo-området har tilsvaren
 
 **Rammer:** arbeidet følger BMAD-metoden, siden bygges med HTML, CSS og JavaScript, og hosting er Vercel som utgangspunkt.
 
-**Krav til Andreas:** droneoperatør-registrering og forsikring må være på plass før han tar betalte oppdrag, uavhengig av firmaregistrering.
+**Krav til Andreas:** han har ansvarsforsikring for droneflyging. Droneoperatør-registreringen er ikke gyldig for øyeblikket og må søkes på nytt. Den må være på plass før han tar betalte oppdrag, uavhengig av firmaregistrering, og siden nevner den ikke før den er fornyet.
 
 **Med i første versjon:** alt under Løsningen, pluss logo, fargepalett og enkel visuell identitet. Siden er på norsk.
 
 **Utenfor første versjon:**
 - Booking med kalender og betaling på nett
-- Innlogging og adminpanel
+- Innlogging og eget adminpanel. Andreas redigerer ikke selv i første versjon; ML gjør endringer, og redigeringsløsning avtales etter prosjektet.
 - Blogg, kundeanmeldelser og referanser (finnes ikke ennå)
 - Aktive sosiale medier
-- Organisasjonsnummer, forsikring og registreringsbevis på siden. Andreas har ikke registrert firma ennå.
+- Organisasjonsnummer og registreringsbevis på siden. Andreas har ikke registrert firma ennå, og operatørregistreringen skal fornyes. Forsikringen kan nevnes.
 
 ## Åpne spørsmål
 
 **Andreas**
-- Hva dekker 2 000 kr (antall bilder, redigering, reisekostnad, bruksrett), og hva er leveringstiden?
-- Hvor langt kjører han, og er det tillegg utenfor Oslo?
-- Har han lov til å vise bildene fra tidligere oppdrag offentlig? De viser andres boliger.
-- Har han et domene, og hvem endrer innhold etter lansering?
-- Svarene må komme tidlig. Det som ikke er avklart innen utgangen av november, løses med en enkel standardløsning i stedet for å vente.
+- Er 2 000 kr inkl. eller eks. mva, og hvor mange ferdig redigerte bilder får kunden? («Alt er inkludert», men antall og mva er ikke oppgitt.)
+- Kan han sende kopi av forsikringsbeviset, og når er droneoperatør-registreringen fornyet?
+- Har kundene eller meglerne gitt lov til å vise bildene fra tidligere oppdrag offentlig? De viser andres boliger. (Andreas sier vi kan bruke bildene han har sendt.)
+- Er det reisetillegg til Asker, Drammen og Lillestrøm? Han kjører dit, og reise er inkludert i prisen, men tillegg er ikke bekreftet.
 
 **ML**
 - Hva skal leveres inn i IBE160 ved fristen: kun nettsiden, eller også dokumentasjon fra BMAD-arbeidet?
+- Domenet `dimmendronefoto.no`: Andreas ba ML ordne det. Hvem skal stå som eier, og hvem betaler?
 
 **Arkitektur**
+- Tekst, priser og bilder bør ligge samlet (for eksempel i en egen innholdsfil) slik at både ML og Andreas kan ha tilgang til å endre dem uten å røre koden. Redigeringsløsning for Andreas (enkel CMS eller filredigering) avtales etter at prosjektet er ferdig.
 - Hvordan sender kontaktskjemaet e-post fra en HTML/JS-side på Vercel: ekstern tjeneste som Formspree, eller en liten serverless-funksjon?
 
 ## Visjon

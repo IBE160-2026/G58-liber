@@ -39,3 +39,15 @@ Detaljer som er levert av oppdragsgiver/utvikler og som hører hjemme i PRD og d
 
 ## Materiale
 - Bilder fra tidligere oppdrag ligger på Google Drive; lastes ned til prosjektet av utvikler
+
+## Svar fra Andreas på spørsmål (mail, mottatt 2026-11-21)
+
+- **2 000 kr (boligfoto med drone):** «Alt er inkludert.» Megler kan bruke bildene fritt. Antall bilder og mva-status er ikke oppgitt.
+- **Levering:** innen 2–3 dager.
+- **Dekning:** Oslo, Asker, Drammen og Lillestrøm. Reisetillegg ikke omtalt.
+- **Firma:** ikke registrert nå, kommer senere.
+- **Forsikring:** ja, ansvarsforsikring for droneflyging.
+- **Droneoperatør-registrering:** ja, men ikke for øyeblikket. Han skal søke på nytt og sende beviset.
+- **Domene:** ML ordner det om mulig; navnet kan være `dimmendronefoto.no`. Andreas ber om beskjed hvis ML heller vil at han gjør det selv.
+- **Redigering:** Andreas må selv kunne endre tekst, priser og bilder etter lansering. Avgjort av ML: ML gjør endringer i første versjon, løsning for Andreas avtales etter prosjektet, og begge bør ha tilgang til å endre tekst.
+- **Bilder:** ML kan bruke bildene Andreas har sendt.
