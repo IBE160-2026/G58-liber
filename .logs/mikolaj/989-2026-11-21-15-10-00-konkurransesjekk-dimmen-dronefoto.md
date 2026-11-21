@@ -21,3 +21,22 @@ Kjøre en konkurransesjekk (bmad-deep-recon, type competitive) for Dimmen Dronef
 - Avklare med Andreas hva 2 000 kr dekker og om prisen er inkl. eller eks. mva (prisposisjonen kan ikke vurderes uten).
 - Hente skjermbilder av konkurrentene med nettleser-verktøyet før grafikkfasen (design er lest ut av kode og tekst, ikke sett).
 - Sjekke Kvadratfotos pakkepris i nettleser (2 100 eller ca. 2 993) og nettleserstøtten for CSS scroll-driven animations mot en støttetabell.
+
+## 2026-11-21 kl. 15:45 — Mikolaj
+
+### Oppgave
+Innarbeide svar fra Andreas (mail) i briefen, avgjøre redigering, og committe og pushe.
+
+### Plan
+- Oppdatere brief og addendum med svarene og konkurranseanalysen.
+- ML avgjorde: ML gjør endringer i første versjon, løsning for Andreas avtales etter prosjektet, begge bør ha tilgang til tekst.
+- Skjermbilder ble avbrutt av brukeren og ikke gjenopptatt.
+
+### Resultat
+- Brief og addendum oppdatert: 2 000 kr inkluderer alt, levering 2–3 dager, dekning Oslo/Asker/Drammen/Lillestrøm, ansvarsforsikring på plass, droneoperatør-registrering må fornyes, domene `dimmendronefoto.no` ordnes av ML. Påstanden «de fleste konkurrenter krever kontakt for pris» fjernet.
+- Konkurranseanalysen (`research.md`, digester, memlog) committet og pushet. Skjermbildene ble ikke committet.
+
+### Åpne punkter
+- Avtale redigeringsløsning med Andreas etter prosjektet.
+- Avklare mva, antall bilder, forsikringsbevis, fornyet registrering og tillatelse til å vise bilder.
+- Skjermbilder: ta på nytt eller slette.
