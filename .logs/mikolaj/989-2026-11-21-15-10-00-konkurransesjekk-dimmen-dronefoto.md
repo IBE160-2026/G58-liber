@@ -33,10 +33,10 @@ Innarbeide svar fra Andreas (mail) i briefen, avgjøre redigering, og committe o
 - Skjermbilder ble avbrutt av brukeren og ikke gjenopptatt.
 
 ### Resultat
-- Brief og addendum oppdatert: 2 000 kr inkluderer alt, levering 2–3 dager, dekning Oslo/Asker/Drammen/Lillestrøm, ansvarsforsikring på plass, droneoperatør-registrering må fornyes, domene `dimmendronefoto.no` ordnes av ML. Påstanden «de fleste konkurrenter krever kontakt for pris» fjernet.
+- Brief og addendum oppdatert: 2 000 kr inkluderer alt, levering 2–3 dager, dekning Oslo/Asker/Drammen/Lillestrøm, ansvarsforsikring på plass, droneoperatør-registrering må dokumenteres, domene `dimmendronefoto.no` ordnes av ML. Påstanden «de fleste konkurrenter krever kontakt for pris» fjernet.
 - Konkurranseanalysen (`research.md`, digester, memlog) committet og pushet. Skjermbildene ble ikke committet.
 
 ### Åpne punkter
 - Avtale redigeringsløsning med Andreas etter prosjektet.
-- Avklare mva, antall bilder, forsikringsbevis, fornyet registrering og tillatelse til å vise bilder.
+- Avklare mva, antall bilder, forsikringsbevis, dokumentasjon på registrering og tillatelse til å vise bilder.
 - Skjermbilder: ta på nytt eller slette.

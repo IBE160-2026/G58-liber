@@ -55,11 +55,11 @@ Dette er ikke en ny idé; flere etablerte aktører i Oslo-området har tilsvaren
 
 ## Omfang
 
-**Frist:** 15. desember 2026.
+**Frist og innlevering:** 15. desember 2026. Alt skal leveres inn i IBE160: nettsiden og dokumentasjonen fra BMAD-arbeidet er begge en del av prosjektet.
 
 **Rammer:** arbeidet følger BMAD-metoden, siden bygges med HTML, CSS og JavaScript, og hosting er Vercel som utgangspunkt.
 
-**Krav til Andreas:** han har ansvarsforsikring for droneflyging. Droneoperatør-registreringen er ikke gyldig for øyeblikket og må søkes på nytt. Den må være på plass før han tar betalte oppdrag, uavhengig av firmaregistrering, og siden nevner den ikke før den er fornyet.
+**Krav til Andreas:** han har ansvarsforsikring for droneflyging. Gyldig droneoperatør-registrering må være dokumentert før han tar betalte oppdrag, uavhengig av firmaregistrering, og siden nevner den først når beviset foreligger.
 
 **Med i første versjon:** alt under Løsningen, pluss logo, fargepalett og enkel visuell identitet. Siden er på norsk.
 
@@ -68,18 +68,17 @@ Dette er ikke en ny idé; flere etablerte aktører i Oslo-området har tilsvaren
 - Innlogging og eget adminpanel. Andreas redigerer ikke selv i første versjon; ML gjør endringer, og redigeringsløsning avtales etter prosjektet.
 - Blogg, kundeanmeldelser og referanser (finnes ikke ennå)
 - Aktive sosiale medier
-- Organisasjonsnummer og registreringsbevis på siden. Andreas har ikke registrert firma ennå, og operatørregistreringen skal fornyes. Forsikringen kan nevnes.
+- Organisasjonsnummer og registreringsbevis på siden. Andreas har ikke registrert firma ennå. Forsikringen kan nevnes.
 
 ## Åpne spørsmål
 
 **Andreas**
-- Er 2 000 kr inkl. eller eks. mva, og hvor mange ferdig redigerte bilder får kunden? («Alt er inkludert», men antall og mva er ikke oppgitt.)
-- Kan han sende kopi av forsikringsbeviset, og når er droneoperatør-registreringen fornyet?
+- Er 2 000 kr inkl. eller eks. mva? (2 000 kr dekker alt, men mva-status er ikke oppgitt.)
+- Kan han sende kopi av forsikringsbeviset og dokumentasjon på droneoperatør-registreringen?
 - Har kundene eller meglerne gitt lov til å vise bildene fra tidligere oppdrag offentlig? De viser andres boliger. (Andreas sier vi kan bruke bildene han har sendt.)
 - Er det reisetillegg til Asker, Drammen og Lillestrøm? Han kjører dit, og reise er inkludert i prisen, men tillegg er ikke bekreftet.
 
 **ML**
-- Hva skal leveres inn i IBE160 ved fristen: kun nettsiden, eller også dokumentasjon fra BMAD-arbeidet?
 - Domenet `dimmendronefoto.no`: Andreas ba ML ordne det. Hvem skal stå som eier, og hvem betaler?
 
 **Arkitektur**
